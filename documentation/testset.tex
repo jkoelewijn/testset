@@ -622,6 +622,10 @@ Trip-to-trip transfers allow the definition of prefered transfers that may be ga
 In a dynamic scenario a trip-to-trip transfer is guaranteed as if the last arriving trip was in time, so commuters can make the transfer.
 This has realtime prediction implications which may delay the waiting trip.
 
+\begin{figure}[h]
+\vspace{1em}
+\raggedleft
+\begin{minipage}{265pt}
 \begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=3cm,
   thick,main node/.style={circle,fill=blue!20,draw,font=\sffamily\Large\bfseries}]
 
@@ -642,24 +646,34 @@ This has realtime prediction implications which may delay the waiting trip.
   \path (3.-15) edge [draw=blue,densely dotted] (4.195);
 
 \end{tikzpicture}
+\end{minipage}
+\label{fig:triptotrip_network}
+\vspace{0em}
+\end{figure}
 
 A secondary trip-to-trip transfer is based on blockcodes.
-A blockcode is assigned to a vehicle which operates on a predefined sequential pattern of trip.
-An earlier delay within the pattern must be propagated to later trips, but it also guarantees that a alighting and boarding between the last stop of the current trip and the first stop of the next trip is not required.
+A blockcode is assigned to a vehicle which operates on a predefined sequential pattern of trips.
+An earlier delay within the pattern must be propagated to later trips, but it also guarantees that alighting and boarding between the last stop of the current trip and the first stop of the next trip is not required.
 
-
+\begin{figure}[h]
+\vspace{1em}
+\raggedleft
+\begin{minipage}{250pt}
 \begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=3cm,
   thick,main node/.style={circle,fill=blue!20,draw,font=\sffamily\Large\bfseries}]
 
-  \node[main node] (1) [] {1};
-  \node[main node] (2) [right of=1] {2};
-  \node[main node] (3) [right of=2] {3};
+  \node[main node] (7) [] {7};
+  \node[main node] (8) [right of=7] {8};
+  \node[main node] (9) [right of=8] {9};
 
   \path[every node/.style={font=\sffamily\small}]
-    (1) edge node {$b=1, t=1$} (2)
-    (2) edge [draw=blue,densely dotted] node {$b=1, t=2$} (3);
+    (7) edge node {$b=1, t=1$} (8)
+    (8) edge [draw=blue,densely dotted] node {$b=1, t=2$} (9);
 \end{tikzpicture}
-
+\end{minipage}
+\label{fig:blocktoblock_network}
+\vspace{0em}
+\end{figure}
 
 \subsubsection*{Synthetic Tests}
 
@@ -669,11 +683,74 @@ An earlier delay within the pattern must be propagated to later trips, but it al
 
 %%%%%%%%%
 
-\item \textit{The journey planner is capable to produce a pre-trip advice (stop to stop) and an on-trip advice  based on current location to the last stop.}
+\item \textit{The journey planner is capable to produce a pre-trip advice (stop to stop) and an on-trip advice based on current location to the last stop.}
 
+\subsubsection*{Network description and Timetable}
+We define a network of three routes, an intercity route between two stations, passing by a third station in the middle.
+A local train is calling at all three of the stations and operates in both directions.
+The user queries at the edge of the network between the first and second stop, while being on the intercity train.
 
+\begin{figure}[h]
+\vspace{1em}
+\raggedleft
+\begin{minipage}{250pt}
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=3cm,
+  thick,main node/.style={circle,fill=blue!20,draw,font=\sffamily\Large\bfseries}]
+
+  \node[main node] (1) [] {1};
+  \node[main node] (2) [right of=1] {2};
+  \node[main node] (3) [right of=2] {3};
+
+  \path[every node/.style={font=\sffamily\small}]
+    (1.30) edge [bend left=10] node {} (3.-210)
+    (1) edge [draw=blue,densely dotted] node {} (2)
+    (2) edge [draw=blue,densely dotted] node {} (3)
+    (3.210) edge [draw=blue,densely dotted] node {} (2.-30)
+    (2.210) edge [draw=blue,densely dotted] node {} (1.-30)
+    (2.210) edge [draw=blue,densely dotted] node {} (1.-30);
+
+  \node[] (1a) [above=.2cm of 1] {00:01};
+  \node[] (3a) [above=.2cm of 3] {00:04};
+
+  \node[] (1b) [below=.2cm of 1] {00:01};
+  \node[] (2b) [below=.2cm of 2] {00:03};
+  \node[] (3b) [below=.2cm of 3] {00:05};
+
+  \node[] (3b) [below=.1pt of 3b] {00:06};
+  \node[] (2b) [below=.1pt of 2b] {00:09};
+  \node[] (1b) [below=.1pt of 1b] {00:11};
+
+\draw[very thick] (1.5,1)--(1.5,0.4);
+\end{tikzpicture}
+\end{minipage}
+\label{fig:ontrip_network}
+\vspace{0em}
+\end{figure}
+
+\subsubsection*{Synthetic Tests}
+\begin{enumerate}
+\item \textbf{depart} from trip 1 heading stop 2.
 \end{enumerate}
 
+\subsubsection*{Expected Results}
+\begin{enumerate}
+\item
+{\scriptsize
+\begin{tabular}{p{.75cm} | p{3.0cm} c p{3.0cm} | p{.75cm} }
+\hline
+\rowcolor{Gray}
+Depart & From & \hspace{0.4cm} & To & Arrive \\
+\hline
+00:01 & Stop 1 & \train & Stop 3 & 00:02 \\
+\hline
+00:06 & Stop 3 & \train & Stop 2 & 00:09 \\
+\hline
+\end{tabular}
+}
+\end{enumerate}
+
+\end{enumerate}
+\newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \item
 \begin{enumerate}
