@@ -9,9 +9,9 @@
 \usetikzlibrary{arrows}
 \usetikzlibrary{positioning}
 \usetikzlibrary{decorations.pathreplacing}
+\usepackage[enabled,section]{easy-todo}
 
 \author{Stefan de Konink & Joost Cassee}
-
 
 \newcommand*{\bus}{\includegraphics[scale=0.02]{img/bus}}
 \newcommand*{\ferry}{\includegraphics[scale=0.02]{img/ferry}}
@@ -676,6 +676,17 @@ This has realtime prediction implications which may delay the waiting trip.
   \path (3.15) edge (4.165);
   \path (3.-15) edge [draw=blue,densely dotted] (4.195);
 
+  \node[] (t1) [below=.4cm of 1] {trip 1};
+  \node[] (t2) [above=.4cm of 2] {trip 2};
+
+  \node[] (1a) [above=.2cm of 1] {00:01};
+  \node[] (2b) [below=.2cm of 2] {00:02};
+  \node[] (3a) [above=.2cm of 3] {00:02};
+  \node[] (3b) [below=.2cm of 3] {00:03};
+  \node[] (4a) [above=.2cm of 4] {00:03};
+  \node[] (4b) [below=.2cm of 4] {00:04};
+  \node[] (5a) [above=.2cm of 5] {00:04};
+  \node[] (6b) [below=.2cm of 6] {00:05};
 \end{tikzpicture}
 \end{minipage}
 \label{fig:triptotrip_network}
@@ -707,9 +718,78 @@ An earlier delay within the pattern must be propagated to later trips, but it al
 \end{figure}
 
 \subsubsection*{Synthetic Tests}
+\begin{enumerate}
+\item \textbf{given} a \textit{preferred} transfer from trip 1 to trip 2 at stop 3, \textbf{depart} at 00:01 from stop 1 heading to stop 6.
+\item \textbf{given} a \textit{preferred} transfer from trip 1 to trip 2 at stop 4, \textbf{depart} at 00:01 from stop 1 heading to stop 6.
+\item \textbf{given} a \textit{unpreferred} transfer from trip 1 to trip 2 at stop 3, \textbf{depart} at 00:01 from stop 1 heading to stop 6.
+\item \textbf{given} a \textit{unpreferred} transfer from trip 1 to trip 2 at stop 4, \textbf{depart} at 00:01 from stop 1 heading to stop 6.
+\end{enumerate}
+
+\todo{Add tests for blockcode trip-to-trip transfers.}
 
 \subsubsection*{Expected Results}
-
+\begin{enumerate}
+\item
+{\scriptsize
+\begin{tabular}{p{.75cm} | p{3.0cm} c p{3.0cm} | p{.75cm} }
+\hline
+\rowcolor{Gray}
+Depart & From & \hspace{0.4cm} & To & Arrive \\
+\hline
+00:01 & Stop 1 & \train & Stop 3 & 00:02 \\
+\hline
+00:03 & Stop 3 & \train & Stop 4 & 00:04 \\
+\hline
+00:04 & Stop 4 & \train & Stop 6 & 00:05 \\
+\hline
+\end{tabular}
+}
+\item
+{\scriptsize
+\begin{tabular}{p{.75cm} | p{3.0cm} c p{3.0cm} | p{.75cm} }
+\hline
+\rowcolor{Gray}
+Depart & From & \hspace{0.4cm} & To & Arrive \\
+\hline
+00:01 & Stop 1 & \train & Stop 3 & 00:02 \\
+\hline
+00:02 & Stop 3 & \train & Stop 4 & 00:03 \\
+\hline
+00:04 & Stop 4 & \train & Stop 6 & 00:05 \\
+\hline
+\end{tabular}
+}
+\item
+{\scriptsize
+\begin{tabular}{p{.75cm} | p{3.0cm} c p{3.0cm} | p{.75cm} }
+\hline
+\rowcolor{Gray}
+Depart & From & \hspace{0.4cm} & To & Arrive \\
+\hline
+00:01 & Stop 1 & \train & Stop 3 & 00:02 \\
+\hline
+00:02 & Stop 3 & \train & Stop 4 & 00:03 \\
+\hline
+00:04 & Stop 4 & \train & Stop 6 & 00:05 \\
+\hline
+\end{tabular}
+}
+\item
+{\scriptsize
+\begin{tabular}{p{.75cm} | p{3.0cm} c p{3.0cm} | p{.75cm} }
+\hline
+\rowcolor{Gray}
+Depart & From & \hspace{0.4cm} & To & Arrive \\
+\hline
+00:01 & Stop 1 & \train & Stop 3 & 00:02 \\
+\hline
+00:03 & Stop 3 & \train & Stop 4 & 00:04 \\
+\hline
+00:04 & Stop 4 & \train & Stop 6 & 00:05 \\
+\hline
+\end{tabular}
+}
+\end{enumerate}
 \newpage
 
 %%%%%%%%%
@@ -858,6 +938,6 @@ It must arrive at the best departure stop given the shortest total travel time.}
 
 
 
-
+\listoftodos
 
 \end{document}
