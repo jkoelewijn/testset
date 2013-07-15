@@ -10,7 +10,7 @@
 \usetikzlibrary{positioning}
 \usetikzlibrary{decorations.pathreplacing}
 
-\author{Stefan de Konink}
+\author{Stefan de Konink & Joost Cassee}
 
 
 \newcommand*{\bus}{\includegraphics[scale=0.02]{img/bus}}
@@ -598,11 +598,24 @@ The dwell time for the transfer is defined, or can be reduced to zero if enough 
   \node[main node] (4) [above right=1.5cm and 3cm of 3] {4};
   \node[main node] (5) [below right=1.5cm and 3cm of 3] {5};
 
+  \node[] (1a)  [above=.2cm of 1] {00:01};
+  \node[] (2b1) [below=.2cm of 2] {00:02};
+  \node[] (2b2) [below=.6cm of 2] {00:06};
+  \node[] (3a)  [above=.2cm of 3] {00:03};
+  \node[] (3b1) [below=.2cm of 3] {00:03};
+  \node[] (3b2) [below=.6cm of 3] {00:07};
+  \node[] (4b1) [below=.2cm of 4] {00:04};
+  \node[] (4b2) [below=.6cm of 4] {00:08};
+  \node[] (5a)  [above=.2cm of 5] {00:05};
+
   \path[every node/.style={font=\sffamily\small}]
     (1) edge [draw=blue,densely dotted] node {} (3)
     (2) edge node {} (3)
     (3) edge node {} (4)
     (3) edge [draw=blue,densely dotted] node {} (5);
+
+  \draw[very thick] (0,2)--(0,1.4);
+  \node[] (dwell) [above=1.6cm of 3] {dwell time: 0s};
 \end{tikzpicture}
 \end{minipage}
 \label{fig:singlemodality_network}
@@ -610,8 +623,26 @@ The dwell time for the transfer is defined, or can be reduced to zero if enough 
 \end{figure}
 
 \subsubsection*{Synthetic Tests}
+\begin{enumerate}
+\item \textbf{given} a default dwell time of 60 seconds and a specified dwell time of 0 seconds at stop 3, \textbf{depart} at 00:01 from stop 1 heading to stop 4.
+\end{enumerate}
 
 \subsubsection*{Expected Results}
+\begin{enumerate}
+\item
+{\scriptsize
+\begin{tabular}{p{.75cm} | p{3.0cm} c p{3.0cm} | p{.75cm} }
+\hline
+\rowcolor{Gray}
+Depart & From & \hspace{0.4cm} & To & Arrive \\
+\hline
+00:01 & Stop 1 & \train & Stop 2 & 00:03 \\
+\hline
+00:03 & Stop 3 & \train & Stop 4 & 00:04 \\
+\hline
+\end{tabular}
+}
+\end{enumerate}
 \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
