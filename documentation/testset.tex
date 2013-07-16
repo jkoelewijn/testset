@@ -738,7 +738,7 @@ Depart & From & \hspace{0.4cm} & To & Arrive \\
 \hline
 00:01 & Stop 1 & \train & Stop 3 & 00:02 \\
 \hline
-00:03 & Stop 3 & \train & Stop 4 & 00:04 \\
+00:03 & Stop 3 & \train & Stop 4 & 00:05 \\
 \hline
 00:04 & Stop 4 & \train & Stop 6 & 00:05 \\
 \hline
@@ -790,6 +790,9 @@ Depart & From & \hspace{0.4cm} & To & Arrive \\
 \end{tabular}
 }
 \end{enumerate}
+
+\todo{Explain why you have added the intermediate stops.}
+
 \newpage
 
 %%%%%%%%%
@@ -852,7 +855,7 @@ The user queries at the edge of the network between the first and second stop, w
 \rowcolor{Gray}
 Depart & From & \hspace{0.4cm} & To & Arrive \\
 \hline
-00:01 & Stop 1 & \train & Stop 3 & 00:02 \\
+00:01 & Stop 1 & \train & Stop 3 & 00:04 \\
 \hline
 00:06 & Stop 3 & \train & Stop 2 & 00:09 \\
 \hline
@@ -935,26 +938,317 @@ Depart & From & \hspace{0.4cm} & To & Arrive \\
 \end{tabular}
 }
 \end{enumerate}
-
+\newpage
 %%%%%%%%%%%%%%%
 
 \item \textit{The journey planner is capable use changes within the travel advice, which may lead to a different travice advice.}
+
+\subsubsection*{Network description and Timetable}
+The network consists of three stops and two trips.
+The first trip punctuality changes in a punctuality, while the second trip is in time.
+
+\begin{figure}[h]
+\vspace{1em}
+\raggedleft
+\begin{minipage}{245pt}
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=3cm,
+  thick,main node/.style={circle,fill=blue!20,draw,font=\sffamily\Large\bfseries}]
+
+  \node[main node] (1) [] {1};
+  \node[main node] (2) [right of=1] {2};
+  \node[main node] (3) [right of=2] {3};
+  \node[] (1a) [above=.2cm of 1] {00:01};
+  \node[] (1b) [below=.2cm of 1] {00:04};
+  \node[] (2a) [above=.2cm of 2] {00:02};
+  \node[] (2b) [below=.2cm of 2] {00:05};
+  \node[] (3a) [above=.2cm of 3] {00:03};
+  \node[] (3b) [below=.2cm of 3] {00:06};
+
+  \path (1.15) edge node {\tiny p = 120s} (2.165);
+  \path (2.15) edge node {\tiny p = 60s} (3.165);
+  \path (1.-15) edge [draw=blue,densely dotted] node [yshift=-14pt,pos=0.5,style={font=\sffamily\small}] {} (2.195);
+  \path (2.-15) edge [draw=blue,densely dotted] node [yshift=-14pt,pos=0.5,style={font=\sffamily\small}] {} (3.195);
+\end{tikzpicture}
+\end{minipage}
+\label{fig:delay_network}
+\vspace{-2em}
+\end{figure}
+
+\subsubsection*{Synthetic Tests}
+\begin{enumerate}
+\item \textbf{depart} at 00:04 from Stop 2 heading Stop 3.
+\end{enumerate}
+
+\subsubsection*{Expected Results}
+\begin{enumerate}
+\item
+{\scriptsize
+\begin{tabular}{p{.75cm} | p{3.0cm} c p{3.0cm} | p{.75cm} }
+\hline
+\rowcolor{Gray}
+Depart & From & \hspace{0.4cm} & To & Arrive \\
+\hline
+00:02 +2m & Stop 2 & \bus & Stop 3 & 00:03 \textbf{+2m} \\
+\hline
+\end{tabular}
+}
+\\
+\tiny{\textit{Note: keep in mind, that while the punctuality may reduce after stop 2, it is not yet known to the journey planner, \\ the \textbf{+2m} in the table may be reduced by a natural decay of the journey planner, we assume naive propagation.}}
+\end{enumerate}
+\newpage
+
 
 %%%%%%%%%%%%%%%
 
 \item \textit{The journey planner is capable to exclude routes from travice advice.}
 
+\subsubsection*{Network description and Timetable}
+The network consists of two stops, and two routes.
+The first route is the fastest but is excluded.
+
+\begin{figure}[h]
+\vspace{1em}
+\raggedleft
+\begin{minipage}{205pt}
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=3cm,
+  thick,main node/.style={circle,fill=blue!20,draw,font=\sffamily\Large\bfseries}]
+
+  \node[main node] (1) [] {1};
+  \node[main node] (2) [right of=1] {2};
+  \node[] (1a) [above=.2cm of 1] {00:01};
+  \node[] (1b) [below=.2cm of 1] {00:01};
+  \node[] (2a) [above=.2cm of 2] {00:02};
+  \node[] (2b) [below=.2cm of 2] {00:03};
+
+  \path (1.15) edge node {} (2.165);
+  \path (1.-15) edge [draw=blue,densely dotted] node [yshift=-14pt,pos=0.5,style={font=\sffamily\small}] {} (2.195);
+\end{tikzpicture}
+\end{minipage}
+\label{fig:delay_network}
+\vspace{-2em}
+\end{figure}
+
+\subsubsection*{Synthetic Tests}
+\begin{enumerate}
+\item \textbf{depart} at 00:01 from Stop 1 heading Stop 2 exclude route 1.
+\end{enumerate}
+
+\subsubsection*{Expected Results}
+\begin{enumerate}
+\item
+{\scriptsize
+\begin{tabular}{p{.75cm} | p{3.0cm} c p{3.0cm} | p{.75cm} }
+\hline
+\rowcolor{Gray}
+Depart & From & \hspace{0.4cm} & To & Arrive \\
+\hline
+00:01 & Stop 1 & \bus & Stop 2 & 00:03 \\
+\hline
+\end{tabular}
+}
+\end{enumerate}
+\vspace{2em}
+
+
 %%%%%%%%%%%%%%%
 
 \item \textit{The journey planner is capable to exclude trips from travice advice.}
+
+\subsubsection*{Network description and Timetable}
+The network consists of two stops, and two routes.
+The first trip is is canceled by KV17, therefore it cannot be planned.
+
+\begin{figure}[h]
+\vspace{1em}
+\raggedleft
+\begin{minipage}{255pt}
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=3cm,
+  thick,main node/.style={circle,fill=blue!20,draw,font=\sffamily\Large\bfseries}]
+
+  \node[main node] (1) [] {1};
+  \node[main node] (2) [right of=1] {2};
+  \node[] (1b) [below=.2cm of 1] {00:01};
+  \node[] (1c) [below=.1pt of 1b] {00:03};
+  \node[] (2b) [below=.2cm of 2] {00:02};
+  \node[] (2c) [below=.1pt of 2b] {00:04};
+  \node[] (17) [left=.2cm of 1b] {\tiny KV17 cancel};
+
+  \path (1) edge node {} (2);
+\end{tikzpicture}
+\end{minipage}
+\label{fig:delay_network}
+\vspace{-2em}
+\end{figure}
+
+\subsubsection*{Synthetic Tests}
+\begin{enumerate}
+\item \textbf{depart} at 00:01 from Stop 1 heading Stop 2 exclude route 1.
+\end{enumerate}
+
+\subsubsection*{Expected Results}
+\begin{enumerate}
+\item
+{\scriptsize
+\begin{tabular}{p{.75cm} | p{3.0cm} c p{3.0cm} | p{.75cm} }
+\hline
+\rowcolor{Gray}
+Depart & From & \hspace{0.4cm} & To & Arrive \\
+\hline
+00:03 & Stop 1 & \bus & Stop 2 & 00:04 \\
+\hline
+\end{tabular}
+}
+\end{enumerate}
+
+\newpage
 
 %%%%%%%%%%%%%%%
 
 \item \textit{The journey planner is capable to exclude stop places from travice advice.}
 
+\subsubsection*{Network description and Timetable}
+The network consists of four stops, and two routes.
+The first route travels via the north, the second via the south.
+The we do not want to pass through the North station.
+
+\begin{figure}[h]
+\vspace{1em}
+\raggedleft
+\begin{minipage}{225pt}
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=3cm,
+  thick,main node/.style={circle,fill=blue!20,draw,font=\sffamily\Large\bfseries}]
+
+  \node[main node] (1) [] {1};
+  \node[main node] (2) [above right of=1] {2};
+  \node[main node] (3) [below right of=2] {3};
+  \node[main node] (4) [below right of=1] {4};
+
+  \node[] (1a) [above=.2cm of 1] {00:01};
+  \node[] (2a) [above=.2cm of 2] {00:02};
+  \node[] (3a) [above=.2cm of 3] {00:03};
+  \node[] (1b) [below=.2cm of 1] {00:01};
+  \node[] (4b) [below=.2cm of 4] {00:02};
+  \node[] (3b) [below=.2cm of 3] {00:04};
+
+  \path[every node/.style={font=\sffamily\small}]
+    (1) edge node {} (2)
+    (2) edge node {} (3)
+    (1) edge[draw=blue,densely dotted] node {} (4)
+    (4) edge[draw=blue,densely dotted] node {} (3);
+
+\end{tikzpicture}
+\end{minipage}
+\label{fig:delay_network}
+\vspace{-2em}
+\end{figure}
+
+\subsubsection*{Synthetic Tests}
+\begin{enumerate}
+\item \textbf{depart} at 00:01 from Stop 1 heading Stop 3 exclude Stop 2.
+\end{enumerate}
+
+\subsubsection*{Expected Results}
+\begin{enumerate}
+\item
+{\scriptsize
+\begin{tabular}{p{.75cm} | p{3.0cm} c p{3.0cm} | p{.75cm} }
+\hline
+\rowcolor{Gray}
+Depart & From & \hspace{0.4cm} & To & Arrive \\
+\hline
+00:01 & Stop 1 (via Stop 4) & \train & Stop 3 & 00:04 \\
+\hline
+\end{tabular}
+}
+\end{enumerate}
+
+\newpage
+
 %%%%%%%%%%%%%%%
 
 \item \textit{The journey planner is capable to exclude stops from travice advice.}
+
+\subsubsection*{Network description and Timetable}
+In normal trip planning the planner would choose a place to alight and board trips based on preference of the operator (trip-to-trip), or an algorithm choose.
+Especially at night not all stops might qualify to wait a bit for the next trip.
+We exclude stops we do not want to alight and/or board from and allow this dynamic unpreferred transfer.
+
+\begin{figure}[h]
+\vspace{1em}
+\raggedleft
+\begin{minipage}{265pt}
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=3cm,
+  thick,main node/.style={circle,fill=blue!20,draw,font=\sffamily\Large\bfseries}]
+
+  \node[main node] (3) {3};
+  \node[main node] (1) [above left of=3] {1};
+  \node[main node] (2) [below left of=3] {2};
+  \node[main node] (4) [right of=3] {4};
+  \node[main node] (5) [above right of=4] {5};
+  \node[main node] (6) [below right of=4] {6};
+
+  \path[every node/.style={font=\sffamily\small}]
+    (1) edge node {} (3)
+    (2) edge [draw=blue,densely dotted] node {} (3)
+    (4) edge node {} (5)
+    (4) edge [draw=blue,densely dotted] node {} (6);
+
+  \path (3.15) edge (4.165);
+  \path (3.-15) edge [draw=blue,densely dotted] (4.195);
+
+  \node[] (t1) [below=.4cm of 1] {trip 1};
+  \node[] (t2) [above=.4cm of 2] {trip 2};
+
+  \node[] (1a) [above=.2cm of 1] {00:01};
+  \node[] (2b) [below=.2cm of 2] {00:02};
+  \node[] (3a) [above=.2cm of 3] {00:02};
+  \node[] (3b) [below=.2cm of 3] {00:03};
+  \node[] (4a) [above=.2cm of 4] {00:03};
+  \node[] (4b) [below=.2cm of 4] {00:04};
+  \node[] (5a) [above=.2cm of 5] {00:04};
+  \node[] (6b) [below=.2cm of 6] {00:05};
+\end{tikzpicture}
+\end{minipage}
+\label{fig:triptotrip_network}
+\vspace{0em}
+\end{figure}
+
+\subsubsection*{Synthetic Tests}
+\begin{enumerate}
+\item \textbf{given} a \textit{unpreferred} transfer from trip 1 to trip 2 at stop 3, \textbf{depart} at 00:01 from stop 1 heading to stop 6.
+\item \textbf{given} a \textit{unpreferred} transfer from trip 1 to trip 2 at stop 4, \textbf{depart} at 00:01 from stop 1 heading to stop 6.
+\end{enumerate}
+
+\subsubsection*{Expected Results}
+\begin{enumerate}
+\item
+{\scriptsize
+\begin{tabular}{p{.75cm} | p{3.0cm} c p{3.0cm} | p{.75cm} }
+\hline
+\rowcolor{Gray}
+Depart & From & \hspace{0.4cm} & To & Arrive \\
+\hline
+00:01 & Stop 1 & \train & Stop 4 & 00:03 \\
+\hline
+00:04 & Stop 4 & \train & Stop 6 & 00:05 \\
+\hline
+\end{tabular}
+}
+\item
+{\scriptsize
+\begin{tabular}{p{.75cm} | p{3.0cm} c p{3.0cm} | p{.75cm} }
+\hline
+\rowcolor{Gray}
+Depart & From & \hspace{0.4cm} & To & Arrive \\
+\hline
+00:01 & Stop 1 & \train & Stop 3 & 00:02 \\
+\hline
+00:03 & Stop 3 & \train & Stop 6 & 00:05 \\
+\hline
+\end{tabular}
+}
+\end{enumerate}
+\newpage
 
 %%%%%%%%%%%%%%%
 
@@ -981,11 +1275,11 @@ It must arrive at the best departure stop given the shortest total travel time.}
 
 %%%%%%%%%%%%%%%
 
-\item \textit{The journey palnner is aware of delays at the first vehicle in a sequence and is able to propagate it to latter vehicles with respect to future transfers. The travel advice results in an alternative using all available dynamic information in the journey planner.}
+\item \textit{The journey planner is aware of delays at the first vehicle in a sequence and is able to propagate it to latter vehicles with respect to future transfers. The travel advice results in an alternative using all available dynamic information in the journey planner.}
 
 %%%%%%%%%%%%%%%
 
-\item \textit{The journeyp planner is aware of delays in the previous trips, and suggests these delayed connections to give a shorter total transit time.}
+\item \textit{The journey planner is aware of delays in the previous trips, and suggests these delayed connections to give a shorter total transit time.}
 
 
 \end{enumerate}
