@@ -2,11 +2,11 @@
 Beter Benutten MMRI project
 ===========================
 
-This project contains code and data for the Beter Benutten MMRI project.
+This project contains testing code and data for the Beter Benutten MMRI project.
 
 See the `project source`_ at GitHub.
 
-.. _`project source`: https://github.com/goabout/mmri
+.. _`project source`: https://github.com/plannerstack/mmri
 
 
 Setting up a development environment
@@ -16,6 +16,7 @@ Using Virtualenv_ is recommended. Use the following commands to set-up a
 development environment::
 
     virtualenv .
+    . bin/activate
     pip install -r dev_requirements.txt
 
 .. _Virtualenv: http://virtualenv.org
