@@ -9,6 +9,20 @@ See the `project source`_ at GitHub.
 .. _`project source`: https://github.com/plannerstack/mmri
 
 
+Specification
+=============
+
+The test-set is based on the requirements document developed in the Beter Benutten MMRI project. The documents contains an informal set of requirements, which this project attempts to formalize and test.
+
+The formalization of the requirements is written in LaTeX and can be found here: :file:`specs/testset.tex`. Every requirement is tested as a single testcase and is defined as a transit graph, a list of planning requests and the correct results.
+
+
+Test data
+=========
+
+The data sets of the testcases can be found as GTFS here: :file:`data/gtfs`.
+
+
 Setting up a development environment
 ====================================
 
