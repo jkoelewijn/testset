@@ -1,0 +1,4 @@
+-e .
+bpython
+Sphinx
+sphinxcontrib-programoutput
