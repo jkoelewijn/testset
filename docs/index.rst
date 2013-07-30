@@ -95,7 +95,7 @@ A testcase defines the following properties:
     A test identifier. Used to match test output.
 
 ``from``
-    The start location, an object containing ``latitude``, ``longitude`` and ``description`` properties.
+    The start location, an object containing ``latitude``, ``longitude`` and ``description`` properties or the ``stopId`` for stop-to-stop planning
 
 ``to``
     The destination location, using the the same format as ``from``.
@@ -108,6 +108,18 @@ A testcase defines the following properties:
 
 ``comment``
     Comments describing the test-case.
+
+``preferLeastTransfers``
+    Wether having less transfers is preferred
+
+``preferredTravelType``
+    The preferred travel type, for instance ``bus``
+
+``bannedRoute``
+    The route to ban during a trip, defined by the routeId
+
+``bannedStop``
+    The stop to ban during a trip, defined by the StopId
 
 
 Test output is a JSON array containing objects representing test results. For example:
