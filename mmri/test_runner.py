@@ -16,6 +16,8 @@ def parse_args(args=None):
             help='the provider to run the tests for (default: otp)')
     parser.add_argument('input', metavar='INPUT', nargs='?', default='-',
             help='the test input file (default: stdin)')
+    parser.add_argument('expected_result', metavar='EXPECTED_RESULT', nargs='?', default='-',
+            help='the test expected output file (default: stdin)')
     parser.add_argument('output', metavar='OUTPUT', nargs='?', default='-',
             help='the test output file (default: stdout')
     parser.add_argument('-u', '--url', metavar='URL',
