@@ -1,34 +1,277 @@
 [
     {
         "id": "1a1",
-        "from": "MMRI_1a1_depart",
-        "to": "MMRI_1a2_arrive",
+        "agencyId": "MMRI",
+        "from": "1a1",
+        "to": "1a6",
         "time": "2014-01-01T00:00:00",
         "timeType": "D",
-        "comment": "All agencies and their published timetables including modalities bus, ferry, lightrail, metro, ferry and train given a departure time must be incorporatable in the journey planner. \n i. depart at 00:00 from stop 1 heading to stop 6."
+        "comment": "depart at 00:00 from stop 1 heading to stop 6."
     },
     {
-        "id": "1a1a",
-        "from": "MMRI_1a1",
-        "to": "MMRI_1a2",
-        "time": "2014-01-01T00:00:00",
+        "id": "1g1",
+        "agencyId": "MMRI",
+        "from": "1g1",
+        "to": "1g2",
+        "time": "2014-01-01T00:02:00",
         "timeType": "D",
-        "comment": "All agencies and their published timetables including modalities bus, ferry, lightrail, metro, ferry and train given a departure time must be incorporatable in the journey planner. \n i. depart at 00:00 from stop 1 heading to stop 6."
+        "comment": "depart at 00:02 from stop 1 heading to stop 2"
     },
     {
-        "id": "1a2",
-        "from": "MMRI_1a1_depart",
-        "to": "MMRI_1a3_arrive",
-        "time": "2014-01-01T00:00:00",
-        "timeType": "D",
-        "comment": "All agencies and their published timetables including modalities bus, ferry, lightrail, metro, ferry and train given a departure time must be incorporatable in the journey planner. \n i. depart at 00:00 from stop 1 heading to stop 6."
+        "id": "1g2",
+        "agencyId": "MMRI",
+        "from": "1g1",
+        "to": "1g2",
+        "time": "2014-01-01T00:03:00",
+        "timeType": "A",
+        "comment": "from stop 1 heading stop 2 arrive at 00:03"
     },
     {
-        "id": "1a2a",
-        "from": "MMRI_1a1",
-        "to": "MMRI_1a3",
-        "time": "2014-01-01T00:00:00",
+        "id": "1g3",
+        "agencyId": "MMRI",
+        "from": "1g1",
+        "to": "1g2",
+        "time": "2014-01-01T00:03:00",
         "timeType": "D",
-        "comment": "All agencies and their published timetables including modalities bus, ferry, lightrail, metro, ferry and train given a departure time must be incorporatable in the journey planner. \n i. depart at 00:00 from stop 1 heading to stop 6."
+        "comment": "depart at 00:03 from stop 1 heading to stop 2"
+    },
+    {
+        "id": "1g4",
+        "agencyId": "MMRI",
+        "from": "1g1",
+        "to": "1g2",
+        "time": "2014-01-01T00:04:00",
+        "timeType": "A",
+        "comment": "from stop 1 heading stop 2 arrive at 00:04"
+    },
+    {
+        "id": "1g5",
+        "agencyId": "MMRI",
+        "from": "1g1",
+        "to": "1g2",
+        "time": "2014-01-01T00:03:00",
+        "timeType": "D",
+        "comment": "depart at 00:03 from stop 1 heading to stop 2"
+    },
+    {
+        "id": "1g6",
+        "agencyId": "MMRI",
+        "from": "1g1",
+        "to": "1g2",
+        "time": "2014-01-01T00:04:00",
+        "timeType": "A",
+        "comment": "from stop 1 heading stop 2 arrive at 00:04"
+    },
+    {
+        "id": "2a1",
+        "agencyId": "MMRI",
+        "from": "2a1",
+        "to": "2a2",
+        "time": "2014-01-01T00:01:00",
+        "timeType": "D",
+        "comment": "depart at 00:01 from stop 1 heading to stop 2."
+    },
+    {
+        "id": "2a2",
+        "agencyId": "MMRI",
+        "from": "2a1",
+        "to": "2a2",
+        "time": "2014-01-01T00:03:00",
+        "timeType": "D",
+        "comment": "depart at 00:03 from stop 1 heading to stop 2."
+    },
+    {
+        "id": "2a3",
+        "agencyId": "MMRI",
+        "from": "2a3",
+        "to": "2a6",
+        "time": "2014-01-01T00:01:00",
+        "timeType": "D",
+        "comment": "depart at 00:01 from stop 3 heading to stop 6."
+    },
+    {
+        "id": "2a4",
+        "agencyId": "MMRI",
+        "from": "2a3",
+        "to": "2a6",
+        "time": "2014-01-01T00:02:00",
+        "timeType": "D",
+        "comment": "depart at 00:02 from stop 3 heading to stop 6."
+    },
+    {
+        "id": "2a5",
+        "agencyId": "MMRI",
+        "from": "2a3",
+        "to": "2a6",
+        "time": "2014-01-01T00:09:00",
+        "timeType": "A",
+        "comment": "from stop 3 heading to stop 6 arrive at 00:09."
+    },
+    {
+        "id": "2b1",
+        "agencyId": "MMRI",
+        "from": "2b1",
+        "to": "2b2",
+        "time": "2014-01-01T00:01:00",
+        "timeType": "D",
+        "comment": "depart at 00:01 from stop 1 heading to stop 2, wants x = 1"
+    },
+    {
+        "id": "2c1",
+        "agencyId": "MMRI",
+        "from": "2c1",
+        "to": "2c3",
+        "time": "2014-01-01T00:01:00",
+        "timeType": "D",
+        "comment": "depart at 00:01 from stop 1 heading to stop 3."
+    },
+    {
+        "id": "2c2",
+        "agencyId": "MMRI",
+        "from": "2c1",
+        "to": "2c3",
+        "time": "2014-01-01T00:01:00",
+        "timeType": "D",
+        "preferredTravelType": "bus",
+        "comment": "depart at 00:01 from stop 1 heading to stop 3, prefer bus."
+    },
+    {
+        "id": "2c3",
+        "agencyId": "MMRI",
+        "from": "2c1",
+        "to": "2c3",
+        "time": "2014-01-01T00:01:00",
+        "timeType": "D",
+        "preferLeastTransfers": true,
+        "comment": "depart at 00:01 from stop 1 heading to stop 3, prefer least transfers."
+    },
+    {
+        "id": "2d1",
+        "agencyId": "MMRI",
+        "from": "2d1",
+        "to": "2d4",
+        "time": "2014-01-01T00:01:00",
+        "timeType": "D",
+        "comment": "given a default dwell time of 60 seconds and a specified dwell time of 0 seconds at stop 3, depart at 00:01 from stop 1 heading to stop 4."
+    },
+    {
+        "id": "2e1",
+        "agencyId": "MMRI",
+        "from": "2e11",
+        "to": "2e16",
+        "time": "2014-01-01T00:01:00",
+        "timeType": "D",
+        "comment": "given a preferred transfer from trip1 to trip2 at stop3, depart at 00:01 from stop 1 heading to stop 6."
+    },
+    {
+        "id": "2e2",
+        "agencyId": "MMRI",
+        "from": "2e21",
+        "to": "2e26",
+        "time": "2014-01-01T00:01:00",
+        "timeType": "D",
+        "comment": "given a preferred transfer from trip1 to trip2 at stop4, depart at 00:01 from stop 1 heading to stop 6."
+    },
+    {
+        "id": "2e3",
+        "agencyId": "MMRI",
+        "from": "2e31",
+        "to": "2e36",
+        "time": "2014-01-01T00:01:00",
+        "timeType": "D",
+        "comment": "given a UNpreferred transfer from trip1 to trip2 at stop3, depart at 00:01 from stop 1 heading to stop 6."
+    },
+    {
+        "id": "2e4",
+        "agencyId": "MMRI",
+        "from": "2e41",
+        "to": "2e46",
+        "time": "2014-01-01T00:01:00",
+        "timeType": "D",
+        "comment": "given a UNpreferred transfer from trip1 to trip2 at stop4, depart at 00:01 from stop 1 heading to stop 6."
+    },
+    {
+        "id": "2f1",
+        "agencyId": "MMRI",
+        "from": "2f1",
+        "startingTransitTripId": "2f|intercity",
+        "to": "2f3",
+        "time": "2014-01-01T00:02:00",
+        "timeType": "D",
+        "comment": "depart from trip 1 heading stop 2."
+    },
+    {
+        "id": "3b1",
+        "agencyId": "MMRI",
+        "from": "3b1",
+        "to": "3b2",
+        "time": "2014-01-01T00:01:00",
+        "timeType": "D",
+        "comment": "depart at 00:01 from Stop 1 heading Stop 2."
+    },
+    {
+        "id": "3b2",
+        "agencyId": "MMRI",
+        "from": "3b1",
+        "to": "3b2",
+        "time": "2014-01-01T00:11:00",
+        "timeType": "D",
+        "comment": "depart at 00:11 from Stop 1 heading Stop 2."
+    },
+    {
+        "id": "3c1",
+        "agencyId": "MMRI",
+        "from": "3c2",
+        "to": "3c3",
+        "time": "2014-01-01T00:04:00",
+        "timeType": "D",
+        "comment": "depart at 00:04 from Stop 2 heading Stop 3."
+    },
+    {
+        "id": "3d1",
+        "agencyId": "MMRI",
+        "from": "3d1",
+        "to": "3d2",
+        "time": "2014-01-01T00:01:00",
+        "timeType": "D",
+        "bannedRoute": "3d|1",
+        "comment": "depart at 00:01 from Stop 1 heading Stop 2 exclude route 1."
+    },
+    {
+        "id": "3e1",
+        "agencyId": "MMRI",
+        "from": "3e1",
+        "to": "3e2",
+        "time": "2014-01-01T00:01:00",
+        "timeType": "D",
+        "comment": "depart at 00:01 from Stop 1 heading Stop 2 exclude route 1 (by KV17)"
+    },
+    {
+        "id": "3f1",
+        "agencyId": "MMRI",
+        "from": "3f1",
+        "to": "3f3",
+        "time": "2014-01-01T00:01:00",
+        "timeType": "D",
+        "bannedStop": "3f2",
+        "comment": "depart at 00:01 from Stop 1 heading Stop 3 exclude Stop 2."
+    },
+    {
+        "id": "3g1",
+        "agencyId": "MMRI",
+        "from": "3g11",
+        "to": "3g16",
+        "time": "2014-01-01T00:01:00",
+        "timeType": "D",
+        "comment": "given an UNpreferred transfer from trip 1 to trip 2 at stop 3, depart at 00:01 from stop 1 heading to stop 6."
+    },
+    {
+        "id": "3g2",
+        "agencyId": "MMRI",
+        "from": "3g21",
+        "to": "3g26",
+        "time": "2014-01-01T00:01:00",
+        "timeType": "D",
+        "comment": "given an UNpreferred transfer from trip 1 to trip 2 at stop 4, depart at 00:01 from stop 1 heading to stop 6."
     }
 ]

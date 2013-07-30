@@ -26,13 +26,33 @@ class TestClass(TestBase):
             'numItineraries': 1,
         }
 
-        # If lat/lon use lat,lon otherwise use the provided stopid
+        # If lat/lon use lat,lon otherwise use the provided stopid (rewritten format from given 1a1 to expected MMRI_1a1)
         if type(test['to']) is dict:
             params['fromPlace'] = coords(test['from'])
             params['toPlace'] = coords(test['to'])
         else:
-            params['fromPlace'] = test['from']
-            params['toPlace'] = test['to']
+            params['fromPlace'] = '%s_%s' % (test['agencyId'], test['from'])
+            params['toPlace'] = '%s_%s' % (test['agencyId'], test['to'])
+
+        # if startingTransitTripId is set, set the startingTransitTripId param for onboard planning (rewritten format from given 2f|intercity to expected MMRI_2f|intercity)
+        if not test.get('startingTransitTripId') is None:
+            params['startingTransitTripId'] = '%s_%s' % (test['agencyId'], test['startingTransitTripId'])
+
+        # If preferLeastTransfers is set to true, set the transferPenalty param to a value that makes sense
+        if not test.get('preferLeastTransfers') is None:
+            params['transferPenalty'] = 60
+
+        # If preferredTravelTypes is set, add it as the only mode next to walk in the mode param
+        if not test.get('preferredTravelType') is None:
+            params['mode'] = 'WALK, %s' % test['preferredTravelType'].upper()
+
+        # If a bannedRoute is set, add it to the bannedRoutes param (rewritten format from given 3d|1 to expected MMRI_3d|1)
+        if not test.get('bannedRoute') is None:
+            params['bannedRoutes'] = '%s_%s' % (test['agencyId'], test['bannedRoute'])
+
+        # If a bannedStop is set, add it to the bannedStops param (rewritten format from given 3f2 to expected MMRI_3f2)
+        if not test.get('bannedStop') is None:
+            params['bannedStops'] = '%s_%s' % (test['agencyId'], test['bannedStop'])
 
         url = self.options.url + '?' + '&'.join('%s=%s' % (k, v) for k, v in params.items())
         return url
