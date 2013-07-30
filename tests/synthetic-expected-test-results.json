@@ -1,0 +1,29 @@
+[
+    {
+      "id": "1_a_1",
+      "departureTime": "2013-01-01T00:00:00",
+      "arrivalTime": "2013-01-01T00:06:00",
+      "duration": 6, // sec
+      "transfers": 2,
+      "legs": [
+        {
+          "departureTime": "2013-01-01T00:00:00",
+          "arrivalTime": "2013-01-01T00:02:00",
+          "departureStopId": "stop_1_a_1",
+          "arrivalStopId": "stop_1_a_2",
+        }
+        {
+          "departureTime": "2013-01-01T00:03:00",
+          "arrivalTime": "2013-01-01T00:04:00",
+          "departureStopId": "stop_1_a_3",
+          "arrivalStopId": "stop_1_a_4",
+        }
+        {
+          "departureTime": "2013-01-01T00:05:00",
+          "arrivalTime": "2013-01-01T00:06:00",
+          "departureStopId": "stop_1_a_5",
+          "arrivalStopId": "stop_1_a_6",
+        }
+      ]
+    }
+]

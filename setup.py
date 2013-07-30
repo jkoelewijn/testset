@@ -16,7 +16,7 @@ setup(
     platforms = ['all'],
     entry_points = {
         'console_scripts': [
-            'test-otp = mmri.test_otp:main',
+            'mmri-test-runner = mmri.test_runner:main',
         ],
     },
     install_requires = [

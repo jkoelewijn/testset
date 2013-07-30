@@ -38,7 +38,7 @@ The tests are located at :file:`tests/static-tests.json`. Use the
 
 For example::
 
-    test-otp -u http://opentripplanner.nl/opentripplanner-api-webapp/ws/plan tests/static-tests.json output.json
+    mmri-test-runner -p otp -u http://opentripplanner.nl/opentripplanner-api-webapp/ws/plan tests/static-tests.json output.json
 
 .. _OpenTripPlanner: http://www.opentripplanner.org
 
@@ -123,16 +123,22 @@ A test result defines the following properties:
     The test identifier. Used to match test input.
 
 ``departureTime``
-    The date and time of departure.
+    The date and time of departure (in json datetime format).
 
 ``arrivalTime``
-    The date and time of arrival.
+    The date and time of arrival (in json datetime format).
 
 ``duration``
-    The total length of the trip.
+    The total length of the trip (in seconds).
 
 ``transfers``
     The number of transfers.
+
+``departureStopId``
+    The id of the departure stop without the agency prefix.
+
+``arrivalStopId``
+    The id of the arrival stop without the agency prefix.
 
 ``legs``
     A list of trip legs, an object containing ``departureTime``, ``arrivalTime`` and ``line`` properties.

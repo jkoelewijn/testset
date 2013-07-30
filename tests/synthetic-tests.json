@@ -1,0 +1,34 @@
+[
+    {
+        "id": "1a1",
+        "from": "MMRI_1a1_depart",
+        "to": "MMRI_1a2_arrive",
+        "time": "2014-01-01T00:00:00",
+        "timeType": "D",
+        "comment": "All agencies and their published timetables including modalities bus, ferry, lightrail, metro, ferry and train given a departure time must be incorporatable in the journey planner. \n i. depart at 00:00 from stop 1 heading to stop 6."
+    },
+    {
+        "id": "1a1a",
+        "from": "MMRI_1a1",
+        "to": "MMRI_1a2",
+        "time": "2014-01-01T00:00:00",
+        "timeType": "D",
+        "comment": "All agencies and their published timetables including modalities bus, ferry, lightrail, metro, ferry and train given a departure time must be incorporatable in the journey planner. \n i. depart at 00:00 from stop 1 heading to stop 6."
+    },
+    {
+        "id": "1a2",
+        "from": "MMRI_1a1_depart",
+        "to": "MMRI_1a3_arrive",
+        "time": "2014-01-01T00:00:00",
+        "timeType": "D",
+        "comment": "All agencies and their published timetables including modalities bus, ferry, lightrail, metro, ferry and train given a departure time must be incorporatable in the journey planner. \n i. depart at 00:00 from stop 1 heading to stop 6."
+    },
+    {
+        "id": "1a2a",
+        "from": "MMRI_1a1",
+        "to": "MMRI_1a3",
+        "time": "2014-01-01T00:00:00",
+        "timeType": "D",
+        "comment": "All agencies and their published timetables including modalities bus, ferry, lightrail, metro, ferry and train given a departure time must be incorporatable in the journey planner. \n i. depart at 00:00 from stop 1 heading to stop 6."
+    }
+]

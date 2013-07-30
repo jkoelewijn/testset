@@ -1,6 +1,6 @@
 [
 	{
-		"id": 1,
+		"id": "1",
 		"from": {
 			"latitude": 51.93171172932908,
 			"longitude": 4.484078829788638,
@@ -16,7 +16,7 @@
 		"comment": "Three possible train trips"
 	},
 	{
-		"id": 2,
+		"id": "2",
 		"from": {
 			"latitude": 50.90163543215805,
 			"longitude": 5.8517506355830315,
@@ -32,7 +32,7 @@
 		"comment": "Too hard on OTP without precomputed stop"
 	},
 	{
-		"id": 3,
+		"id": "3",
 		"from": {
 			"latitude": 51.64580247357085,
 			"longitude": 4.858801954214757,
@@ -48,7 +48,7 @@
 		"comment": "Taking the bus is faster than taking the train"
 	},
 	{
-		"id": 4,
+		"id": "4",
 		"from": {
 			"latitude": 51.919776112183214,
 			"longitude": 4.525208290705168,
@@ -64,7 +64,7 @@
 		"comment": "Many different transit mode possibilities"
 	},
 	{
-		"id": 5,
+		"id": "5",
 		"from": {
 			"latitude": 52.09202778150251,
 			"longitude": 4.408993766169693,
@@ -80,7 +80,7 @@
 		"comment": "Planning drama :-)"
 	},
 	{
-		"id": 6,
+		"id": "6",
 		"from": {
 			"latitude": 50.85668456232952,
 			"longitude": 5.6643918685934445,
@@ -96,7 +96,7 @@
 		"comment": "Will I get home tonight?"
 	},
 	{
-		"id": 7,
+		"id": "7",
 		"from": {
 			"latitude": 52.09202778150251,
 			"longitude": 4.408993766169693,
@@ -112,7 +112,7 @@
 		"comment": ""
 	},
 	{
-		"id": 8,
+		"id": "8",
 		"from": {
 			"latitude": 52.12611812943665,
 			"longitude": 6.23942596975613,
@@ -128,7 +128,7 @@
 		"comment": "Many altervatives, including choice between train and bus between Rotterdam and Delft"
 	},
 	{
-		"id": 9,
+		"id": "9",
 		"from": {
 			"latitude": 52.06972,
 			"longitude": 4.3225,
@@ -144,7 +144,7 @@
 		"comment": "Tram is sometimes faster than train"
 	},
 	{
-		"id": 10,
+		"id": "10",
 		"from": {
 			"latitude": 52.135277,
 			"longitude": 5.0336113,
@@ -160,7 +160,7 @@
 		"comment": "Multiple transfer options; high chance of delay."
 	},
 	{
-		"id": 11,
+		"id": "11",
 		"from": {
 			"latitude": 52.08889,
 			"longitude": 5.1102777,
@@ -176,7 +176,7 @@
 		"comment": "Multiple buslines"
 	},
 	{
-		"id": 12,
+		"id": "12",
 		"from": {
 			"latitude": 52.09848846931021,
 			"longitude": 5.079098109360649,
