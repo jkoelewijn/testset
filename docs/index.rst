@@ -121,6 +121,9 @@ A testcase defines the following properties:
 ``bannedStop``
     The stop to ban during a trip, defined by the StopId
 
+``wheelchairAccessible``
+    Whether the trip should be wheelchairAccessible
+
 
 Test output is a JSON array containing objects representing test results. For example:
 

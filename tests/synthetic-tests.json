@@ -31,7 +31,7 @@
         "agencyId": "MMRI",
         "from": "1g1",
         "to": "1g2",
-        "time": "2014-01-01T00:03:00",
+        "time": "2014-01-02T00:03:00",
         "timeType": "D",
         "comment": "depart at 00:03 from stop 1 heading to stop 2"
     },
@@ -40,7 +40,7 @@
         "agencyId": "MMRI",
         "from": "1g1",
         "to": "1g2",
-        "time": "2014-01-01T00:04:00",
+        "time": "2014-01-02T00:04:00",
         "timeType": "A",
         "comment": "from stop 1 heading stop 2 arrive at 00:04"
     },
@@ -49,7 +49,7 @@
         "agencyId": "MMRI",
         "from": "1g1",
         "to": "1g2",
-        "time": "2014-01-01T00:03:00",
+        "time": "2014-01-03T00:03:00",
         "timeType": "D",
         "comment": "depart at 00:03 from stop 1 heading to stop 2"
     },
@@ -58,7 +58,7 @@
         "agencyId": "MMRI",
         "from": "1g1",
         "to": "1g2",
-        "time": "2014-01-01T00:04:00",
+        "time": "2014-01-03T00:04:00",
         "timeType": "A",
         "comment": "from stop 1 heading stop 2 arrive at 00:04"
     },
@@ -114,6 +114,7 @@
         "to": "2b2",
         "time": "2014-01-01T00:01:00",
         "timeType": "D",
+        "wheelchairAccessible": true,
         "comment": "depart at 00:01 from stop 1 heading to stop 2, wants x = 1"
     },
     {

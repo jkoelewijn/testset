@@ -34,19 +34,27 @@ class TestClass(TestBase):
             params['fromPlace'] = '%s_%s' % (test['agencyId'], test['from'])
             params['toPlace'] = '%s_%s' % (test['agencyId'], test['to'])
 
+        # if wheelchairAccessible is set, set the wheelchairAccessible param (true or false)
+        if not test.get('wheelchairAccessible') is None:
+            params['wheelchairAccessible'] = test['wheelchairAccessible']
+
         # if startingTransitTripId is set, set the startingTransitTripId param for onboard planning (rewritten format from given 2f|intercity to expected MMRI_2f|intercity)
+        # NB: This is untested, not sure wether this is the correct way to pass along on-board planning or that other params should be changed as well
         if not test.get('startingTransitTripId') is None:
             params['startingTransitTripId'] = '%s_%s' % (test['agencyId'], test['startingTransitTripId'])
 
         # If preferLeastTransfers is set to true, set the transferPenalty param to a value that makes sense
+        # NB: This transferPenalty is just picked at random, no idea wether it will actually make the accompanying test pass
         if not test.get('preferLeastTransfers') is None:
             params['transferPenalty'] = 60
 
         # If preferredTravelTypes is set, add it as the only mode next to walk in the mode param
+        # NB: Is this actually complying to the test? As we're just removing the ability to go by train, instead of increasing a preference. Any better API param we can set?
         if not test.get('preferredTravelType') is None:
             params['mode'] = 'WALK, %s' % test['preferredTravelType'].upper()
 
         # If a bannedRoute is set, add it to the bannedRoutes param (rewritten format from given 3d|1 to expected MMRI_3d|1)
+        # NB: Perhaps we should use unpreferredRoutes here?
         if not test.get('bannedRoute') is None:
             params['bannedRoutes'] = '%s_%s' % (test['agencyId'], test['bannedRoute'])
 

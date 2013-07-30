@@ -395,7 +395,7 @@ Depart & From & & To & Arrive \\
 \hline
 00:02 & Stop 4 & \walk & Stop 5 & 00:07 \\
 \hline
-00:08 & Stop 4 & \bus & Stop 6 & 00:09 \\
+00:08 & Stop 5 & \bus & Stop 6 & 00:09 \\
 \hline
 \end{tabular}
 }
@@ -410,7 +410,7 @@ Depart & From & & To & Arrive \\
 \hline
 00:02 & Stop 4 & \walk & Stop 5 & 00:07 \\
 \hline
-00:08 & Stop 4 & \bus & Stop 6 & 00:09 \\
+00:08 & Stop 5 & \bus & Stop 6 & 00:09 \\
 \hline
 \end{tabular}
 }
@@ -425,7 +425,7 @@ Depart & From & & To & Arrive \\
 \hline
 00:02 & Stop 4 & \walk & Stop 5 & 00:07 \\
 \hline
-00:08 & Stop 4 & \bus & Stop 6 & 00:09 \\
+00:08 & Stop 5 & \bus & Stop 6 & 00:09 \\
 \hline
 \end{tabular}
 }
@@ -538,13 +538,13 @@ The test will evaluate if the planner prioritises modaliy and least transfers ov
 \rowcolor{Gray}
 Depart & From & \hspace{0.4cm} & To & Arrive \\
 \hline
-00:01 & Stop 1 & \train & Stop 2 & 00:03 \\
+00:01 & Stop 1 & \train & Stop 2 & 00:02 \\
 \hline
-00:03 & Stop 1 & \train & Stop 2 & 00:04 \\
+00:03 & Stop 2 & \train & Stop 3 & 00:04 \\
 \hline
 \end{tabular}
 }
-\item
+\itemx
 {\scriptsize
 \begin{tabular}{p{.75cm} | p{3.0cm} c p{3.0cm} | p{.75cm} }
 \hline
@@ -738,7 +738,18 @@ Depart & From & \hspace{0.4cm} & To & Arrive \\
 \hline
 00:01 & Stop 1 & \train & Stop 3 & 00:02 \\
 \hline
-00:03 & Stop 3 & \train & Stop 4 & 00:05 \\
+00:03 & Stop 3 & \train & Stop 6 & 00:05 \\
+\hline
+\end{tabular}
+}
+\item
+{\scriptsize
+\begin{tabular}{p{.75cm} | p{3.0cm} c p{3.0cm} | p{.75cm} }
+\hline
+\rowcolor{Gray}
+Depart & From & \hspace{0.4cm} & To & Arrive \\
+\hline
+00:01 & Stop 1 & \train & Stop 4 & 00:03 \\
 \hline
 00:04 & Stop 4 & \train & Stop 6 & 00:05 \\
 \hline
@@ -751,9 +762,7 @@ Depart & From & \hspace{0.4cm} & To & Arrive \\
 \rowcolor{Gray}
 Depart & From & \hspace{0.4cm} & To & Arrive \\
 \hline
-00:01 & Stop 1 & \train & Stop 3 & 00:02 \\
-\hline
-00:02 & Stop 3 & \train & Stop 4 & 00:03 \\
+00:01 & Stop 1 & \train & Stop 4 & 00:03 \\
 \hline
 00:04 & Stop 4 & \train & Stop 6 & 00:05 \\
 \hline
@@ -766,32 +775,13 @@ Depart & From & \hspace{0.4cm} & To & Arrive \\
 \rowcolor{Gray}
 Depart & From & \hspace{0.4cm} & To & Arrive \\
 \hline
-00:01 & Stop 1 & \train & Stop 3 & 00:02 \\
-\hline
-00:02 & Stop 3 & \train & Stop 4 & 00:03 \\
-\hline
-00:04 & Stop 4 & \train & Stop 6 & 00:05 \\
-\hline
-\end{tabular}
-}
-\item
-{\scriptsize
-\begin{tabular}{p{.75cm} | p{3.0cm} c p{3.0cm} | p{.75cm} }
-\hline
-\rowcolor{Gray}
-Depart & From & \hspace{0.4cm} & To & Arrive \\
-\hline
-00:01 & Stop 1 & \train & Stop 3 & 00:02 \\
-\hline
-00:03 & Stop 3 & \train & Stop 4 & 00:04 \\
+00:01 & Stop 1 & \train & Stop 4 & 00:03 \\
 \hline
 00:04 & Stop 4 & \train & Stop 6 & 00:05 \\
 \hline
 \end{tabular}
 }
 \end{enumerate}
-
-\todo{Explain why you have added the intermediate stops.}
 
 \newpage
 
