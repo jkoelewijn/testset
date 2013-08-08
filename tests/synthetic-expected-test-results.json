@@ -1,612 +1,578 @@
 [
     {
-      "id": "1a1",
-      "departureTime": "2014-01-01T00:01:00",
-      "arrivalTime": "2014-01-01T00:06:00",
-      "duration": 300,
-      "transfers": 2,
-      "legs": [
-        {
-          "departureTime": "2014-01-01T00:01:00",
-          "arrivalTime": "2014-01-01T00:02:00",
-          "departureStopId": "1a1",
-          "arrivalStopId": "1a2"
-        },
-        {
-          "departureTime": "2014-01-01T00:03:00",
-          "arrivalTime": "2014-01-01T00:04:00",
-          "departureStopId": "1a3",
-          "arrivalStopId": "1a4"
-        },
-        {
-          "departureTime": "2014-01-01T00:05:00",
-          "arrivalTime": "2014-01-01T00:06:00",
-          "departureStopId": "1a5",
-          "arrivalStopId": "1a6"
-        }
-      ]
-    },
-
-    {
-      "id": "1g1",
-      "departureTime": "2014-01-01T00:03:00",
-      "arrivalTime": "2014-01-01T00:04:00",
-      "duration": 60,
-      "transfers": 0,
-      "legs": [
-        {
-          "departureTime": "2014-01-01T00:03:00",
-          "arrivalTime": "2014-01-01T00:04:00",
-          "departureStopId": "1g1",
-          "arrivalStopId": "1g2"
-        }
-      ]
-    },
-
-    {
-      "id": "1g2",
-      "departureTime": "2014-01-01T00:01:00",
-      "arrivalTime": "2014-01-01T00:02:00",
-      "duration": 60,
-      "transfers": 0,
-      "legs": [
-        {
-          "departureTime": "2014-01-01T00:01:00",
-          "arrivalTime": "2014-01-01T00:02:00",
-          "departureStopId": "1g1",
-          "arrivalStopId": "1g2"
-        }
-      ]
-    },
-
-    {
-      "id": "1g3",
-      "departureTime": "2014-01-03T00:01:00",
-      "arrivalTime": "2014-01-03T00:02:00",
-      "duration": 60,
-      "transfers": 0,
-      "legs": [
-        {
-          "departureTime": "2014-01-03T00:01:00",
-          "arrivalTime": "2014-01-03T00:02:00",
-          "departureStopId": "1g1",
-          "arrivalStopId": "1g2"
-        }
-      ]
-    },
-
-    {
-      "id": "1g4",
-      "departureTime": "2014-01-01T00:05:00",
-      "arrivalTime": "2014-01-01T00:06:00",
-      "duration": 60,
-      "transfers": 0,
-      "legs": [
-        {
-          "departureTime": "2014-01-01T00:05:00",
-          "arrivalTime": "2014-01-01T00:06:00",
-          "departureStopId": "1g1",
-          "arrivalStopId": "1g2"
-        }
-      ]
-    },
-
-    {
-      "id": "1g5",
-      "departureTime": "2014-01-03T00:03:00",
-      "arrivalTime": "2014-01-03T00:04:00",
-      "duration": 60,
-      "transfers": 0,
-      "legs": [
-        {
-          "departureTime": "2014-01-03T00:03:00",
-          "arrivalTime": "2014-01-03T00:04:00",
-          "departureStopId": "1g1",
-          "arrivalStopId": "1g2"
-        }
-      ]
-    },
-
-    {
-      "id": "1g6",
-      "departureTime": "2014-01-03T00:03:00",
-      "arrivalTime": "2014-01-03T00:04:00",
-      "duration": 60,
-      "transfers": 0,
-      "legs": [
-        {
-          "departureTime": "2014-01-03T00:03:00",
-          "arrivalTime": "2014-01-03T00:04:00",
-          "departureStopId": "1g1",
-          "arrivalStopId": "1g2"
-        }
-      ]
-    },
-
-
-
-
-
-    {
-      "id": "2a1",
-      "departureTime": "2014-01-01T00:01:00",
-      "arrivalTime": "2014-01-01T00:02:00",
-      "duration": 60,
-      "transfers": 0,
-      "legs": [
-        {
-          "departureTime": "2014-01-01T00:01:00",
-          "arrivalTime": "2014-01-01T00:02:00",
-          "departureStopId": "2a1",
-          "arrivalStopId": "2a2"
-        }
-      ]
+        "id": "1a1",
+        "departureTime": "2014-01-01T00:01:00",
+        "arrivalTime": "2014-01-01T00:06:00",
+        "duration": 300,
+        "transfers": 2,
+        "legs": [
+            {
+                "departureTime": "2014-01-01T00:01:00",
+                "arrivalTime": "2014-01-01T00:02:00",
+                "departureStopId": "1a1",
+                "arrivalStopId": "1a2"
+            },
+            {
+                "departureTime": "2014-01-01T00:03:00",
+                "arrivalTime": "2014-01-01T00:04:00",
+                "departureStopId": "1a3",
+                "arrivalStopId": "1a4"
+            },
+            {
+                "departureTime": "2014-01-01T00:05:00",
+                "arrivalTime": "2014-01-01T00:06:00",
+                "departureStopId": "1a5",
+                "arrivalStopId": "1a6"
+            }
+        ]
     },
     {
-      "id": "2a2",
-      "departureTime": "2014-01-01T00:05:00",
-      "arrivalTime": "2014-01-01T00:06:00",
-      "duration": 60,
-      "transfers": 0,
-      "legs": [
-        {
-          "departureTime": "2014-01-01T00:05:00",
-          "arrivalTime": "2014-01-01T00:06:00",
-          "departureStopId": "2a1",
-          "arrivalStopId": "2a2"
-        }
-      ]
+        "id": "1g1",
+        "departureTime": "2014-01-01T00:03:00",
+        "arrivalTime": "2014-01-01T00:04:00",
+        "duration": 60,
+        "transfers": 0,
+        "legs": [
+            {
+                "departureTime": "2014-01-01T00:03:00",
+                "arrivalTime": "2014-01-01T00:04:00",
+                "departureStopId": "1g1",
+                "arrivalStopId": "1g2"
+            }
+        ]
     },
     {
-      "id": "2a3",
-      "departureTime": "2014-01-01T00:01:00",
-      "arrivalTime": "2014-01-01T00:09:00",
-      "duration": 480,
-      "transfers": 1,
-      "legs": [
-        {
-          "departureTime": "2014-01-01T00:01:00",
-          "arrivalTime": "2014-01-01T00:02:00",
-          "departureStopId": "2a3",
-          "arrivalStopId": "2a4"
-        },
-        {
-          "departureTime": "2014-01-01T00:02:00",
-          "arrivalTime": "2014-01-01T00:07:00",
-          "departureStopId": "2a4",
-          "arrivalStopId": "2a5"
-        },
-        {
-          "departureTime": "2014-01-01T00:08:00",
-          "arrivalTime": "2014-01-01T00:09:00",
-          "departureStopId": "2a5",
-          "arrivalStopId": "2a6"
-        }
-      ]
+        "id": "1g2",
+        "departureTime": "2014-01-01T00:01:00",
+        "arrivalTime": "2014-01-01T00:02:00",
+        "duration": 60,
+        "transfers": 0,
+        "legs": [
+            {
+                "departureTime": "2014-01-01T00:01:00",
+                "arrivalTime": "2014-01-01T00:02:00",
+                "departureStopId": "1g1",
+                "arrivalStopId": "1g2"
+            }
+        ]
     },
     {
-      "id": "2a4",
-      "departureTime": "2014-01-01T00:02:00",
-      "arrivalTime": "2014-01-01T00:09:00",
-      "duration": 420,
-      "transfers": 1,
-      "legs": [
-        {
-          "departureTime": "2014-01-01T00:02:00",
-          "arrivalTime": "2014-01-01T00:03:00",
-          "departureStopId": "2a3",
-          "arrivalStopId": "2a4"
-        },
-        {
-          "departureTime": "2014-01-01T00:03:00",
-          "arrivalTime": "2014-01-01T00:08:00",
-          "departureStopId": "2a4",
-          "arrivalStopId": "2a5"
-        },
-        {
-          "departureTime": "2014-01-01T00:08:00",
-          "arrivalTime": "2014-01-01T00:09:00",
-          "departureStopId": "2a5",
-          "arrivalStopId": "2a6"
-        }
-      ]
+        "id": "1g3",
+        "departureTime": "2014-01-03T00:01:00",
+        "arrivalTime": "2014-01-03T00:02:00",
+        "duration": 60,
+        "transfers": 0,
+        "legs": [
+            {
+                "departureTime": "2014-01-03T00:01:00",
+                "arrivalTime": "2014-01-03T00:02:00",
+                "departureStopId": "1g1",
+                "arrivalStopId": "1g2"
+            }
+        ]
     },
     {
-      "id": "2a5",
-      "departureTime": "2014-01-01T00:02:00",
-      "arrivalTime": "2014-01-01T00:09:00",
-      "duration": 420,
-      "transfers": 1,
-      "legs": [
-        {
-          "departureTime": "2014-01-01T00:02:00",
-          "arrivalTime": "2014-01-01T00:03:00",
-          "departureStopId": "2a3",
-          "arrivalStopId": "2a4"
-        },
-        {
-          "departureTime": "2014-01-01T00:03:00",
-          "arrivalTime": "2014-01-01T00:08:00",
-          "departureStopId": "2a4",
-          "arrivalStopId": "2a5"
-        },
-        {
-          "departureTime": "2014-01-01T00:08:00",
-          "arrivalTime": "2014-01-01T00:09:00",
-          "departureStopId": "2a5",
-          "arrivalStopId": "2a6"
-        }
-      ]
+        "id": "1g4",
+        "departureTime": "2014-01-01T00:05:00",
+        "arrivalTime": "2014-01-01T00:06:00",
+        "duration": 60,
+        "transfers": 0,
+        "legs": [
+            {
+                "departureTime": "2014-01-01T00:05:00",
+                "arrivalTime": "2014-01-01T00:06:00",
+                "departureStopId": "1g1",
+                "arrivalStopId": "1g2"
+            }
+        ]
+    },
+    {
+        "id": "1g5",
+        "departureTime": "2014-01-03T00:03:00",
+        "arrivalTime": "2014-01-03T00:04:00",
+        "duration": 60,
+        "transfers": 0,
+        "legs": [
+            {
+                "departureTime": "2014-01-03T00:03:00",
+                "arrivalTime": "2014-01-03T00:04:00",
+                "departureStopId": "1g1",
+                "arrivalStopId": "1g2"
+            }
+        ]
+    },
+    {
+        "id": "1g6",
+        "departureTime": "2014-01-03T00:03:00",
+        "arrivalTime": "2014-01-03T00:04:00",
+        "duration": 60,
+        "transfers": 0,
+        "legs": [
+            {
+                "departureTime": "2014-01-03T00:03:00",
+                "arrivalTime": "2014-01-03T00:04:00",
+                "departureStopId": "1g1",
+                "arrivalStopId": "1g2"
+            }
+        ]
+    },
+    {
+        "id": "2a1",
+        "departureTime": "2014-01-01T00:01:00",
+        "arrivalTime": "2014-01-01T00:02:00",
+        "duration": 60,
+        "transfers": 0,
+        "legs": [
+            {
+                "departureTime": "2014-01-01T00:01:00",
+                "arrivalTime": "2014-01-01T00:02:00",
+                "departureStopId": "2a1",
+                "arrivalStopId": "2a2"
+            }
+        ]
+    },
+    {
+        "id": "2a2",
+        "departureTime": "2014-01-01T00:05:00",
+        "arrivalTime": "2014-01-01T00:06:00",
+        "duration": 60,
+        "transfers": 0,
+        "legs": [
+            {
+                "departureTime": "2014-01-01T00:05:00",
+                "arrivalTime": "2014-01-01T00:06:00",
+                "departureStopId": "2a1",
+                "arrivalStopId": "2a2"
+            }
+        ]
+    },
+    {
+        "id": "2a3",
+        "departureTime": "2014-01-01T00:01:00",
+        "arrivalTime": "2014-01-01T00:09:00",
+        "duration": 480,
+        "transfers": 1,
+        "legs": [
+            {
+                "departureTime": "2014-01-01T00:01:00",
+                "arrivalTime": "2014-01-01T00:02:00",
+                "departureStopId": "2a3",
+                "arrivalStopId": "2a4"
+            },
+            {
+                "departureTime": "2014-01-01T00:02:00",
+                "arrivalTime": "2014-01-01T00:07:00",
+                "departureStopId": "2a4",
+                "arrivalStopId": "2a5"
+            },
+            {
+                "departureTime": "2014-01-01T00:08:00",
+                "arrivalTime": "2014-01-01T00:09:00",
+                "departureStopId": "2a5",
+                "arrivalStopId": "2a6"
+            }
+        ]
+    },
+    {
+        "id": "2a4",
+        "departureTime": "2014-01-01T00:02:00",
+        "arrivalTime": "2014-01-01T00:09:00",
+        "duration": 420,
+        "transfers": 1,
+        "legs": [
+            {
+                "departureTime": "2014-01-01T00:02:00",
+                "arrivalTime": "2014-01-01T00:03:00",
+                "departureStopId": "2a3",
+                "arrivalStopId": "2a4"
+            },
+            {
+                "departureTime": "2014-01-01T00:03:00",
+                "arrivalTime": "2014-01-01T00:08:00",
+                "departureStopId": "2a4",
+                "arrivalStopId": "2a5"
+            },
+            {
+                "departureTime": "2014-01-01T00:08:00",
+                "arrivalTime": "2014-01-01T00:09:00",
+                "departureStopId": "2a5",
+                "arrivalStopId": "2a6"
+            }
+        ]
+    },
+    {
+        "id": "2a5",
+        "departureTime": "2014-01-01T00:02:00",
+        "arrivalTime": "2014-01-01T00:09:00",
+        "duration": 420,
+        "transfers": 1,
+        "legs": [
+            {
+                "departureTime": "2014-01-01T00:02:00",
+                "arrivalTime": "2014-01-01T00:03:00",
+                "departureStopId": "2a3",
+                "arrivalStopId": "2a4"
+            },
+            {
+                "departureTime": "2014-01-01T00:03:00",
+                "arrivalTime": "2014-01-01T00:08:00",
+                "departureStopId": "2a4",
+                "arrivalStopId": "2a5"
+            },
+            {
+                "departureTime": "2014-01-01T00:08:00",
+                "arrivalTime": "2014-01-01T00:09:00",
+                "departureStopId": "2a5",
+                "arrivalStopId": "2a6"
+            }
+        ]
+    },
+    {
+        "id": "2b1",
+        "departureTime": "2014-01-01T00:03:00",
+        "arrivalTime": "2014-01-01T00:04:00",
+        "duration": 60,
+        "transfers": 0,
+        "legs": [
+            {
+                "departureTime": "2014-01-01T00:03:00",
+                "arrivalTime": "2014-01-01T00:04:00",
+                "departureStopId": "2b1",
+                "arrivalStopId": "2b2"
+            }
+        ]
+    },
+    {
+        "id": "2c1",
+        "departureTime": "2014-01-01T00:01:00",
+        "arrivalTime": "2014-01-01T00:04:00",
+        "duration": 180,
+        "transfers": 1,
+        "legs": [
+            {
+                "departureTime": "2014-01-01T00:01:00",
+                "arrivalTime": "2014-01-01T00:02:00",
+                "departureStopId": "2c1",
+                "arrivalStopId": "2c2"
+            },
+            {
+                "departureTime": "2014-01-01T00:03:00",
+                "arrivalTime": "2014-01-01T00:04:00",
+                "departureStopId": "2c2",
+                "arrivalStopId": "2c3"
+            }
+        ]
+    },
+    {
+        "id": "2c2",
+        "departureTime": "2014-01-01T00:01:00",
+        "arrivalTime": "2014-01-01T00:07:00",
+        "duration": 360,
+        "transfers": 1,
+        "legs": [
+            {
+                "departureTime": "2014-01-01T00:01:00",
+                "arrivalTime": "2014-01-01T00:02:00",
+                "departureStopId": "2c1",
+                "arrivalStopId": "2c4"
+            },
+            {
+                "departureTime": "2014-01-01T00:02:00",
+                "arrivalTime": "2014-01-01T00:06:00",
+                "departureStopId": "2c4",
+                "arrivalStopId": "2c5"
+            },
+            {
+                "departureTime": "2014-01-01T00:06:00",
+                "arrivalTime": "2014-01-01T00:07:00",
+                "departureStopId": "2c5",
+                "arrivalStopId": "2c3"
+            }
+        ]
+    },
+    {
+        "id": "2c3",
+        "departureTime": "2014-01-01T00:01:00",
+        "arrivalTime": "2014-01-01T00:07:00",
+        "duration": 360,
+        "transfers": 1,
+        "legs": [
+            {
+                "departureTime": "2014-01-01T00:01:00",
+                "arrivalTime": "2014-01-01T00:02:00",
+                "departureStopId": "2c1",
+                "arrivalStopId": "2c4"
+            },
+            {
+                "departureTime": "2014-01-01T00:02:00",
+                "arrivalTime": "2014-01-01T00:06:00",
+                "departureStopId": "2c4",
+                "arrivalStopId": "2c5"
+            },
+            {
+                "departureTime": "2014-01-01T00:06:00",
+                "arrivalTime": "2014-01-01T00:07:00",
+                "departureStopId": "2c5",
+                "arrivalStopId": "2c3"
+            }
+        ]
+    },
+    {
+        "id": "2d1",
+        "departureTime": "2014-01-01T00:01:00",
+        "arrivalTime": "2014-01-01T00:04:00",
+        "duration": 180,
+        "transfers": 1,
+        "legs": [
+            {
+                "departureTime": "2014-01-01T00:01:00",
+                "arrivalTime": "2014-01-01T00:03:00",
+                "departureStopId": "2d1",
+                "arrivalStopId": "2d4"
+            },
+            {
+                "departureTime": "2014-01-01T00:03:00",
+                "arrivalTime": "2014-01-01T00:04:00",
+                "departureStopId": "2d3",
+                "arrivalStopId": "2d4"
+            }
+        ]
+    },
+    {
+        "id": "2e1",
+        "departureTime": "2014-01-01T00:01:00",
+        "arrivalTime": "2014-01-01T00:05:00",
+        "duration": 240,
+        "transfers": 1,
+        "legs": [
+            {
+                "departureTime": "2014-01-01T00:01:00",
+                "arrivalTime": "2014-01-01T00:02:00",
+                "departureStopId": "2e11",
+                "arrivalStopId": "2e13"
+            },
+            {
+                "departureTime": "2014-01-01T00:03:00",
+                "arrivalTime": "2014-01-01T00:05:00",
+                "departureStopId": "2e13",
+                "arrivalStopId": "2e16"
+            }
+        ]
+    },
+    {
+        "id": "2e2",
+        "departureTime": "2014-01-01T00:01:00",
+        "arrivalTime": "2014-01-01T00:05:00",
+        "duration": 240,
+        "transfers": 1,
+        "legs": [
+            {
+                "departureTime": "2014-01-01T00:01:00",
+                "arrivalTime": "2014-01-01T00:03:00",
+                "departureStopId": "2e21",
+                "arrivalStopId": "2e24"
+            },
+            {
+                "departureTime": "2014-01-01T00:04:00",
+                "arrivalTime": "2014-01-01T00:05:00",
+                "departureStopId": "2e24",
+                "arrivalStopId": "2e26"
+            }
+        ]
+    },
+    {
+        "id": "2e3",
+        "departureTime": "2014-01-01T00:01:00",
+        "arrivalTime": "2014-01-01T00:05:00",
+        "duration": 240,
+        "transfers": 1,
+        "legs": [
+            {
+                "departureTime": "2014-01-01T00:01:00",
+                "arrivalTime": "2014-01-01T00:02:00",
+                "departureStopId": "2e11",
+                "arrivalStopId": "2e13"
+            },
+            {
+                "departureTime": "2014-01-01T00:03:00",
+                "arrivalTime": "2014-01-01T00:05:00",
+                "departureStopId": "2e13",
+                "arrivalStopId": "2e16"
+            }
+        ]
+    },
+    {
+        "id": "2e4",
+        "departureTime": "2014-01-01T00:01:00",
+        "arrivalTime": "2014-01-01T00:05:00",
+        "duration": 240,
+        "transfers": 1,
+        "legs": [
+            {
+                "departureTime": "2014-01-01T00:01:00",
+                "arrivalTime": "2014-01-01T00:03:00",
+                "departureStopId": "2e21",
+                "arrivalStopId": "2e24"
+            },
+            {
+                "departureTime": "2014-01-01T00:04:00",
+                "arrivalTime": "2014-01-01T00:05:00",
+                "departureStopId": "2e24",
+                "arrivalStopId": "2e26"
+            }
+        ]
+    },
+    {
+        "id": "2f1",
+        "departureTime": "2014-01-01T00:01:00",
+        "arrivalTime": "2014-01-01T00:09:00",
+        "duration": 480,
+        "transfers": 1,
+        "legs": [
+            {
+                "departureTime": "2014-01-01T00:01:00",
+                "arrivalTime": "2014-01-01T00:04:00",
+                "departureStopId": "2f1",
+                "arrivalStopId": "2f3"
+            },
+            {
+                "departureTime": "2014-01-01T00:06:00",
+                "arrivalTime": "2014-01-01T00:09:00",
+                "departureStopId": "2f3",
+                "arrivalStopId": "2f2"
+            }
+        ]
+    },
+    {
+        "id": "3b1",
+        "departureTime": "2014-01-01T00:10:00",
+        "arrivalTime": "2014-01-01T00:11:00",
+        "duration": 60,
+        "transfers": 0,
+        "legs": [
+            {
+                "departureTime": "2014-01-01T00:10:00",
+                "arrivalTime": "2014-01-01T00:11:00",
+                "departureStopId": "3b1",
+                "arrivalStopId": "3b2"
+            }
+        ]
+    },
+    {
+        "id": "3b2",
+        "departureTime": "2014-01-01T00:10:00",
+        "arrivalTime": "2014-01-01T00:11:00",
+        "duration": 60,
+        "transfers": 0,
+        "legs": [
+            {
+                "departureTime": "2014-01-01T00:10:00",
+                "arrivalTime": "2014-01-01T00:11:00",
+                "departureStopId": "3b1",
+                "arrivalStopId": "3b2"
+            }
+        ]
+    },
+    {
+        "id": "3c1",
+        "departureTime": "2014-01-01T00:04:00",
+        "arrivalTime": "2014-01-01T00:05:00",
+        "duration": 60,
+        "transfers": 0,
+        "legs": [
+            {
+                "departureTime": "2014-01-01T00:04:00",
+                "arrivalTime": "2014-01-01T00:05:00",
+                "departureStopId": "3c2",
+                "arrivalStopId": "3c3"
+            }
+        ]
+    },
+    {
+        "id": "3d1",
+        "departureTime": "2014-01-01T00:01:00",
+        "arrivalTime": "2014-01-01T00:03:00",
+        "duration": 120,
+        "transfers": 0,
+        "legs": [
+            {
+                "departureTime": "2014-01-01T00:01:00",
+                "arrivalTime": "2014-01-01T00:03:00",
+                "departureStopId": "3d1",
+                "arrivalStopId": "3d2"
+            }
+        ]
+    },
+    {
+        "id": "3e1",
+        "departureTime": "2014-01-01T00:03:00",
+        "arrivalTime": "2014-01-01T00:04:00",
+        "duration": 60,
+        "transfers": 0,
+        "legs": [
+            {
+                "departureTime": "2014-01-01T00:03:00",
+                "arrivalTime": "2014-01-01T00:04:00",
+                "departureStopId": "3e1",
+                "arrivalStopId": "3e2"
+            }
+        ]
+    },
+    {
+        "id": "3f1",
+        "departureTime": "2014-01-01T00:01:00",
+        "arrivalTime": "2014-01-01T00:04:00",
+        "duration": 180,
+        "transfers": 0,
+        "legs": [
+            {
+                "departureTime": "2014-01-01T00:01:00",
+                "arrivalTime": "2014-01-01T00:04:00",
+                "departureStopId": "3f1",
+                "arrivalStopId": "3f3"
+            }
+        ]
+    },
+    {
+        "id": "3g1",
+        "departureTime": "2014-01-01T00:01:00",
+        "arrivalTime": "2014-01-01T00:04:00",
+        "duration": 180,
+        "transfers": 1,
+        "legs": [
+            {
+                "departureTime": "2014-01-01T00:01:00",
+                "arrivalTime": "2014-01-01T00:03:00",
+                "departureStopId": "3g11",
+                "arrivalStopId": "3g14"
+            },
+            {
+                "departureTime": "2014-01-01T00:04:00",
+                "arrivalTime": "2014-01-01T00:05:00",
+                "departureStopId": "3g14",
+                "arrivalStopId": "3g16"
+            }
+        ]
+    },
+    {
+        "id": "3g2",
+        "departureTime": "2014-01-01T00:01:00",
+        "arrivalTime": "2014-01-01T00:04:00",
+        "duration": 180,
+        "transfers": 1,
+        "legs": [
+            {
+                "departureTime": "2014-01-01T00:01:00",
+                "arrivalTime": "2014-01-01T00:02:00",
+                "departureStopId": "3g21",
+                "arrivalStopId": "3g23"
+            },
+            {
+                "departureTime": "2014-01-01T00:03:00",
+                "arrivalTime": "2014-01-01T00:04:00",
+                "departureStopId": "3g23",
+                "arrivalStopId": "3g26"
+            }
+        ]
     }
-
-
-
-
-    {
-      "id": "2b1",
-      "departureTime": "2014-01-01T00:03:00",
-      "arrivalTime": "2014-01-01T00:04:00",
-      "duration": 60,
-      "transfers": 0,
-      "legs": [
-        {
-          "departureTime": "2014-01-01T00:03:00",
-          "arrivalTime": "2014-01-01T00:04:00",
-          "departureStopId": "2b1",
-          "arrivalStopId": "2b2"
-        }
-      ]
-    },
-
-
-
-    {
-      "id": "2c1",
-      "departureTime": "2014-01-01T00:01:00",
-      "arrivalTime": "2014-01-01T00:04:00",
-      "duration": 180,
-      "transfers": 1,
-      "legs": [
-        {
-          "departureTime": "2014-01-01T00:01:00",
-          "arrivalTime": "2014-01-01T00:02:00",
-          "departureStopId": "2c1",
-          "arrivalStopId": "2c2"
-        },
-        {
-          "departureTime": "2014-01-01T00:03:00",
-          "arrivalTime": "2014-01-01T00:04:00",
-          "departureStopId": "2c2",
-          "arrivalStopId": "2c3"
-        }
-      ]
-    },
-    {
-      "id": "2c2",
-      "departureTime": "2014-01-01T00:01:00",
-      "arrivalTime": "2014-01-01T00:07:00",
-      "duration": 360,
-      "transfers": 1,
-      "legs": [
-        {
-          "departureTime": "2014-01-01T00:01:00",
-          "arrivalTime": "2014-01-01T00:02:00",
-          "departureStopId": "2c1",
-          "arrivalStopId": "2c4"
-        },
-        {
-          "departureTime": "2014-01-01T00:02:00",
-          "arrivalTime": "2014-01-01T00:06:00",
-          "departureStopId": "2c4",
-          "arrivalStopId": "2c5"
-        },
-        {
-          "departureTime": "2014-01-01T00:06:00",
-          "arrivalTime": "2014-01-01T00:07:00",
-          "departureStopId": "2c5",
-          "arrivalStopId": "2c3"
-        }
-      ]
-    },
-    {
-      "id": "2c3",
-      "departureTime": "2014-01-01T00:01:00",
-      "arrivalTime": "2014-01-01T00:07:00",
-      "duration": 360,
-      "transfers": 1,
-      "legs": [
-        {
-          "departureTime": "2014-01-01T00:01:00",
-          "arrivalTime": "2014-01-01T00:02:00",
-          "departureStopId": "2c1",
-          "arrivalStopId": "2c4"
-        },
-        {
-          "departureTime": "2014-01-01T00:02:00",
-          "arrivalTime": "2014-01-01T00:06:00",
-          "departureStopId": "2c4",
-          "arrivalStopId": "2c5"
-        },
-        {
-          "departureTime": "2014-01-01T00:06:00",
-          "arrivalTime": "2014-01-01T00:07:00",
-          "departureStopId": "2c5",
-          "arrivalStopId": "2c3"
-        }
-      ]
-    },
-    {
-      "id": "2d1",
-      "departureTime": "2014-01-01T00:01:00",
-      "arrivalTime": "2014-01-01T00:04:00",
-      "duration": 180,
-      "transfers": 1,
-      "legs": [
-        {
-          "departureTime": "2014-01-01T00:01:00",
-          "arrivalTime": "2014-01-01T00:03:00",
-          "departureStopId": "2d1",
-          "arrivalStopId": "2d4"
-        },
-        {
-          "departureTime": "2014-01-01T00:03:00",
-          "arrivalTime": "2014-01-01T00:04:00",
-          "departureStopId": "2d3",
-          "arrivalStopId": "2d4"
-        }
-      ]
-    },
-
-    {
-      "id": "2e1",
-      "departureTime": "2014-01-01T00:01:00",
-      "arrivalTime": "2014-01-01T00:05:00",
-      "duration": 240,
-      "transfers": 1,
-      "legs": [
-        {
-          "departureTime": "2014-01-01T00:01:00",
-          "arrivalTime": "2014-01-01T00:02:00",
-          "departureStopId": "2e11",
-          "arrivalStopId": "2e13"
-        },
-        {
-          "departureTime": "2014-01-01T00:03:00",
-          "arrivalTime": "2014-01-01T00:05:00",
-          "departureStopId": "2e13",
-          "arrivalStopId": "2e16"
-        }
-      ]
-    },
-
-    {
-      "id": "2e2",
-      "departureTime": "2014-01-01T00:01:00",
-      "arrivalTime": "2014-01-01T00:05:00",
-      "duration": 240,
-      "transfers": 1,
-      "legs": [
-        {
-          "departureTime": "2014-01-01T00:01:00",
-          "arrivalTime": "2014-01-01T00:03:00",
-          "departureStopId": "2e21",
-          "arrivalStopId": "2e24"
-        },
-        {
-          "departureTime": "2014-01-01T00:04:00",
-          "arrivalTime": "2014-01-01T00:05:00",
-          "departureStopId": "2e24",
-          "arrivalStopId": "2e26"
-        }
-      ]
-    },
-
-    {
-      "id": "2e3",
-      "departureTime": "2014-01-01T00:01:00",
-      "arrivalTime": "2014-01-01T00:05:00",
-      "duration": 240,
-      "transfers": 1,
-      "legs": [
-        {
-          "departureTime": "2014-01-01T00:01:00",
-          "arrivalTime": "2014-01-01T00:02:00",
-          "departureStopId": "2e11",
-          "arrivalStopId": "2e13"
-        },
-        {
-          "departureTime": "2014-01-01T00:03:00",
-          "arrivalTime": "2014-01-01T00:05:00",
-          "departureStopId": "2e13",
-          "arrivalStopId": "2e16"
-        }
-      ]
-    },
-
-    {
-      "id": "2e4",
-      "departureTime": "2014-01-01T00:01:00",
-      "arrivalTime": "2014-01-01T00:05:00",
-      "duration": 240,
-      "transfers": 1,
-      "legs": [
-        {
-          "departureTime": "2014-01-01T00:01:00",
-          "arrivalTime": "2014-01-01T00:03:00",
-          "departureStopId": "2e21",
-          "arrivalStopId": "2e24"
-        },
-        {
-          "departureTime": "2014-01-01T00:04:00",
-          "arrivalTime": "2014-01-01T00:05:00",
-          "departureStopId": "2e24",
-          "arrivalStopId": "2e26"
-        }
-      ]
-    },
-
-    {
-      "id": "2f1",
-      "departureTime": "2014-01-01T00:01:00",
-      "arrivalTime": "2014-01-01T00:09:00",
-      "duration": 480,
-      "transfers": 1,
-      "legs": [
-        {
-          "departureTime": "2014-01-01T00:01:00",
-          "arrivalTime": "2014-01-01T00:04:00",
-          "departureStopId": "2f1",
-          "arrivalStopId": "2f3"
-        },
-        {
-          "departureTime": "2014-01-01T00:06:00",
-          "arrivalTime": "2014-01-01T00:09:00",
-          "departureStopId": "2f3",
-          "arrivalStopId": "2f2"
-        }
-      ]
-    },
-
-    {
-      "id": "3b1",
-      "departureTime": "2014-01-01T00:10:00",
-      "arrivalTime": "2014-01-01T00:11:00",
-      "duration": 60,
-      "transfers": 0,
-      "legs": [
-        {
-          "departureTime": "2014-01-01T00:10:00",
-          "arrivalTime": "2014-01-01T00:11:00",
-          "departureStopId": "3b1",
-          "arrivalStopId": "3b2"
-        }
-      ]
-    },
-
-
-    {
-      "id": "3b2",
-      "departureTime": "2014-01-01T00:10:00",
-      "arrivalTime": "2014-01-01T00:11:00",
-      "duration": 60,
-      "transfers": 0,
-      "legs": [
-        {
-          "departureTime": "2014-01-01T00:10:00",
-          "arrivalTime": "2014-01-01T00:11:00",
-          "departureStopId": "3b1",
-          "arrivalStopId": "3b2"
-        }
-      ]
-    },
-
-    {
-      "id": "3c1",
-      "departureTime": "2014-01-01T00:04:00",
-      "arrivalTime": "2014-01-01T00:05:00",
-      "duration": 60,
-      "transfers": 0,
-      "legs": [
-        {
-          "departureTime": "2014-01-01T00:04:00",
-          "arrivalTime": "2014-01-01T00:05:00",
-          "departureStopId": "3c2",
-          "arrivalStopId": "3c3"
-        }
-      ]
-    },
-
-    {
-      "id": "3d1",
-      "departureTime": "2014-01-01T00:01:00",
-      "arrivalTime": "2014-01-01T00:03:00",
-      "duration": 120,
-      "transfers": 0,
-      "legs": [
-        {
-          "departureTime": "2014-01-01T00:01:00",
-          "arrivalTime": "2014-01-01T00:03:00",
-          "departureStopId": "3d1",
-          "arrivalStopId": "3d2"
-        }
-      ]
-    },
-
-    {
-      "id": "3e1",
-      "departureTime": "2014-01-01T00:03:00",
-      "arrivalTime": "2014-01-01T00:04:00",
-      "duration": 60,
-      "transfers": 0,
-      "legs": [
-        {
-          "departureTime": "2014-01-01T00:03:00",
-          "arrivalTime": "2014-01-01T00:04:00",
-          "departureStopId": "3e1",
-          "arrivalStopId": "3e2"
-        }
-      ]
-    },
-
-    {
-      "id": "3f1",
-      "departureTime": "2014-01-01T00:01:00",
-      "arrivalTime": "2014-01-01T00:04:00",
-      "duration": 180,
-      "transfers": 0,
-      "legs": [
-        {
-          "departureTime": "2014-01-01T00:01:00",
-          "arrivalTime": "2014-01-01T00:04:00",
-          "departureStopId": "3f1",
-          "arrivalStopId": "3f3"
-        }
-      ]
-    },
-
-    {
-      "id": "3g1",
-      "departureTime": "2014-01-01T00:01:00",
-      "arrivalTime": "2014-01-01T00:04:00",
-      "duration": 180,
-      "transfers": 1,
-      "legs": [
-        {
-          "departureTime": "2014-01-01T00:01:00",
-          "arrivalTime": "2014-01-01T00:03:00",
-          "departureStopId": "3g11",
-          "arrivalStopId": "3g14"
-        },
-        {
-          "departureTime": "2014-01-01T00:04:00",
-          "arrivalTime": "2014-01-01T00:05:00",
-          "departureStopId": "3g14",
-          "arrivalStopId": "3g16"
-        }
-      ]
-    },
-
-    {
-      "id": "3g2",
-      "departureTime": "2014-01-01T00:01:00",
-      "arrivalTime": "2014-01-01T00:04:00",
-      "duration": 180,
-      "transfers": 1,
-      "legs": [
-        {
-          "departureTime": "2014-01-01T00:01:00",
-          "arrivalTime": "2014-01-01T00:02:00",
-          "departureStopId": "3g21",
-          "arrivalStopId": "3g23"
-        },
-        {
-          "departureTime": "2014-01-01T00:03:00",
-          "arrivalTime": "2014-01-01T00:04:00",
-          "departureStopId": "3g23",
-          "arrivalStopId": "3g26"
-        }
-      ]
-    },
-
-
 ]

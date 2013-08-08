@@ -4,8 +4,9 @@
 
 import argparse
 import logging
+from color_logging import ColoredFormatter
 
-logger = logging.getLogger('test-otp')
+logger = logging.getLogger(__name__)
 
 
 # Command line handling
@@ -24,17 +25,32 @@ def parse_args(args=None):
             help='the OpenTripPlanner URL')
     parser.add_argument('-d', '--debug', action='store_true',
             help='show debugging output')
+    parser.add_argument('-s', '--stop_on_error', action='store_true',
+            help='stop when test errors')
+
     return parser.parse_args(args)
 
 
 def main():
     args = parse_args()
 
-    logging.basicConfig(format='%(message)s', level=logging.WARN)
+
+    SUCCESS_LEVEL_NUM = 9 
+    logging.addLevelName(SUCCESS_LEVEL_NUM, "SUCCESS")
+    def success(self, message, *args, **kws):
+        # Yes, logger takes its '*args' as 'args'.
+        self._log(SUCCESS_LEVEL_NUM, message, args, **kws) 
+    logging.Logger.success = success
+
+
     logger.setLevel(logging.DEBUG if args.debug else logging.INFO)
+    console = logging.StreamHandler()
+    console.setFormatter(ColoredFormatter('%(message)s'))
+    # console.setFormatter(ColoredFormatter('%(name)s: %(message)s (%(filename)s:%(lineno)d)'))
+    logger.addHandler(console)
 
     provider = __import__("test_%s" % args.provider)
-    test_class = provider.TestClass(args)
+    test_class = provider.TestClass(args, logger=logger)
     test_class.run_tests()
 
 

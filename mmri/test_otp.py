@@ -1,6 +1,7 @@
 # # Test OpenTripPlanner
-from datetime import datetime
+import urllib
 
+from datetime import datetime
 from test_base import TestBase
 
 
@@ -10,7 +11,7 @@ class TestClass(TestBase):
         super(TestClass, self).__init__(*args, **kwargs)
 
         if not self.options.url:
-            self.options.url = 'http://localhost:8080/opentripplanner-api-webapp/ws/plan'
+            self.options.url = 'http://localhost:8080/otp-rest-servlet/ws/plan'
 
     def build_url(self, test):
         time = datetime.strptime(test['time'], self.DATE_TIME_FORMAT)
@@ -51,7 +52,7 @@ class TestClass(TestBase):
         # If preferredTravelTypes is set, add it as the only mode next to walk in the mode param
         # NB: Is this actually complying to the test? As we're just removing the ability to go by train, instead of increasing a preference. Any better API param we can set?
         if not test.get('preferredTravelType') is None:
-            params['mode'] = 'WALK, %s' % test['preferredTravelType'].upper()
+            params['mode'] = 'WALK,%s' % test['preferredTravelType'].upper()
 
         # If a bannedRoute is set, add it to the bannedRoutes param (rewritten format from given 3d|1 to expected MMRI_3d|1)
         # NB: Perhaps we should use unpreferredRoutes here?
@@ -62,7 +63,7 @@ class TestClass(TestBase):
         if not test.get('bannedStop') is None:
             params['bannedStops'] = '%s_%s' % (test['agencyId'], test['bannedStop'])
 
-        url = self.options.url + '?' + '&'.join('%s=%s' % (k, v) for k, v in params.items())
+        url = self.options.url + '?%s' % urllib.urlencode(params)
         return url
 
     def parse_result(self, test, result):
