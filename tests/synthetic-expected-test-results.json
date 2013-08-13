@@ -174,15 +174,15 @@
         ]
     },
     {
-        "id": "2a4",
+        "id": "2a4_IS_WRONG",
         "departureTime": "2014-01-01T00:02:00",
         "arrivalTime": "2014-01-01T00:09:00",
         "duration": 420,
         "transfers": 1,
         "legs": [
             {
-                "departureTime": "2014-01-01T00:02:00",
-                "arrivalTime": "2014-01-01T00:03:00",
+                "departureTime": "2014-01-01T00:01:00",
+                "arrivalTime": "2014-01-01T00:02:00",
                 "departureStopId": "2a3",
                 "arrivalStopId": "2a4"
             },
@@ -208,14 +208,14 @@
         "transfers": 1,
         "legs": [
             {
-                "departureTime": "2014-01-01T00:02:00",
-                "arrivalTime": "2014-01-01T00:03:00",
+                "departureTime": "2014-01-01T00:01:00",
+                "arrivalTime": "2014-01-01T00:02:00",
                 "departureStopId": "2a3",
                 "arrivalStopId": "2a4"
             },
             {
-                "departureTime": "2014-01-01T00:03:00",
-                "arrivalTime": "2014-01-01T00:08:00",
+                "departureTime": "2014-01-01T00:02:00",
+                "arrivalTime": "2014-01-01T00:07:00",
                 "departureStopId": "2a4",
                 "arrivalStopId": "2a5"
             },
