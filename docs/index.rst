@@ -171,3 +171,16 @@ A test result defines the following properties:
 
 ``legs``
     A list of trip legs, an object containing ``departureTime``, ``arrivalTime`` and ``line`` properties.
+
+
+Generate the test gtfs file
+---------------------------
+
+Install graphserver from http://graphserver.github.io/graphserver/
+And install according to the "One-step Install" instructions
+
+.. code-block:: bash
+
+    cd data/gtfs
+    sh ../../scripts/update.sh
+    sh ../../scripts/merge.sh
