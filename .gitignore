@@ -23,9 +23,7 @@
 
 # GTFS Build
 /data/gtfs/results
-/data/gtfs/*.zip
-/data/gtfs/*.zip
-/data/gtfs/**/*.gtfsdb
+/data/gtfs/**/*.zip
 /data/gtfs/**/*.gtfsdb
 
 # Latex
