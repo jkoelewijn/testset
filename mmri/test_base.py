@@ -45,7 +45,7 @@ class TestBase(object):
                             test['from']['description'], test['from']['latitude'], test['from']['longitude'],
                             test['to']['description'], test['to']['latitude'], test['to']['longitude'])
             else:
-                self.logger.info("Test %s: from stop id: %s to stop id: %s", test['id'], test['from'], test['to'])
+                self.logger.info("Test %s: from stop id: %s to stop id: %s", test['id'], test.get('from', 'n/a'), test.get('to', 'n/a'))
 
             url = self.build_url(test)
             self.logger.debug("    Calling URL: %s", url)
@@ -128,7 +128,7 @@ class TestBase(object):
                     expected_value = leg.get(key)
                     if result_legs[idx].get(key) != expected_value:
                         success = False
-                        self.logger.error("    Values for key: %s are not equal: %s : %s" % (key, expected_value, result_legs[idx].get(key)))
+                        self.logger.error("    Values for key: %s are not equal expected: %s got: %s" % (key, expected_value, result_legs[idx].get(key)))
             else:
                 success = False
                 self.logger.error("    Leg not found in result: %s" % (json.dumps(leg),))
@@ -146,5 +146,5 @@ class TestBase(object):
             else:
                 if expected_value != result_value:
                     success = False
-                    print "Values for key: %s are not equal: %s : %s" % (key, expected_value, result_value)
+                    print "Values for key: %s are not equal expected: %s got: %s" % (key, expected_value, result_value)
         return success

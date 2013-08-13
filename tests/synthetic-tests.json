@@ -194,9 +194,8 @@
     {
         "id": "2f1",
         "agencyId": "MMRI",
-        "from": "2f1",
         "startingTransitTripId": "2f|intercity",
-        "to": "2f3",
+        "to": "2f2",
         "time": "2014-01-01T00:02:00",
         "timeType": "D",
         "comment": "depart from trip 1 heading stop 2."
@@ -254,7 +253,7 @@
         "to": "3f3",
         "time": "2014-01-01T00:01:00",
         "timeType": "D",
-        "bannedStop": "3f2",
+        "bannedStop": "MMRI_3f2",
         "comment": "depart at 00:01 from Stop 1 heading Stop 3 exclude Stop 2."
     },
     {

@@ -32,8 +32,10 @@ class TestClass(TestBase):
             params['fromPlace'] = coords(test['from'])
             params['toPlace'] = coords(test['to'])
         else:
-            params['fromPlace'] = '%s_%s' % (test['agencyId'], test['from'])
-            params['toPlace'] = '%s_%s' % (test['agencyId'], test['to'])
+            if test.get('from'):
+                params['fromPlace'] = '%s_%s' % (test['agencyId'], test['from'])
+            if test.get('to'):
+                params['toPlace'] = '%s_%s' % (test['agencyId'], test['to'])
 
         # if wheelchairAccessible is set, set the wheelchairAccessible param (true or false)
         if not test.get('wheelchairAccessible') is None:

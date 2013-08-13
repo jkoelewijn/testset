@@ -328,7 +328,7 @@
                 "departureTime": "2014-01-01T00:01:00",
                 "arrivalTime": "2014-01-01T00:03:00",
                 "departureStopId": "2d1",
-                "arrivalStopId": "2d4"
+                "arrivalStopId": "2d3"
             },
             {
                 "departureTime": "2014-01-01T00:03:00",
@@ -390,14 +390,14 @@
             {
                 "departureTime": "2014-01-01T00:01:00",
                 "arrivalTime": "2014-01-01T00:02:00",
-                "departureStopId": "2e11",
-                "arrivalStopId": "2e13"
+                "departureStopId": "2e31",
+                "arrivalStopId": "2e33"
             },
             {
                 "departureTime": "2014-01-01T00:03:00",
                 "arrivalTime": "2014-01-01T00:05:00",
-                "departureStopId": "2e13",
-                "arrivalStopId": "2e16"
+                "departureStopId": "2e33",
+                "arrivalStopId": "2e36"
             }
         ]
     },
@@ -411,14 +411,14 @@
             {
                 "departureTime": "2014-01-01T00:01:00",
                 "arrivalTime": "2014-01-01T00:03:00",
-                "departureStopId": "2e21",
-                "arrivalStopId": "2e24"
+                "departureStopId": "2e41",
+                "arrivalStopId": "2e44"
             },
             {
                 "departureTime": "2014-01-01T00:04:00",
                 "arrivalTime": "2014-01-01T00:05:00",
-                "departureStopId": "2e24",
-                "arrivalStopId": "2e26"
+                "departureStopId": "2e44",
+                "arrivalStopId": "2e46"
             }
         ]
     },
@@ -536,8 +536,8 @@
     {
         "id": "3g1",
         "departureTime": "2014-01-01T00:01:00",
-        "arrivalTime": "2014-01-01T00:04:00",
-        "duration": 180,
+        "arrivalTime": "2014-01-01T00:05:00",
+        "duration": 240,
         "transfers": 1,
         "legs": [
             {
@@ -557,8 +557,8 @@
     {
         "id": "3g2",
         "departureTime": "2014-01-01T00:01:00",
-        "arrivalTime": "2014-01-01T00:04:00",
-        "duration": 180,
+        "arrivalTime": "2014-01-01T00:05:00",
+        "duration": 240,
         "transfers": 1,
         "legs": [
             {
@@ -569,7 +569,7 @@
             },
             {
                 "departureTime": "2014-01-01T00:03:00",
-                "arrivalTime": "2014-01-01T00:04:00",
+                "arrivalTime": "2014-01-01T00:05:00",
                 "departureStopId": "3g23",
                 "arrivalStopId": "3g26"
             }
