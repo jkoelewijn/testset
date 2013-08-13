@@ -25,7 +25,7 @@ class TestClass(TestBase):
             'mode': 'WALK,TRANSIT',
             'walkSpeed': 1.389,
             'numItineraries': 1,
-            'disableRemainingWeightHeuristic': True
+            'disableRemainingWeightHeuristic': True,
         }
 
         # If lat/lon use lat,lon otherwise use the provided stopid (rewritten format from given 1a1 to expected MMRI_1a1)
@@ -40,7 +40,7 @@ class TestClass(TestBase):
 
         # if wheelchairAccessible is set, set the wheelchairAccessible param (true or false)
         if not test.get('wheelchairAccessible') is None:
-            params['wheelchairAccessible'] = test['wheelchairAccessible']
+            params['wheelchair'] = test['wheelchairAccessible']
 
         # if startingTransitTripId is set, set the startingTransitTripId param for onboard planning (rewritten format from given 2f|intercity to expected MMRI_2f|intercity)
         # NB: This is untested, not sure wether this is the correct way to pass along on-board planning or that other params should be changed as well
