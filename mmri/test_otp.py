@@ -25,6 +25,7 @@ class TestClass(TestBase):
             'mode': 'WALK,TRANSIT',
             'walkSpeed': 1.389,
             'numItineraries': 1,
+            'disableRemainingWeightHeuristic': True
         }
 
         # If lat/lon use lat,lon otherwise use the provided stopid (rewritten format from given 1a1 to expected MMRI_1a1)
