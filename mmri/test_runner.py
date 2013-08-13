@@ -13,6 +13,8 @@ logger = logging.getLogger(__name__)
 def parse_args(args=None):
     parser = argparse.ArgumentParser(
             description='Test OpenTripPlanner using planning data from a test file.')
+    parser.add_argument('-t', '--test', metavar='TEST',
+            help='the id of the test to run (default all tests are run)')
     parser.add_argument('-p', '--provider', metavar='PROVIDER', default='otp', choices=['otp'],
             help='the provider to run the tests for (default: otp)')
     parser.add_argument('input', metavar='INPUT', nargs='?', default='-',
@@ -51,7 +53,7 @@ def main():
 
     provider = __import__("test_%s" % args.provider)
     test_class = provider.TestClass(args, logger=logger)
-    test_class.run_tests()
+    test_class.run_tests(run_test_id=args.test)
 
 
 if __name__ == '__main__':

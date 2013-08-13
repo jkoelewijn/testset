@@ -23,7 +23,7 @@ class TestBase(object):
             self.logger = logging.getLogger('test-otp')
 
 
-    def run_tests(self):
+    def run_tests(self, run_test_id=None):
         infile = open(self.options.input,  'r') if self.options.input != '-' else sys.stdin
         expected_result_file = open(self.options.expected_result,  'r') if self.options.expected_result != '-' else None
         outfile = open(self.options.output, 'w', 1) if self.options.output != '-' else sys.stdout
@@ -33,10 +33,14 @@ class TestBase(object):
             expected_results = json.load(expected_result_file)
 
         for i, test in enumerate(tests):
+            if run_test_id and test['id'] != run_test_id:
+                continue
+
             if i > 0:
                 self.logger.info('\n')
                 self.logger.info('--------------------------------------------------------')
                 self.logger.info('\n')
+
 
             self.test_counter += 1
             # outfile.write(',\n' if i > 0 else '[\n')

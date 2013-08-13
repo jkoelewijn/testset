@@ -46,9 +46,9 @@ Running the static tests
 ------------------------
 
 The tests are located at :file:`tests/static-tests.json`. Use the
-:program:`test-otp` command to start the tests.
+:program:`mmri-test-runner` command to start the tests.
 
-.. program-output:: test-otp --help
+.. program-output:: mmri-test-runner --help
 
 For example::
 
