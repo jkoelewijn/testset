@@ -389,14 +389,14 @@
         "legs": [
             {
                 "departureTime": "2014-01-01T00:01:00",
-                "arrivalTime": "2014-01-01T00:02:00",
+                "arrivalTime": "2014-01-01T00:03:00",
                 "departureStopId": "2e31",
-                "arrivalStopId": "2e33"
+                "arrivalStopId": "2e34"
             },
             {
-                "departureTime": "2014-01-01T00:03:00",
+                "departureTime": "2014-01-01T00:04:00",
                 "arrivalTime": "2014-01-01T00:05:00",
-                "departureStopId": "2e33",
+                "departureStopId": "2e34",
                 "arrivalStopId": "2e36"
             }
         ]
@@ -410,14 +410,14 @@
         "legs": [
             {
                 "departureTime": "2014-01-01T00:01:00",
-                "arrivalTime": "2014-01-01T00:03:00",
+                "arrivalTime": "2014-01-01T00:02:00",
                 "departureStopId": "2e41",
-                "arrivalStopId": "2e44"
+                "arrivalStopId": "2e43"
             },
             {
-                "departureTime": "2014-01-01T00:04:00",
+                "departureTime": "2014-01-01T00:03:00",
                 "arrivalTime": "2014-01-01T00:05:00",
-                "departureStopId": "2e44",
+                "departureStopId": "2e43",
                 "arrivalStopId": "2e46"
             }
         ]
