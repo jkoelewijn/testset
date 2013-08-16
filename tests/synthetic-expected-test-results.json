@@ -268,7 +268,7 @@
         "departureTime": "2014-01-01T00:01:00",
         "arrivalTime": "2014-01-01T00:07:00",
         "duration": 360,
-        "transfers": 1,
+        "transfers": 0,
         "legs": [
             {
                 "departureTime": "2014-01-01T00:01:00",
@@ -295,7 +295,7 @@
         "departureTime": "2014-01-01T00:01:00",
         "arrivalTime": "2014-01-01T00:07:00",
         "duration": 360,
-        "transfers": 1,
+        "transfers": 0,
         "legs": [
             {
                 "departureTime": "2014-01-01T00:01:00",
