@@ -26,6 +26,10 @@ class TestClass(TestBase):
             'walkSpeed': 1.389,
             'numItineraries': 1,
             'disableRemainingWeightHeuristic': True,
+            'nonpreferredTransferPenalty': 30,
+            'otherThanPreferredRoutesPenalty': 0,
+            'walkBoardCost': 0,
+            'bikeBoardCost': 0,
         }
 
         # If lat/lon use lat,lon otherwise use the provided stopid (rewritten format from given 1a1 to expected MMRI_1a1)
