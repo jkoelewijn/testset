@@ -13,10 +13,10 @@ class TestBase(object):
         self.options = args
         self.stop_on_error = args.stop_on_error
         self.test_counter = 0
-        self.success_counter = 0
-        self.error_counter = 0
-        self.response_error_counter = 0
-        self.trip_not_possible_counter = 0
+        self.tests_success = []
+        self.tests_error = []
+        self.tests_response_error = []
+        self.tests_trip_not_possible = []
         if logger:
             self.logger = logger
         else:
@@ -58,8 +58,8 @@ class TestBase(object):
                 result = self.parse_result(test, response.json())
                 if result.get('error', '').startswith('Trip is not possible'):
                     self.logger.error('    Test failed: Trip not possible')
-                    self.error_counter += 1
-                    self.trip_not_possible_counter += 1
+                    self.tests_error.append(test['id'])
+                    self.tests_trip_not_possible.append(test['id'])
 
                     json.dump(result, outfile, indent=2, sort_keys=True)
                     if self.stop_on_error:
@@ -71,17 +71,17 @@ class TestBase(object):
                         test_result = self.compare_result(result, expected_result)
                         if test_result:
                             self.logger.success('    Test success')
-                            self.success_counter += 1
+                            self.tests_success.append(test['id'])
                         else:
                             self.logger.error('    Test failed')
-                            self.error_counter += 1
+                            self.tests_error.append(test['id'])
     
                             json.dump(result, outfile, indent=2, sort_keys=True)
                             if self.stop_on_error:
                                 return;
                     else:
                         self.logger.error('    Expeced result for test: %s not found' % result.get('id'))
-                        self.error_counter += 1
+                        self.tests_error.append(test['id'])
 
                         json.dump(result, outfile, indent=2, sort_keys=True)
                         if self.stop_on_error:
@@ -90,8 +90,8 @@ class TestBase(object):
                 # json.dump(result, outfile, indent=2, sort_keys=True)
             else:
                 self.logger.error('    Response for test %s failed' % str(test['id']))
-                self.error_counter += 1
-                self.response_error_counter += 1
+                self.tests_error.append(test['id'])
+                self.tests_response_error.append(test['id'])
                 if self.stop_on_error:
                     return;
 
@@ -101,10 +101,11 @@ class TestBase(object):
         if outfile is not sys.stdout: outfile.close()
         
         self.logger.info('\n\nCompleted %d tests' % (self.test_counter,))
-        self.logger.success('    Success: %d' % (self.success_counter,))
-        self.logger.error('    Error: %d' % (self.error_counter,))
-        self.logger.error('    Trip not possible Error: %d' % (self.trip_not_possible_counter,))
-        self.logger.error('    Response Error: %d' % (self.response_error_counter,))
+        self.logger.success('    %2d tests succeeding  %s' % (len(self.tests_success), ' '.join(self.tests_success)))
+        self.logger.error(  '    %2d tests in error    %s' % (len(self.tests_error),   ' '.join(self.tests_error)))
+        self.logger.error(  '    of which:')
+        self.logger.error(  '    %2d trip not possible %s' % (len(self.tests_trip_not_possible), ' '.join(self.tests_trip_not_possible)))
+        self.logger.error(  '    %2d response errors   %s' % (len(self.tests_response_error),    ' '.join(self.tests_response_error)))
 
     def jsonDateTime(self, timestamp):
         time = datetime.fromtimestamp(timestamp / 1000)  # milliseconds to seconds
@@ -132,7 +133,7 @@ class TestBase(object):
                     expected_value = leg.get(key)
                     if result_legs[idx].get(key) != expected_value:
                         success = False
-                        self.logger.error("    Values for key: %s are not equal expected: %s got: %s" % (key, expected_value, result_legs[idx].get(key)))
+                        self.logger.error("    Values for key: %s are not equal.\n    expected: %s \n         got: %s" % (key, expected_value, result_legs[idx].get(key)))
             else:
                 success = False
                 self.logger.error("    Leg not found in result: %s" % (json.dumps(leg),))
