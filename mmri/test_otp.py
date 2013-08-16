@@ -66,9 +66,9 @@ class TestClass(TestBase):
         if not test.get('bannedRoute') is None:
             params['bannedRoutes'] = '%s_%s' % (test['agencyId'], test['bannedRoute'])
 
-        # If a bannedStop is set, add it to the bannedStops param (rewritten format from given 3f2 to expected MMRI_3f2)
+        # If a bannedStop is set, add it to the bannedStopsHard param (rewritten format from given 3f2 to expected MMRI_3f2)
         if not test.get('bannedStop') is None:
-            params['bannedStops'] = '%s_%s' % (test['agencyId'], test['bannedStop'])
+            params['bannedStopsHard'] = '%s_%s' % (test['agencyId'], test['bannedStop'])
 
         url = self.options.url + '?%s' % urllib.urlencode(params)
         return url
