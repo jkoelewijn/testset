@@ -253,7 +253,7 @@
         "to": "3f3",
         "time": "2014-01-01T00:01:00",
         "timeType": "D",
-        "bannedStop": "MMRI_3f2",
+        "bannedStop": "3f2",
         "comment": "depart at 00:01 from Stop 1 heading Stop 3 exclude Stop 2."
     },
     {
