@@ -3,6 +3,7 @@
 # Test OpenTripPlanner
 
 import argparse
+from importlib import import_module
 import logging
 from color_logging import ColoredFormatter
 
@@ -51,7 +52,7 @@ def main():
     # console.setFormatter(ColoredFormatter('%(name)s: %(message)s (%(filename)s:%(lineno)d)'))
     logger.addHandler(console)
 
-    provider = __import__("test_%s" % args.provider)
+    provider = import_module("mmri.test_%s" % args.provider)
     test_class = provider.TestClass(args, logger=logger)
     test_class.run_tests(run_test_id=args.test)
 
