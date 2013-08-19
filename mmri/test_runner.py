@@ -2,6 +2,7 @@
 #
 # Test OpenTripPlanner
 
+import sys
 import argparse
 from importlib import import_module
 import logging
@@ -37,14 +38,13 @@ def parse_args(args=None):
 def main():
     args = parse_args()
 
-
-    SUCCESS_LEVEL_NUM = 9 
+    SUCCESS_LEVEL_NUM = 9
     logging.addLevelName(SUCCESS_LEVEL_NUM, "SUCCESS")
+
     def success(self, message, *args, **kws):
         # Yes, logger takes its '*args' as 'args'.
-        self._log(SUCCESS_LEVEL_NUM, message, args, **kws) 
+        self._log(SUCCESS_LEVEL_NUM, message, args, **kws)
     logging.Logger.success = success
-
 
     logger.setLevel(logging.DEBUG if args.debug else logging.INFO)
     console = logging.StreamHandler()
@@ -52,7 +52,12 @@ def main():
     # console.setFormatter(ColoredFormatter('%(name)s: %(message)s (%(filename)s:%(lineno)d)'))
     logger.addHandler(console)
 
-    provider = import_module("mmri.test_%s" % args.provider)
+    # perform correct dynamic import
+    if sys.version_info < (3, 1):
+        provider = __import__("test_%s" % args.provider)
+    else:
+        provider = import_module("mmri.test_%s" % args.provider)
+
     test_class = provider.TestClass(args, logger=logger)
     test_class.run_tests(run_test_id=args.test)
 
