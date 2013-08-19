@@ -1,0 +1,1 @@
+java -jar ../../bin/onebusaway-gtfs-transformer-cli.jar --overwriteDuplicates $(ls results\*zip) alltests.zip
