@@ -20,12 +20,15 @@
 \renewcommand{\arraystretch}{1.2}
 
 \begin{document}
+\section*{Part I: Non optional}
+\todo {think of the right title for the different parts}
+\todo {somewhere mention that the walking legs are excluded in the partial result as it's not part of the MMRI requirement}
 \begin{enumerate}
 \item \begin{enumerate}
 \item \textit{All agencies and their published timetables including modalities bus, ferry, lightrail, metro, ferry and train given a departure time must be incorporatable in the journey planner.}
 \subsubsection*{Network description and Timetable}
 The network consists of three trips, each of a different modality to test if the journey planner is capable to traverse different modalities.
-Each trip has a single linear timetable consisting of two stops.
+As the trips are from different modalities, each individual trip has a single linear timetable consisting of two stops.
 All trips are planned sequentially.
 
 \begin{figure}[h]
@@ -136,6 +139,7 @@ At most 0.4\% of the request to the jourey planner, may fail.
 \item \textit{The planner reports in in all circumstances a valid traveladvice.}\\
 \\
 All tests must succesfully reply with a valid travel advice.
+*Also see test 1f in Part 2
 \\
 
 \newpage
@@ -279,38 +283,45 @@ Date & Depart & From & & To & Arrive \\
 \begin{enumerate}
 \item \textit{The journey planner must optimise for shortest travel duration and include transfer times in its calculation.}
 \subsubsection*{Network description and Timetable}
-We describe a network consisting of two routes, calling at the same stops.
-The routes have a different time demand type during the operating day, hence the travel duration between two stops is different during the day.
+We describe a network consisting of four stops, and two routes, the first route travels via the north, the second via the south.
+The routes both have a different time demand type during the operating day, hence their travel duration between the departure and arrival stops is different during the day.
 
-\todo{Add correct visualization of the added intermediate stops, see the gtfs data belonging to this test}
+\todo {TODO: add the intermediate times (although irrelevant to the test, the intermediate stations are only in here to have a more realistic representation of a network, without these two intermediate stations, the two trips would  follow the exact same path/ journey pattern)}
+
 
 \begin{figure}[h]
 \vspace{1em}
 \raggedleft
-\begin{minipage}{205pt}
-
+\begin{minipage}{225pt}
 \begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=3cm,
   thick,main node/.style={circle,fill=blue!20,draw,font=\sffamily\Large\bfseries}]
 
   \node[main node] (1) [] {1};
-  \node[main node] (2) [right of=1] {2};
+  \node[main node] (2) [above right of=1] {1a};
+  \node[main node] (3) [below right of=2] {2};
+  \node[main node] (4) [below right of=1] {1b};
+
   \node[] (1a) [above=.2cm of 1] {00:01};
-  \node[] (2a) [above=.2cm of 2] {00:02};
-  \node[] (1z) [above=.1pt of 1a] {00:05};
-  \node[] (2z) [above=.1pt of 2a] {00:07};
-  \node[] (1b) [below=.2cm of 1] {00:01};
-  \node[] (2b) [below=.2cm of 2] {00:03};
-  \node[] (1c) [below=.1pt of 1b] {00:05};
-  \node[] (2c) [below=.1pt of 2b] {00:06};
+  \node[] (1b) [above=.1pt of 1a] {00:05};
+  \node[] (1c) [below=.2cm of 1] {00:01};
+  \node[] (1d) [below=.1pt of 1c] {00:05};
+
+  \node[] (3a) [above=.2cm of 3] {00:02};
+  \node[] (3b) [above=.1pt of 3a] {00:07};
+  \node[] (3c) [below=.2cm of 3] {00:03};
+  \node[] (3d) [below=.1pt of 3c] {00:06};
 
   \path[every node/.style={font=\sffamily\small}]
     (1) edge node {} (2)
-    (1) edge [draw=blue,densely dotted,bend right=45] node {} (2);
+    (2) edge node {} (3)
+    (1) edge[draw=blue,densely dotted] node {} (4)
+    (4) edge[draw=blue,densely dotted] node {} (3);
+
 \end{tikzpicture}
 \end{minipage}
 \label{fig:shortest_network}
-\vspace{2em}
 \end{figure}
+
 
 The second network for this test consists of two routes which require some transfer time.
 Due to the transfer time it is not possible to board the first and second trip between stop 5 and 6.
@@ -340,7 +351,9 @@ The only possible option is to board the first trip between stop 3 and 4, transf
   \node (3c) [below=.1pt of 3b] {00:07};
   \node (4c) [below=.1pt of 4b] {00:08};
   \node (5c) [below=.1pt of 5b] {00:08};
+  \node (5d) [below=.1pt of 5c] {00:10};
   \node (6c) [below=.1pt of 6b] {00:09};
+  \node (6d) [below=.1pt of 6c] {00:11};
 
   \path[every node/.style={font=\sffamily\small}]
     (3) edge node[yshift=-2pt] {} (4)
@@ -359,7 +372,7 @@ The only possible option is to board the first trip between stop 3 and 4, transf
 \item \textbf{depart} at 00:03 from stop 1 heading to stop 2.
 \item \textbf{depart} at 00:01 from stop 3 heading to stop 6.
 \item \textbf{depart} at 00:02 from stop 3 heading to stop 6.
-\item from stop 3 heading to stop 6 \textbf{arrive} at 00:09.
+\item from stop 3 heading to stop 6 \textbf{arrive} at 00:11.
 \end{enumerate}
 
 \subsubsection*{Expected Results}
@@ -395,8 +408,6 @@ Depart & From & & To & Arrive \\
 \hline
 00:01 & Stop 3 & \bus & Stop 4 & 00:02 \\
 \hline
-00:02 & Stop 4 & \walk & Stop 5 & 00:07 \\
-\hline
 00:08 & Stop 5 & \bus & Stop 6 & 00:09 \\
 \hline
 \end{tabular}
@@ -408,11 +419,9 @@ Depart & From & & To & Arrive \\
 \rowcolor{Gray}
 Depart & From & & To & Arrive \\
 \hline
-00:01 & Stop 3 & \bus & Stop 4 & 00:02 \\
+00:04 & Stop 3 & \bus & Stop 4 & 00:05 \\
 \hline
-00:02 & Stop 4 & \walk & Stop 5 & 00:07 \\
-\hline
-00:08 & Stop 5 & \bus & Stop 6 & 00:09 \\
+00:10 & Stop 5 & \bus & Stop 6 & 00:11 \\
 \hline
 \end{tabular}
 }
@@ -423,11 +432,9 @@ Depart & From & & To & Arrive \\
 \rowcolor{Gray}
 Depart & From & & To & Arrive \\
 \hline
-00:01 & Stop 3 & \bus & Stop 4 & 00:02 \\
+00:04 & Stop 3 & \bus & Stop 4 & 00:05 \\
 \hline
-00:02 & Stop 4 & \walk & Stop 5 & 00:07 \\
-\hline
-00:08 & Stop 5 & \bus & Stop 6 & 00:09 \\
+00:10 & Stop 5 & \bus & Stop 6 & 00:11 \\
 \hline
 \end{tabular}
 }
@@ -546,18 +553,14 @@ Depart & From & \hspace{0.4cm} & To & Arrive \\
 \hline
 \end{tabular}
 }
-\itemx
+\item
 {\scriptsize
 \begin{tabular}{p{.75cm} | p{3.0cm} c p{3.0cm} | p{.75cm} }
 \hline
 \rowcolor{Gray}
 Depart & From & \hspace{0.4cm} & To & Arrive \\
 \hline
-00:01 & Stop 1 & \walk & Stop 4 & 00:02 \\
-\hline
 00:02 & Stop 4 & \bus & Stop 5 & 00:06 \\
-\hline
-00:06 & Stop 5 & \walk & Stop 3 & 00:07 \\
 \hline
 \end{tabular}
 }
@@ -568,11 +571,7 @@ Depart & From & \hspace{0.4cm} & To & Arrive \\
 \rowcolor{Gray}
 Depart & From & \hspace{0.4cm} & To & Arrive \\
 \hline
-00:01 & Stop 1 & \walk & Stop 4 & 00:02 \\
-\hline
 00:02 & Stop 4 & \bus & Stop 5 & 00:06 \\
-\hline
-00:06 & Stop 5 & \walk & Stop 3 & 00:07 \\
 \hline
 \end{tabular}
 }
@@ -651,7 +650,7 @@ Depart & From & \hspace{0.4cm} & To & Arrive \\
 
 \item \textit{The journey planner uses trip-to-trip transfers in its advice.}
 \subsubsection*{Network description and Timetable}
-Trip-to-trip transfers allow the definition of prefered transfers that may be garanteed by the operator.
+Trip-to-trip transfers allow the definition of preferred transfers that may be guaranteed by the operator.
 In a dynamic scenario a trip-to-trip transfer is guaranteed as if the last arriving trip was in time, so commuters can make the transfer.
 This has realtime prediction implications which may delay the waiting trip.
 
@@ -695,30 +694,6 @@ This has realtime prediction implications which may delay the waiting trip.
 \vspace{0em}
 \end{figure}
 
-A secondary trip-to-trip transfer is based on blockcodes.
-A blockcode is assigned to a vehicle which operates on a predefined sequential pattern of trips.
-An earlier delay within the pattern must be propagated to later trips, but it also guarantees that alighting and boarding between the last stop of the current trip and the first stop of the next trip is not required.
-
-\begin{figure}[h]
-\vspace{1em}
-\raggedleft
-\begin{minipage}{250pt}
-\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=3cm,
-  thick,main node/.style={circle,fill=blue!20,draw,font=\sffamily\Large\bfseries}]
-
-  \node[main node] (7) [] {7};
-  \node[main node] (8) [right of=7] {8};
-  \node[main node] (9) [right of=8] {9};
-
-  \path[every node/.style={font=\sffamily\small}]
-    (7) edge node {$b=1, t=1$} (8)
-    (8) edge [draw=blue,densely dotted] node {$b=1, t=2$} (9);
-\end{tikzpicture}
-\end{minipage}
-\label{fig:blocktoblock_network}
-\vspace{0em}
-\end{figure}
-
 \subsubsection*{Synthetic Tests}
 \begin{enumerate}
 \item \textbf{given} a \textit{preferred} transfer from trip 1 to trip 2 at stop 3, \textbf{depart} at 00:01 from stop 1 heading to stop 6.
@@ -727,7 +702,7 @@ An earlier delay within the pattern must be propagated to later trips, but it al
 \item \textbf{given} a \textit{forbidden} transfer from trip 1 to trip 2 at stop 4, \textbf{depart} at 00:01 from stop 1 heading to stop 6.
 \end{enumerate}
 
-\todo{Add tests for blockcode trip-to-trip transfers.}
+\newpage
 
 \subsubsection*{Expected Results}
 \begin{enumerate}
@@ -847,13 +822,16 @@ The user queries at the edge of the network between the first and second stop, w
 \rowcolor{Gray}
 Depart & From & \hspace{0.4cm} & To & Arrive \\
 \hline
-00:01 & Stop 1 & \train & Stop 3 & 00:04 \\
+* & Stop 1 & \train & Stop 3 & 00:04 \\
 \hline
 00:06 & Stop 3 & \train & Stop 2 & 00:09 \\
 \hline
 \end{tabular}
 }
 \end{enumerate}
+
+
+* The initial departure time is open to the planner to fill in. The trip MUST be mentioned though.
 
 \end{enumerate}
 \newpage
@@ -1046,6 +1024,8 @@ Depart & From & \hspace{0.4cm} & To & Arrive \\
 
 \item \textit{The journey planner is capable to exclude trips from travice advice.}
 
+\todo {include a test of user based trip exclusion}
+
 \subsubsection*{Network description and Timetable}
 The network consists of two stops, and two routes.
 The first trip is is canceled by KV17, therefore it cannot be planned.
@@ -1160,6 +1140,8 @@ Depart & From & \hspace{0.4cm} & To & Arrive \\
 
 \item \textit{The journey planner is capable to exclude stops from travice advice.}
 
+\todo {this test should fall underneath test 'f' and new tests should be created for this actual stopplace banning, as this test is for stops }
+
 \subsubsection*{Network description and Timetable}
 In normal trip planning the planner would choose a place to alight and board trips based on preference of the operator (trip-to-trip), or an algorithm choose.
 Especially at night not all stops might qualify to wait a bit for the next trip.
@@ -1251,6 +1233,8 @@ It must arrive at the best departure stop given the shortest total travel time.}
 
 \item \textit{The journey planner should show if the planner incorporated dynamic information regarding calamities in the travel advice.}
 
+\todo {create a test for this}
+
 %%%%%%%%%%%%%%%
 
 \end{enumerate}
@@ -1258,6 +1242,8 @@ It must arrive at the best departure stop given the shortest total travel time.}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \item
 \begin{enumerate}
+
+\todo {For these tests below the test harness needs more work}
 
 \item \textit{The journey planner is aware of a punctuality change at the upcoming stop. Based on the provided punctuality it can predict the upcoming arrival and departure times.}
 
@@ -1281,13 +1267,173 @@ It must arrive at the best departure stop given the shortest total travel time.}
 
 
 
+\section*{Part 2: optional tests}
+
+\begin{enumerate}
+\item \begin{enumerate}
+
+\item \textit{}
+\item \textit{}
+\item \textit{}
+\item \textit{}
+\item \textit{}
+\item \textit{The test concerning the nearest travel alternative}
+
+\end{enumerate}
+
+\item \begin{enumerate}
+
+\item \textit{The journey planner must optimise for shortest travel duration and include transfer times in its calculation. }
+\subsubsection*{Network description and Timetable}
+
+\todo {rename to include 'sluitend reisadvies'}
+
+The network for this test consists of two routes which require some transfer time.
+Due to the transfer time it is not possible to board the first and second trip between stop 5 and 6.
+The only possible option is to board the first trip between stop 3 and 4, transfer and board the third trip between stop 5 and 6.
+It's similar to test 2a, except with the difference that there's no fourth trip to choose from between stops 5 and 6, this could result in several scenario's:
+
+\begin{enumerate}
+\item \textit{The planner doesn't return an itinerary, as there's no valid itinerary, due to the transfer demand between stops 4 and 5 and the lack of trip to follow up.}
+\item \textit{The planner only returns a partial itinerary, until stop 4 or 5, as that's as far as it can bring the traveler.}
+\item \textit{The planner returns an itinerary that departs earlier than reqeusted, but does bring the traveler at the destination (in the expected results below)}
+\item \textit{The planner returns an itinerary on the next day (for this the test data should also contain this data)}
+\end{enumerate}
+
+\begin{figure}[h]
+\vspace{1em}
+\raggedleft
+\begin{minipage}{275pt}
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=3cm,
+  thick,main node/.style={circle,fill=blue!20,draw,font=\sffamily\Large\bfseries}]
+
+  \node[main node] (3) {3};
+  \node[main node] (4) [right of=3] {4};
+  \node[main node] (5) [right=1cm of 4] {5};
+  \node[main node] (6) [right of=5] {6};
+  \node (3a) [below=.2cm of 3] {00:01};
+  \node (4a) [below=.2cm of 4] {00:02};
+  \node (5a) [below=.2cm of 5] {00:02};
+  \node (6a) [below=.2cm of 6] {00:03};
+
+  \node (3b) [below=.1pt of 3a] {00:04};
+  \node (4b) [below=.1pt of 4a] {00:05};
+  \node (5b) [below=.1pt of 5a] {00:05};
+  \node (6b) [below=.1pt of 6a] {00:06};
+
+  \node (3c) [below=.1pt of 3b] {00:07};
+  \node (4c) [below=.1pt of 4b] {00:08};
+  \node (5c) [below=.1pt of 5b] {00:08};
+  \node (6c) [below=.1pt of 6b] {00:09};
+
+  \path[every node/.style={font=\sffamily\small}]
+    (3) edge node[yshift=-2pt] {} (4)
+    (5) edge[draw=blue,densely dotted] node {} (6);
+
+  \path [loosely dashed] (4) edge node {\tiny 300s} (5);
+\end{tikzpicture}
+\end{minipage}
+\label{fig:modalities_network}
+\vspace{-0em}
+\end{figure}
+
+\subsubsection*{Synthetic Tests}
+\begin{enumerate}
+\item \textbf{depart} at 00:02 from stop 3 heading to stop 6.
+\item from stop 3 heading to stop 6 \textbf{arrive} at 00:09.
+\end{enumerate}
+
+\subsubsection*{Expected Results}
+\begin{enumerate}
+\item
+{\scriptsize
+\begin{tabular}{p{.75cm} | p{3.0cm} c p{3.0cm} | p{.75cm} }
+\hline
+\rowcolor{Gray}
+Depart & From & & To & Arrive \\
+\hline
+00:01 & Stop 3 & \bus & Stop 4 & 00:02 \\
+\hline
+00:02 & Stop 4 & \walk & Stop 5 & 00:07 \\
+\hline
+00:08 & Stop 5 & \bus & Stop 6 & 00:09 \\
+\hline
+\end{tabular}
+}
+\item
+{\scriptsize
+\begin{tabular}{p{.75cm} | p{3.0cm} c p{3.0cm} | p{.75cm} }
+\hline
+\rowcolor{Gray}
+Depart & From & & To & Arrive \\
+\hline
+00:01 & Stop 3 & \bus & Stop 4 & 00:02 \\
+\hline
+00:02 & Stop 4 & \walk & Stop 5 & 00:07 \\
+\hline
+00:08 & Stop 5 & \bus & Stop 6 & 00:09 \\
+\hline
+\end{tabular}
+}
+\end{enumerate}
+\newpage
+
+\item \textit{}
+\item \textit{}
+\item \textit{}
+\item \textit{The journey planner uses trip-to-trip transfers in its advice.}
+\subsubsection*{Network description and Timetable}
+
+A trip-to-trip transfer is based on blockcodes.
+A blockcode is assigned to a vehicle which operates on a predefined sequential pattern of trips.
+An earlier delay within the pattern must be propagated to later trips, but it also guarantees that alighting and boarding between the last stop of the current trip and the first stop of the next trip is not required.
+
+\begin{figure}[h]
+\vspace{1em}
+\raggedleft
+\begin{minipage}{250pt}
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=3cm,
+  thick,main node/.style={circle,fill=blue!20,draw,font=\sffamily\Large\bfseries}]
+
+  \node[main node] (7) [] {7};
+  \node[main node] (8) [right of=7] {8};
+  \node[main node] (9) [right of=8] {9};
+
+  \path[every node/.style={font=\sffamily\small}]
+    (7) edge node {$b=1, t=1$} (8)
+    (8) edge [draw=blue,densely dotted] node {$b=1, t=2$} (9);
+\end{tikzpicture}
+\end{minipage}
+\label{fig:blocktoblock_network}
+\vspace{0em}
+\end{figure}
+
+\todo{Add tests for blockcode trip-to-trip transfers.}
+
+\subsubsection*{Synthetic Tests}
+\begin{enumerate}
+\item \textit{}
+\item \textit{}
+\item \textit{}
+\item \textit{}
+\end{enumerate}
+
+\subsubsection*{Expected Results}
+\begin{enumerate}
+\item \textit{}
+\item \textit{}
+\item \textit{}
+\item \textit{}
+\end{enumerate}
+
+\newpage
 
 
+\end{enumerate}
 
 
+\end{enumerate}
 
 
-
-\listoftodos
 
 \end{document}
