@@ -128,23 +128,17 @@
         ]
     },
     {
-        "id": "2a4_IS_WRONG",
+        "id": "2a4",
         "legs": [
             {
-                "departureTime": "2014-01-01T00:01:00",
-                "arrivalTime": "2014-01-01T00:02:00",
+                "departureTime": "2014-01-01T00:04:00",
+                "arrivalTime": "2014-01-01T00:05:00",
                 "departureStopId": "2a3",
                 "arrivalStopId": "2a4"
             },
             {
-                "departureTime": "2014-01-01T00:03:00",
-                "arrivalTime": "2014-01-01T00:08:00",
-                "departureStopId": "2a4",
-                "arrivalStopId": "2a5"
-            },
-            {
-                "departureTime": "2014-01-01T00:08:00",
-                "arrivalTime": "2014-01-01T00:09:00",
+                "departureTime": "2014-01-01T00:10:00",
+                "arrivalTime": "2014-01-01T00:11:00",
                 "departureStopId": "2a5",
                 "arrivalStopId": "2a6"
             }
@@ -154,14 +148,14 @@
         "id": "2a5",
         "legs": [
             {
-                "departureTime": "2014-01-01T00:01:00",
-                "arrivalTime": "2014-01-01T00:02:00",
+                "departureTime": "2014-01-01T00:04:00",
+                "arrivalTime": "2014-01-01T00:05:00",
                 "departureStopId": "2a3",
                 "arrivalStopId": "2a4"
             },
             {
-                "departureTime": "2014-01-01T00:08:00",
-                "arrivalTime": "2014-01-01T00:09:00",
+                "departureTime": "2014-01-01T00:10:00",
+                "arrivalTime": "2014-01-01T00:11:00",
                 "departureStopId": "2a5",
                 "arrivalStopId": "2a6"
             }
