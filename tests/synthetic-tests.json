@@ -90,7 +90,7 @@
         "comment": "depart at 00:01 from stop 3 heading to stop 6."
     },
     {
-        "id": "2a4_IS_WRONG",
+        "id": "2a4",
         "agencyId": "MMRI",
         "from": "2a3",
         "to": "2a6",
@@ -103,9 +103,9 @@
         "agencyId": "MMRI",
         "from": "2a3",
         "to": "2a6",
-        "time": "2014-01-01T00:09:00",
+        "time": "2014-01-01T00:11:00",
         "timeType": "A",
-        "comment": "from stop 3 heading to stop 6 arrive at 00:09."
+        "comment": "from stop 3 heading to stop 6 arrive at 00:11."
     },
     {
         "id": "2b1",
