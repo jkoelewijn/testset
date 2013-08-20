@@ -9,7 +9,7 @@ class ColoredFormatter(logging.Formatter):
     LEVELCOLOR = {
         # 'DEBUG': 'BLUE',
         # 'INFO': 'BLACK',
-        # 'WARNING': 'PURPLE',
+        'WARNING': 'YELLOW',
         'SUCCESS': 'GREEN',
         'ERROR': 'RED',
         'CRITICAL': 'RED_BG',

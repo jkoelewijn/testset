@@ -83,11 +83,7 @@ class TestClass(TestBase):
         itinerary = result['plan']['itineraries'][0]
         return {
             'id': test['id'],
-            'transfers': itinerary['transfers'],
-            'departureTime': self.jsonDateTime(itinerary['startTime']),
-            'arrivalTime': self.jsonDateTime(itinerary['endTime']),
-            'duration': itinerary['duration'] / 1000,  # milliseconds to seconds
-            'legs': [self.parse_leg(leg) for leg in itinerary['legs']],
+            'legs': [self.parse_leg(leg) for leg in itinerary['legs'] if leg['mode'] != 'WALK'],
         }
 
     def get_stop_id(self, direction, leg):
@@ -96,17 +92,13 @@ class TestClass(TestBase):
         return None
 
     def parse_leg(self, leg):
-        if leg['mode'] == 'WALK':
-            line = 'walk'
-        else:
-            line = '%(route)s (%(headsign)s)' % leg
 
         return {
             'departureTime': self.jsonDateTime(leg['startTime']),
             'arrivalTime': self.jsonDateTime(leg['endTime']),
             'departureStopId': self.get_stop_id('from', leg),
             'arrivalStopId': self.get_stop_id('to', leg),
-            'line': line,
+            'line': '%(route)s (%(headsign)s)' % leg,
         }
 
     def parse_error(self, test, result):
