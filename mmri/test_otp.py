@@ -46,10 +46,10 @@ class TestClass(TestBase):
         if not test.get('wheelchairAccessible') is None:
             params['wheelchair'] = test['wheelchairAccessible']
 
-        # if startingTransitTripId is set, set the startingTransitTripId param for onboard planning (rewritten format from given 2f|intercity to expected MMRI_2f|intercity)
+        # if startTransitTripId is set, set the startTransitTripId param for onboard planning (rewritten format from given 2f|intercity to expected MMRI_2f|intercity)
         # NB: This is untested, not sure wether this is the correct way to pass along on-board planning or that other params should be changed as well
-        if not test.get('startingTransitTripId') is None:
-            params['startingTransitTripId'] = '%s_%s' % (test['agencyId'], test['startingTransitTripId'])
+        if not test.get('startTransitTripId') is None:
+            params['startTransitTripId'] = '%s_%s' % (test['agencyId'], test['startTransitTripId'])
 
         # If preferLeastTransfers is set to true, set the transferPenalty param to a value that makes sense
         # NB: This transferPenalty is just picked at random, no idea wether it will actually make the accompanying test pass

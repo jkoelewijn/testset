@@ -194,7 +194,7 @@
     {
         "id": "2f1",
         "agencyId": "MMRI",
-        "startingTransitTripId": "2f|intercity",
+        "startTransitTripId": "2f|intercity",
         "to": "2f2",
         "time": "2014-01-01T00:02:00",
         "timeType": "D",
