@@ -6,3 +6,4 @@ foreach ($x in "1a","1g","2a1","2a2","2b","2c","2d","2e1","2e2","2e3","2e4","2e5
 	7z a ..\results\$x.zip *txt
 	cd ..
 }
+java -jar ../../bin/onebusaway-gtfs-transformer-cli.jar --overwriteDuplicates results\*zip alltests.zip
