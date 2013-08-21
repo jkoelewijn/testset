@@ -54,7 +54,7 @@ class TestClass(TestBase):
         # If preferLeastTransfers is set to true, set the transferPenalty param to a value that makes sense
         # NB: This transferPenalty is just picked at random, no idea wether it will actually make the accompanying test pass
         if not test.get('preferLeastTransfers') is None:
-            params['transferPenalty'] = 60
+            params['transferPenalty'] = 180
 
         # If preferredTravelTypes is set, add it as the only mode next to walk in the mode param
         # NB: Is this actually complying to the test? As we're just removing the ability to go by train, instead of increasing a preference. Any better API param we can set?
