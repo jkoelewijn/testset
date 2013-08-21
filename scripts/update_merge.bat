@@ -25,4 +25,4 @@ FOR /F "delims=" %%f in ('dir %DATA_DIRECTORY% /A:D /B /O:N') DO (
 )
 
 REM Combine tests
-java -jar %~dp0..\bin\onebusaway-gtfs-transformer-cli.jar --overwriteDuplicates %GTFS_OUTPUT_DIRECTORY%\*.zip %ALL_TESTS_ZIP%
+java -jar "%~dp0..\bin\onebusaway-gtfs-transformer-cli.jar" --overwriteDuplicates %GTFS_OUTPUT_DIRECTORY%\*.zip %ALL_TESTS_ZIP%
