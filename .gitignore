@@ -25,6 +25,8 @@
 /data/gtfs/results
 /data/gtfs/*.zip
 /data/gtfs/**/*.gtfsdb
+/scripts/tests
+/scripts/alltests.zip
 
 # Latex
 *.acn
