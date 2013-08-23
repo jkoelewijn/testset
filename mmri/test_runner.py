@@ -55,10 +55,9 @@ def main():
     # console.setFormatter(ColoredFormatter('%(name)s: %(message)s (%(filename)s:%(lineno)d)'))
     logger.addHandler(console)
 
-    # perform correct dynamic import
-    if sys.version_info < (3, 1):
+    try:
         provider = __import__("test_%s" % args.provider)
-    else:
+    except ImportError:
         provider = import_module("mmri.test_%s" % args.provider)
 
     test_class = provider.TestClass(args, logger=logger)
