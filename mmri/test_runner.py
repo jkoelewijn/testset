@@ -33,7 +33,7 @@ def parse_args(args=None):
             help='stop when test errors')
     parser.add_argument('-b', '--benchmark', action='store_true',
             help='benchmarks requests')
-    parser.add_argument('-bo', '--benchmark-output', metavar='BENCHMARK_OUTPUT', default='benchmark_output.txt',
+    parser.add_argument('-o', '--benchmark-output', metavar='BENCHMARK_OUTPUT', default='benchmark_output.txt',
             help='the file to output the benchmark data points')
 
     return parser.parse_args(args)
