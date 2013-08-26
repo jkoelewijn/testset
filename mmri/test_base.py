@@ -176,7 +176,9 @@ class TestBase(object):
             if result_legs and len(result_legs) > idx:
                 for key in leg:
                     expected_value = leg.get(key)
-                    if result_legs[idx].get(key) != expected_value:
+                    if expected_value == '*':
+                        self.logger.warning("    Value for key: %s has been neglected as the expected result is declared with a *" % (key))
+                    elif result_legs[idx].get(key) != expected_value:
                         success = False
                         self.logger.error("    Values for key: %s are not equal.\n    expected: %s \n         got: %s" % (key, expected_value, result_legs[idx].get(key)))
             else:
@@ -209,7 +211,9 @@ class TestBase(object):
         self.logger.error('\tSlower than %(max_duration).2fs - %(number_warning)d requests\n' % self.benchmarker)
 
         if benchmark_outfile is not None:
-            summary = ' '.join([str(x) for x in self.benchmarker['summary']])
+            summary = "\n # TEST RUN AT %s \n" % str(datetime.now())
+            for x in self.benchmarker['summary']:
+                summary += "%s %s\n" % (x[0], x[1])
             benchmark_outfile.write(summary)
             benchmark_outfile.close()
 

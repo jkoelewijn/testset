@@ -300,9 +300,9 @@
         "id": "2f1",
         "legs": [
             {
-                "departureTime": "2014-01-01T00:01:00",
+                "departureTime": "*",
                 "arrivalTime": "2014-01-01T00:04:00",
-                "departureStopId": "2f1",
+                "departureStopId": "*",
                 "arrivalStopId": "2f3"
             },
             {
