@@ -11,9 +11,12 @@ development environment:
 
 .. code-block:: console
 
-    virtualenv .
-    . bin/activate
-    pip install -r dev_requirements.txt
+    $ virtualenv .
+    $ . bin/activate
+    $ pip install -r dev_requirements.txt
+
+Activating the `virtualenv` should be done every time before working on the
+code or running the tests.
 
 .. _Virtualenv: http://virtualenv.org
 

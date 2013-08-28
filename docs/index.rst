@@ -13,7 +13,8 @@ See the `project source`_ at GitHub.
   :maxdepth: 2
 
   specs
-  install
   data
+  install
   planner
   run
+  glossary

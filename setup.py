@@ -16,6 +16,7 @@ setup(
     platforms = ['all'],
     entry_points = {
         'console_scripts': [
+            'merge-gtfs = mmri.gtfs.merge:main',
             'mmri-test-runner = mmri.test_runner:main',
         ],
     },
