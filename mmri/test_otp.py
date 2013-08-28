@@ -1,4 +1,5 @@
 # # Test OpenTripPlanner
+import requests
 import urllib
 
 from datetime import datetime
@@ -12,6 +13,14 @@ class TestClass(TestBase):
 
         if not self.options.url:
             self.options.url = 'http://localhost:8080/otp-rest-servlet/ws/plan'
+
+    def plan_trip(self, test):
+        url = self.build_url(test)
+        response = requests.get(url)
+        if response:
+            return self.parse_result(test, response.json())
+        else:
+            return None
 
     def build_url(self, test):
         time = datetime.strptime(test['time'], self.DATE_TIME_FORMAT)
