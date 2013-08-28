@@ -9,6 +9,9 @@ import logging
 from color_logging import ColoredFormatter
 
 
+PROVIDER_CHOICES = ['otp', 'hpjp']
+
+
 logger = logging.getLogger(__name__)
 
 
@@ -34,7 +37,7 @@ def parse_args(args=None):
     parser.add_argument('-t', '--test', metavar='TEST',
             help='id of the test to run (default: all tests)')
     parser.add_argument('-p', '--provider', metavar='PROVIDER',
-            choices=['otp', 'hpjp'], default='otp',
+            choices=PROVIDER_CHOICES, default='otp',
             help='provider to run the tests for (default: otp)')
     parser.add_argument('input', metavar='INPUT',
             help='file to read test input from')

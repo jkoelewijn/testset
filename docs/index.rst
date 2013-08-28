@@ -15,6 +15,6 @@ See the `project source`_ at GitHub.
   specs
   data
   install
-  planner
   run
+  planner
   glossary
