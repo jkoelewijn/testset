@@ -11,7 +11,7 @@
 \usetikzlibrary{decorations.pathreplacing}
 \usepackage[enabled,section]{easy-todo}
 
-\author{Stefan de Konink & Joost Cassee}
+\usepackage{enumitem}
 
 \newcommand*{\bus}{\includegraphics[scale=0.02]{img/bus}}
 \newcommand*{\ferry}{\includegraphics[scale=0.02]{img/ferry}}
@@ -19,12 +19,26 @@
 \newcommand*{\walk}{\includegraphics[scale=0.022]{img/walk}}
 \renewcommand{\arraystretch}{1.2}
 
+\def\thesection{\Roman{section}.}
+\def\thesubsection{\Alph{subsection}.}
+
 \begin{document}
-\section*{Part I: Non optional}
-\todo {think of the right title for the different parts}
-\todo {somewhere mention that the walking legs are excluded in the partial result as it's not part of the MMRI requirement}
+
+\title{Functional testset \\ \large for the Beter Benutten MMRI project}
+\maketitle
+
+\setlist[enumerate,1]{label=\arabic{subsection}\alph*., ref=\arabic{subsection}\alph*.}
+\setlist[enumerate,2]{label=\arabic*., ref=\arabic{subsection}\theenumi\arabic*.}
+
+\section{Unit tests for the functional requirements}
+
+The numbering in this section corresponds to the numbering of the requirements in the GAP Analysis document.
+
+Note that planning on the transit network is the current scope of the MMRI project, so the test running will ignore any walk legs encountered in the result.
+
+\subsection{Ondersteuning van alle OV vervoerswijzen en vervoerders}
+
 \begin{enumerate}
-\item \begin{enumerate}
 \item \textit{All agencies and their published timetables including modalities bus, ferry, lightrail, metro, ferry and train given a departure time must be incorporatable in the journey planner.}
 \subsubsection*{Network description and Timetable}
 The network consists of three trips, each of a different modality to test if the journey planner is capable to traverse different modalities.
@@ -276,10 +290,8 @@ Date & Depart & From & & To & Arrive \\
 }
 
 \end{enumerate}
-\end{enumerate}
 \newpage
 
-\item
 \begin{enumerate}
 \item \textit{The journey planner must optimise for shortest travel duration and include transfer times in its calculation.}
 \subsubsection*{Network description and Timetable}
@@ -1286,7 +1298,7 @@ It must arrive at the best departure stop given the shortest total travel time.}
 \item \textit{The journey planner must optimise for shortest travel duration and include transfer times in its calculation. }
 \subsubsection*{Network description and Timetable}
 
-\todo {rename to include 'sluitend reisadvies'}
+\todo {rename to include `sluitend reisadvies'}
 
 The network for this test consists of two routes which require some transfer time.
 Due to the transfer time it is not possible to board the first and second trip between stop 5 and 6.
@@ -1431,8 +1443,6 @@ An earlier delay within the pattern must be propagated to later trips, but it al
 
 \end{enumerate}
 
-
-\end{enumerate}
 
 
 

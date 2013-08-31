@@ -30,6 +30,7 @@ distributions will carry these packages in either their base or an optional
 LaTeX package.)
 
 * colortbl_
+* enumitem_
 * pgf_
 * `easy-todo`_
 
@@ -46,6 +47,7 @@ references.
 .. _`download page`: http://latex-project.org/ftp.html
 .. _CTAN: http://ctan.org/
 .. _colortbl: http://ctan.org/pkg/colortbl
+.. _enumitem: http://ctan.org/pkg/enumitem
 .. _pgf: http://ctan.org/pkg/pgf
 .. _`easy-todo`: http://ctan.org/pkg/easy-todo
 
