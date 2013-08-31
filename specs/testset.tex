@@ -9,7 +9,7 @@
 \usetikzlibrary{arrows}
 \usetikzlibrary{positioning}
 \usetikzlibrary{decorations.pathreplacing}
-\usepackage[enabled,section]{easy-todo}
+\usepackage[disabled,section]{easy-todo}
 
 \usepackage{enumitem}
 
@@ -19,24 +19,28 @@
 \newcommand*{\walk}{\includegraphics[scale=0.022]{img/walk}}
 \renewcommand{\arraystretch}{1.2}
 
-\def\thesection{\Roman{section}.}
-\def\thesubsection{\Alph{subsection}.}
+\def\thesection{\Roman{section}}
+\def\thesubsection{\Alph{subsection}}
 
 \begin{document}
 
 \title{Functional testset \\ \large for the Beter Benutten MMRI project}
+\author{}
+\date{}
 \maketitle
 
-\setlist[enumerate,1]{label=\arabic{subsection}\alph*., ref=\arabic{subsection}\alph*.}
-\setlist[enumerate,2]{label=\arabic*., ref=\arabic{subsection}\theenumi\arabic*.}
+\setlist[enumerate,1]{label=\arabic{subsection}\alph*., ref=\arabic{subsection}\alph*}
+\setlist[enumerate,2]{label=\arabic*., ref=\theenumi\arabic*}
+
 
 \section{Unit tests for the functional requirements}
 
-The numbering in this section corresponds to the numbering of the requirements in the GAP Analysis document.
+The numbering in this section corresponds to the numbering of the requirements in the GAP Analysis document and the numbering of the test case implementation.
 
-Note that planning on the transit network is the current scope of the MMRI project, so the test running will ignore any walk legs encountered in the result.
+Note that planning on the transit network is the current scope of the MMRI project, so the testrunner will ignore any walk legs encountered in the result.
 
-\subsection{Ondersteuning van alle OV vervoerswijzen en vervoerders}
+
+\subsection{Support all transit modes and agencies}
 
 \begin{enumerate}
 \item \textit{All agencies and their published timetables including modalities bus, ferry, lightrail, metro, ferry and train given a departure time must be incorporatable in the journey planner.}
@@ -103,8 +107,6 @@ Depart & From & & To & Arrive \\
 
 \end{enumerate}
 
-
-
 \subsubsection*{Practical Test}
 \begin{enumerate}
 \item \textbf{depart} at 12:09pm from Amsterdam, Hagedoornweg heading to Amsterdam, Sloterdijk.
@@ -152,8 +154,7 @@ At most 0.4\% of the request to the jourey planner, may fail.
 
 \item \textit{The planner reports in in all circumstances a valid traveladvice.}\\
 \\
-All tests must succesfully reply with a valid travel advice.
-*Also see test 1f in Part 2
+All tests must succesfully reply with a valid travel advice. The definition of a ``valid travel advice'' is impossible to formalize. Section~\ref{sec:nonunit} describes tests that explore the quality of travel advices.
 \\
 
 \newpage
@@ -290,15 +291,17 @@ Date & Depart & From & & To & Arrive \\
 }
 
 \end{enumerate}
+\end{enumerate}
 \newpage
+
+
+\subsection{Dynamic transit planning using departure or arrival stops}
 
 \begin{enumerate}
 \item \textit{The journey planner must optimise for shortest travel duration and include transfer times in its calculation.}
 \subsubsection*{Network description and Timetable}
 We describe a network consisting of four stops, and two routes, the first route travels via the north, the second via the south.
 The routes both have a different time demand type during the operating day, hence their travel duration between the departure and arrival stops is different during the day.
-
-\todo {TODO: add the intermediate times (although irrelevant to the test, the intermediate stations are only in here to have a more realistic representation of a network, without these two intermediate stations, the two trips would  follow the exact same path/ journey pattern)}
 
 
 \begin{figure}[h]
@@ -333,6 +336,8 @@ The routes both have a different time demand type during the operating day, henc
 \end{minipage}
 \label{fig:shortest_network}
 \end{figure}
+
+\todo {TODO: add the intermediate times (although irrelevant to the test, the intermediate stations are only in here to have a more realistic representation of a network, without these two intermediate stations, the two trips would  follow the exact same path/ journey pattern)}
 
 
 The second network for this test consists of two routes which require some transfer time.
@@ -848,7 +853,10 @@ Depart & From & \hspace{0.4cm} & To & Arrive \\
 \end{enumerate}
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\item
+
+
+\subsection{Planned and unplanned maintenance and disruptions}
+
 \begin{enumerate}
 
 \item \textit{The journey planner is capable to process planned changes in the regular publications automatically.} \\
@@ -1252,53 +1260,28 @@ It must arrive at the best departure stop given the shortest total travel time.}
 \end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\item
-\begin{enumerate}
-
-\todo {For these tests below the test harness needs more work}
-
-\item \textit{The journey planner is aware of a punctuality change at the upcoming stop. Based on the provided punctuality it can predict the upcoming arrival and departure times.}
-
-%%%%%%%%%%%%%%%
-
-\item \textit{The journey planner is aware of the current timetable, timingstops and mutations on the operational process.}
-
-%%%%%%%%%%%%%%%
-
-\item \textit{The journey planner is aware of delays at the first vehicle in a sequence and is able to propagate it to latter vehicles with respect to future transfers. The travel advice results in an alternative using all available dynamic information in the journey planner.}
-
-%%%%%%%%%%%%%%%
-
-\item \textit{The journey planner is aware of delays in the previous trips, and suggests these delayed connections to give a shorter total transit time.}
 
 
-\end{enumerate}
+\subsection{Forcasting and prediction}
+
+These test cases describe functionality on layer 2, the data layer. The current test harnas is limited to testing layer 3, the algorithmics layer. Future versions of the testset may improve in this area.
 
 
-\end{enumerate}
+\subsection{Pre-- and posttransit transportation} \todo{correct translation of ``voor-- en navervoer''?}
+
+Only the transit network is currently in scope for the MMRI project. The requirements of this section are not tested.
 
 
+\section{Informative tests}
+\label{sec:nonunit}
 
-\section*{Part 2: optional tests}
+
+\subsection{Tests concerning the definition of a ``valid travel advice''}
 
 \begin{enumerate}
-\item \begin{enumerate}
 
-\item \textit{}
-\item \textit{}
-\item \textit{}
-\item \textit{}
-\item \textit{}
-\item \textit{The test concerning the nearest travel alternative}
-
-\end{enumerate}
-
-\item \begin{enumerate}
-
-\item \textit{The journey planner must optimise for shortest travel duration and include transfer times in its calculation. }
+\item \textit{How does a planner react to conflicting constraints?}
 \subsubsection*{Network description and Timetable}
-
-\todo {rename to include `sluitend reisadvies'}
 
 The network for this test consists of two routes which require some transfer time.
 Due to the transfer time it is not possible to board the first and second trip between stop 5 and 6.
@@ -1388,58 +1371,36 @@ Depart & From & & To & Arrive \\
 \end{tabular}
 }
 \end{enumerate}
-\newpage
-
-\item \textit{}
-\item \textit{}
-\item \textit{}
-\item \textit{The journey planner uses trip-to-trip transfers in its advice.}
-\subsubsection*{Network description and Timetable}
-
-A trip-to-trip transfer is based on blockcodes.
-A blockcode is assigned to a vehicle which operates on a predefined sequential pattern of trips.
-An earlier delay within the pattern must be propagated to later trips, but it also guarantees that alighting and boarding between the last stop of the current trip and the first stop of the next trip is not required.
-
-\begin{figure}[h]
-\vspace{1em}
-\raggedleft
-\begin{minipage}{250pt}
-\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=3cm,
-  thick,main node/.style={circle,fill=blue!20,draw,font=\sffamily\Large\bfseries}]
-
-  \node[main node] (7) [] {7};
-  \node[main node] (8) [right of=7] {8};
-  \node[main node] (9) [right of=8] {9};
-
-  \path[every node/.style={font=\sffamily\small}]
-    (7) edge node {$b=1, t=1$} (8)
-    (8) edge [draw=blue,densely dotted] node {$b=1, t=2$} (9);
-\end{tikzpicture}
-\end{minipage}
-\label{fig:blocktoblock_network}
-\vspace{0em}
-\end{figure}
 
 \todo{Add tests for blockcode trip-to-trip transfers.}
 
-\subsubsection*{Synthetic Tests}
-\begin{enumerate}
-\item \textit{}
-\item \textit{}
-\item \textit{}
-\item \textit{}
-\end{enumerate}
+% \newpage
+% \item \textit{The journey planner uses blockcode trip-to-trip transfers in its advice.}
+% \subsubsection*{Network description and Timetable}
 
-\subsubsection*{Expected Results}
-\begin{enumerate}
-\item \textit{}
-\item \textit{}
-\item \textit{}
-\item \textit{}
-\end{enumerate}
+% A trip-to-trip transfer is based on blockcodes.
+% A blockcode is assigned to a vehicle which operates on a predefined sequential pattern of trips.
+% An earlier delay within the pattern must be propagated to later trips, but it also guarantees that alighting and boarding between the last stop of the current trip and the first stop of the next trip is not required.
 
-\newpage
+% \begin{figure}[h]
+% \vspace{1em}
+% \raggedleft
+% \begin{minipage}{250pt}
+% \begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=3cm,
+%   thick,main node/.style={circle,fill=blue!20,draw,font=\sffamily\Large\bfseries}]
 
+%   \node[main node] (7) [] {7};
+%   \node[main node] (8) [right of=7] {8};
+%   \node[main node] (9) [right of=8] {9};
+
+%   \path[every node/.style={font=\sffamily\small}]
+%     (7) edge node {$b=1, t=1$} (8)
+%     (8) edge [draw=blue,densely dotted] node {$b=1, t=2$} (9);
+% \end{tikzpicture}
+% \end{minipage}
+% \label{fig:blocktoblock_network}
+% \vspace{0em}
+% \end{figure}
 
 \end{enumerate}
 
