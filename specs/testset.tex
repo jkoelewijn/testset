@@ -1253,7 +1253,54 @@ It must arrive at the best departure stop given the shortest total travel time.}
 
 \item \textit{The journey planner should show if the planner incorporated dynamic information regarding calamities in the travel advice.}
 
-\todo {create a test for this}
+\subsubsection*{Network description and Timetable}
+The network consists of two stops, with a ten minute interval service, we present one trip.
+This trip has received an service alert regarding calamities related to it. The test determines whether this alert is communicated inside the travel advice itself.
+
+\begin{figure}[h]
+\vspace{1em}
+\raggedleft
+\begin{minipage}{285pt}
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=3cm,
+  thick,main node/.style={circle,fill=blue!20,draw,font=\sffamily\Large\bfseries}]
+
+  \node[main node] (1) [] {1};
+  \node[main node] (2) [right of=1] {2};
+  \node[] (1a) [above=.2cm of 1] {00:01};
+  \node[] (2a) [above=.2cm of 2] {00:02};
+
+
+  \node[] (6) [left=1cm of 1a] {\tiny alert};
+
+  \path (1.15) edge node {} (2.165);
+
+\end{tikzpicture}
+\end{minipage}
+\label{fig:delay_network}
+\vspace{-2em}
+\end{figure}
+
+\subsubsection*{Synthetic Tests}
+\begin{enumerate}
+\item \textbf{depart} at 00:01 from Stop 1 heading Stop 2.
+\end{enumerate}
+
+\subsubsection*{Expected Results}
+\begin{enumerate}
+\item
+{\scriptsize
+\begin{tabular}{p{.75cm} | p{3.0cm} c p{3.0cm} | p{.75cm} }
+\hline
+\rowcolor{Gray}
+Depart & From & \hspace{0.4cm} & To & Arrive \\
+\hline
+00:01 & Stop 1 & \bus * & Stop 2 & 00:02 \\
+\hline
+\end{tabular}
+}
+\end{enumerate}
+* This trip should contain the original alert in it's data.
+\newpage
 
 %%%%%%%%%%%%%%%
 
