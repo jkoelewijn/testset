@@ -114,7 +114,7 @@ class TestClass(TestBase):
         }
 
         if leg.get('alerts') is not None and leg.get('alerts', [{}])[0].get('alertHeaderText', {}).get('someTranslation', {}) is not None:
-            result['alert'] = leg['alerts'][0]['alertHeaderText']['translsomeTranslationations']
+            result['alert'] = leg['alerts'][0]['alertHeaderText']['someTranslation']
         return result
 
     def parse_error(self, test, result):
