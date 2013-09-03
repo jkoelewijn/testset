@@ -53,6 +53,8 @@ class TestBase(object):
         tests = json.load(infile)
         expected_results = json.load(expectfile)
 
+        tests = map(self.preprocess_test, tests)
+
         for j in range(RUN_TIMES):
             for i, test in enumerate(tests):
                 if run_test_id and test['id'] != run_test_id:
@@ -62,7 +64,6 @@ class TestBase(object):
                     self.logger.info('\n')
                     self.logger.info('--------------------------------------------------------')
                     self.logger.info('\n')
-
 
                 self.test_counter += 1
                 # outfile.write(',\n' if i > 0 else '[\n')
@@ -96,7 +97,7 @@ class TestBase(object):
                             else:
                                 self.logger.error('    Test failed')
                                 self.tests_error.append(test['id'])
-        
+
                                 json.dump(result, outfile, indent=2, sort_keys=True)
                                 if self.stop_on_error:
                                     return;
@@ -108,7 +109,7 @@ class TestBase(object):
                             if self.stop_on_error:
                                 return;
 
-                    # If there is not expected result and otp didin't return 
+                    # If there is not expected result and otp didin't return
                     # trip not possible, then it's considered as successful
                     else:
                         self.logger.success('    Test success')
@@ -126,7 +127,7 @@ class TestBase(object):
 
         if infile  is not sys.stdin:  infile.close()
         if outfile is not sys.stdout: outfile.close()
-        
+
         self.logger.info('\n\nCompleted %d tests' % (self.test_counter,))
         self.logger.success('\t%2d tests succeeding  %s' % (len(self.tests_success), ' '.join(self.tests_success)))
         if expectfile is None:
@@ -141,13 +142,16 @@ class TestBase(object):
         time = datetime.fromtimestamp(timestamp / 1000)  # milliseconds to seconds
         return datetime.strftime(time, self.DATE_TIME_FORMAT)
 
-    def build_url(self, test):
-        # Implement in extended class
-        pass
+    def preprocess_test(self, test):
+        """
+        Do test preprocessing and return the trip. This is useful for things
+        like converting source stop ids to internal ones. The default
+        implementation just returns the test unchanged.
+        """
+        return test
 
-    def parse_result(self, test):
-        # Implement in extended class
-        pass
+    def plan_trip(self, test):
+        raise NotImplementedError("must be implemented by extending classes")
 
     def find_expected_result_for_test(self, test_result, expected_results):
         for result in expected_results:
