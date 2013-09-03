@@ -424,5 +424,22 @@
                 "alert": "Unknown effect"
             }
         ]
-    }
+    },
+    {
+        "id": "plannerstack_scenario",
+        "legs": [
+            {
+                "departureTime": "*",
+                "arrivalTime": "2014-01-01T00:09:00",
+                "departureStopId": "*",
+                "arrivalStopId": "2f3"
+            },
+            {
+                "departureTime": "2014-01-01T00:10:00",
+                "arrivalTime": "2014-01-01T00:14:00",
+                "departureStopId": "2f3",
+                "arrivalStopId": "2f2"
+            }
+        ]
+    },
 ]

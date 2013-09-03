@@ -282,5 +282,14 @@
         "time": "2014-01-01T00:01:00",
         "timeType": "D",
         "comment": "The journey planner should show if the planner incorporated dynamic information regarding calamities in the travel advice."
-    }
+    },
+    {
+        "id": "plannerstack_scenario",
+        "agencyId": "MMRI",
+        "startTransitTripId": "plannerstack_scenario|intercity",
+        "to": "plannerstack_scenario2",
+        "time": "2014-01-01T00:07:00",
+        "timeType": "D",
+        "comment": "depart from the delayed trip 1 heading stop 2."
+    },
 ]

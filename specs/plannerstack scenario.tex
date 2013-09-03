@@ -1,0 +1,95 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[british]{babel}
+\usepackage{color, colortbl}
+\definecolor{Gray}{gray}{0.9}
+%\usepackage{mathptmx}
+\usepackage{mathpazo}
+%\usepackage{palatcm}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary{positioning}
+\usetikzlibrary{decorations.pathreplacing}
+\usepackage[enabled,section]{easy-todo}
+
+\begin{document}
+
+\title{Demo Scenario: ontrip planning with delay}
+\author{Plannerstack}
+\date{Aug 2013}
+\maketitle
+
+\subsubsection*{Network description and Timetable}
+We define a network of three routes, an intercity route between two stations, passing by a third station in the middle.
+A local train is calling at all three of the stations and operates in both directions.
+The user queries at the edge of the network between the first and second stop, while being on the intercity train.
+The intercity has had an initial delay of 5 minutes,
+
+\begin{figure}[h]
+\vspace{1em}
+\raggedleft
+\begin{minipage}{250pt}
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=3cm,
+  thick,main node/.style={circle,fill=blue!20,draw,font=\sffamily\Large\bfseries}]
+
+  \node[main node] (1) [] {1};
+  \node[main node] (2) [right of=1] {2};
+  \node[main node] (3) [right of=2] {3};
+
+  \path[every node/.style={font=\sffamily\small}]
+    (1.30) edge [bend left=10] node {} (3.-210)
+    (1) edge [draw=blue,densely dotted] node {} (2)
+    (2) edge [draw=blue,densely dotted] node {} (3)
+    (3.210) edge [draw=blue,densely dotted] node {} (2.-30)
+    (2.210) edge [draw=blue,densely dotted] node {} (1.-30)
+    (2.210) edge [draw=blue,densely dotted] node {} (1.-30);
+
+  \node[] (1a) [above=.2cm of 1] {00:01};
+  \node[] (3a) [above=.2cm of 3] {00:04};
+
+  \node[] (1b) [below=.2cm of 1] {00:01};
+  \node[] (2b) [below=.2cm of 2] {00:03};
+  \node[] (3b) [below=.2cm of 3] {00:05};
+
+  \node[] (3b) [below=.1pt of 3b] {00:06};
+  \node[] (2b) [below=.1pt of 2b] {00:09};
+  \node[] (1b) [below=.1pt of 1b] {00:11};
+
+  \node[] (3c) [below=.1pt of 3b] {00:10};
+  \node[] (2c) [below=.1pt of 2b] {00:14};
+  \node[] (1c) [below=.1pt of 1b] {00:16};
+
+  \node[] (6) [left=1cm of 1a] {\tiny KV6 delay: 300s};
+
+\draw[very thick] (1.5,1)--(1.5,0.4);
+\end{tikzpicture}
+\end{minipage}
+\label{fig:ontrip_network}
+\vspace{0em}
+\end{figure}
+
+\subsubsection*{Synthetic Tests}
+\begin{enumerate}
+\item \textbf{depart} from trip 1 heading stop 2.
+\end{enumerate}
+
+\subsubsection*{Expected Results}
+\begin{enumerate}
+\item
+{\scriptsize
+\begin{tabular}{p{.75cm} | p{3.0cm} c p{3.0cm} | p{.75cm} }
+\hline
+\rowcolor{Gray}
+Depart & From & \hspace{0.4cm} & To & Arrive \\
+\hline
+* & * & \train & Stop 3 & 00:09 \\
+\hline
+00:10 & Stop 3 & \train & Stop 2 & 00:14 \\
+\hline
+\end{tabular}
+}
+
+* The initial departure time and stop is open to the planner to fill in. The trip MUST be mentioned though.
+
+\end{enumerate}
+
+\end{document}
