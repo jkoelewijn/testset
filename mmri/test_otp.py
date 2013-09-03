@@ -16,6 +16,7 @@ class TestClass(TestBase):
 
     def plan_trip(self, test):
         url = self.build_url(test)
+        self.logger.debug("calling url: %s" % url)
         response = requests.get(url)
         if response:
             return self.parse_result(test, response.json())
