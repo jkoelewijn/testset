@@ -104,14 +104,17 @@ class TestClass(TestBase):
         return None
 
     def parse_leg(self, leg):
-
-        return {
+        result = {
             'departureTime': self.jsonDateTime(leg['startTime']),
             'arrivalTime': self.jsonDateTime(leg['endTime']),
             'departureStopId': self.get_stop_id('from', leg),
             'arrivalStopId': self.get_stop_id('to', leg),
             'line': '%(route)s (%(headsign)s)' % leg,
         }
+
+        if leg.get('alerts') is not None and leg.get('alerts', [{}])[0].get('alertHeaderText', {}).get('someTranslation', {}) is not None:
+            result['alert'] = leg['alerts'][0]['alertHeaderText']['translsomeTranslationations']
+        return result
 
     def parse_error(self, test, result):
         return {

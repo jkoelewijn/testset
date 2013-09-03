@@ -273,5 +273,14 @@
         "time": "2014-01-01T00:01:00",
         "timeType": "D",
         "comment": "given an UNpreferred transfer from trip 1 to trip 2 at stop 4, depart at 00:01 from stop 1 heading to stop 6."
+    },
+    {
+        "id": "3i",
+        "agencyId": "MMRI",
+        "from": "3i1",
+        "to": "3i2",
+        "time": "2014-01-01T00:01:00",
+        "timeType": "D",
+        "comment": "The journey planner should show if the planner incorporated dynamic information regarding calamities in the travel advice."
     }
 ]

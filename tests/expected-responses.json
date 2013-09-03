@@ -412,5 +412,17 @@
                 "arrivalStopId": "3g26"
             }
         ]
+    },
+    {
+        "id": "3i",
+        "legs": [
+            {
+                "departureTime": "2014-01-01T00:01:00",
+                "arrivalTime": "2014-01-01T00:02:00",
+                "departureStopId": "3i1",
+                "arrivalStopId": "3i2",
+                "alert": "Unknown effect"
+            }
+        ]
     }
 ]
