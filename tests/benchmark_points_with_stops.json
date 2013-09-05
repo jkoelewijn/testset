@@ -1,11 +1,12 @@
 [
     {
         "start": {
-            "stop_name": "De Baandert, Heemskerk", 
+            "stop_name": "Heemskerk, De Baandert", 
             "stop_point": {
-                "lat": "52.512090", 
-                "lon": "4.684920"
+                "lat": "52.51209", 
+                "lon": "4.68492"
             }, 
+            "feed_id": "CXX", 
             "stop_id": "CXX|56300070", 
             "point": {
                 "lat": 52.511916666666664, 
@@ -13,12 +14,13 @@
             }
         }, 
         "stop": {
-            "stop_name": "Station Sloterdijk, Amsterdam", 
+            "stop_name": "Amsterdam, Einsteinweg/Basisweg", 
             "stop_point": {
-                "lat": "52.389330", 
-                "lon": "4.839000"
+                "lat": "52.39219", 
+                "lon": "4.84322"
             }, 
-            "stop_id": "GVB|02294", 
+            "feed_id": "CXX", 
+            "stop_id": "CXX|57120010", 
             "point": {
                 "lat": 52.38580555555556, 
                 "lon": 4.840777777777777
@@ -27,24 +29,26 @@
     }, 
     {
         "start": {
-            "stop_name": "Station Sloterdijk, Amsterdam", 
+            "stop_name": "Amsterdam, Einsteinweg/Basisweg", 
             "stop_point": {
-                "lat": "52.389330", 
-                "lon": "4.839000"
+                "lat": "52.39219", 
+                "lon": "4.84322"
             }, 
-            "stop_id": "GVB|02294", 
+            "feed_id": "CXX", 
+            "stop_id": "CXX|57120010", 
             "point": {
                 "lat": 52.38580555555556, 
                 "lon": 4.840777777777777
             }
         }, 
         "stop": {
-            "stop_name": "Hoofddorpplein, Amsterdam", 
+            "stop_name": "Amsterdam, Haarlemmermeerstation", 
             "stop_point": {
-                "lat": "52.350740", 
-                "lon": "4.849500"
+                "lat": "52.35022", 
+                "lon": "4.85708"
             }, 
-            "stop_id": "GVB|04104", 
+            "feed_id": "CXX", 
+            "stop_id": "CXX|57002171", 
             "point": {
                 "lat": 52.349333333333334, 
                 "lon": 4.856777777777777
@@ -53,11 +57,12 @@
     }, 
     {
         "start": {
-            "stop_name": "Houtmankade, Amsterdam", 
+            "stop_name": "Amsterdam, Houtmankade", 
             "stop_point": {
-                "lat": "52.390860", 
-                "lon": "4.883930"
+                "lat": "52.39086", 
+                "lon": "4.88393"
             }, 
+            "feed_id": "GVB", 
             "stop_id": "GVB|02104", 
             "point": {
                 "lat": 52.39083333333333, 
@@ -65,12 +70,13 @@
             }
         }, 
         "stop": {
-            "stop_name": "Standerdmolen, Amsterdam", 
+            "stop_name": "Amsterdam, Molenaarsweg", 
             "stop_point": {
-                "lat": "52.416200", 
-                "lon": "4.892180"
+                "lat": "52.42112", 
+                "lon": "4.89191"
             }, 
-            "stop_id": "GVB|01222", 
+            "feed_id": "CXX", 
+            "stop_id": "CXX|57112990", 
             "point": {
                 "lat": 52.424277777777775, 
                 "lon": 4.892777777777777
@@ -79,11 +85,12 @@
     }, 
     {
         "start": {
-            "stop_name": "Sjeesstraat, Purmerend", 
+            "stop_name": "Purmerend, Sjeesstraat", 
             "stop_point": {
-                "lat": "52.497640", 
-                "lon": "4.981260"
+                "lat": "52.49764", 
+                "lon": "4.98126"
             }, 
+            "feed_id": "EBS", 
             "stop_id": "EBS|37401010", 
             "point": {
                 "lat": 52.501, 
@@ -91,12 +98,13 @@
             }
         }, 
         "stop": {
-            "stop_name": "Schiphol Plaza, Schiphol", 
+            "stop_name": "Schiphol Centrum, E. v. d. Beekstraat", 
             "stop_point": {
-                "lat": "52.308870", 
-                "lon": "4.761390"
+                "lat": "52.30470", 
+                "lon": "4.75037"
             }, 
-            "stop_id": "GVB|04267", 
+            "feed_id": "CXX", 
+            "stop_id": "CXX|57332039", 
             "point": {
                 "lat": 52.30894444444444, 
                 "lon": 4.761333333333333
@@ -105,24 +113,26 @@
     }, 
     {
         "start": {
-            "stop_name": "Adm. Helfrichstraat, Amsterdam", 
+            "stop_name": "Amsterdam, Nachtwachtlaan", 
             "stop_point": {
-                "lat": "52.369370", 
-                "lon": "4.843680"
+                "lat": "52.36409", 
+                "lon": "4.84332"
             }, 
-            "stop_id": "EBS|57134230", 
+            "feed_id": "GVB", 
+            "stop_id": "GVB|03165", 
             "point": {
                 "lat": 52.36688888888889, 
                 "lon": 4.8311111111111105
             }
         }, 
         "stop": {
-            "stop_name": "Beukenweg, Amsterdam", 
+            "stop_name": "Amsterdam, Beukenweg", 
             "stop_point": {
-                "lat": "52.359060", 
-                "lon": "4.916750"
+                "lat": "52.35830", 
+                "lon": "4.91721"
             }, 
-            "stop_id": "GVB|00020", 
+            "feed_id": "GVB", 
+            "stop_id": "GVB|00021", 
             "point": {
                 "lat": 52.36227777777778, 
                 "lon": 4.908
@@ -131,24 +141,26 @@
     }, 
     {
         "start": {
-            "stop_name": "Beukenweg, Amsterdam", 
+            "stop_name": "Amsterdam, Beukenweg", 
             "stop_point": {
-                "lat": "52.359060", 
-                "lon": "4.916750"
+                "lat": "52.35830", 
+                "lon": "4.91721"
             }, 
-            "stop_id": "GVB|00020", 
+            "feed_id": "GVB", 
+            "stop_id": "GVB|00021", 
             "point": {
                 "lat": 52.36172222222223, 
                 "lon": 4.904888888888889
             }
         }, 
         "stop": {
-            "stop_name": "Adm. Helfrichstraat, Amsterdam", 
+            "stop_name": "Amsterdam, Nachtwachtlaan", 
             "stop_point": {
-                "lat": "52.369370", 
-                "lon": "4.843680"
+                "lat": "52.36409", 
+                "lon": "4.84332"
             }, 
-            "stop_id": "EBS|57134230", 
+            "feed_id": "GVB", 
+            "stop_id": "GVB|03165", 
             "point": {
                 "lat": 52.36688888888889, 
                 "lon": 4.8311111111111105
@@ -157,24 +169,26 @@
     }, 
     {
         "start": {
-            "stop_name": "Seineweg, Amsterdam", 
+            "stop_name": "Amsterdam, Plein '40-45", 
             "stop_point": {
-                "lat": "52.386320", 
-                "lon": "4.818570"
+                "lat": "52.38161", 
+                "lon": "4.82051"
             }, 
-            "stop_id": "GVB|02311", 
+            "feed_id": "CXX", 
+            "stop_id": "CXX|57130160", 
             "point": {
                 "lat": 52.38327777777778, 
                 "lon": 4.8165
             }
         }, 
         "stop": {
-            "stop_name": "Reimerswaalstraat, Amsterdam", 
+            "stop_name": "Amsterdam, Ruimzicht", 
             "stop_point": {
-                "lat": "52.360980", 
-                "lon": "4.794260"
+                "lat": "52.35951", 
+                "lon": "4.80739"
             }, 
-            "stop_id": "GVB|04028", 
+            "feed_id": "CXX", 
+            "stop_id": "CXX|57134280", 
             "point": {
                 "lat": 52.35841666666667, 
                 "lon": 4.8069999999999995
@@ -183,24 +197,26 @@
     }, 
     {
         "start": {
-            "stop_name": "1e v.Swindenstraat, Amsterdam", 
+            "stop_name": "Amsterdam, 1e v.Swindenstraat", 
             "stop_point": {
-                "lat": "52.361690", 
-                "lon": "4.924120"
+                "lat": "52.36211", 
+                "lon": "4.92386"
             }, 
-            "stop_id": "GVB|08097", 
+            "feed_id": "GVB", 
+            "stop_id": "GVB|08098", 
             "point": {
                 "lat": 52.36566666666667, 
                 "lon": 4.935027777777778
             }
         }, 
         "stop": {
-            "stop_name": "Station Sloterdijk, Amsterdam", 
+            "stop_name": "Amsterdam, Einsteinweg/Basisweg", 
             "stop_point": {
-                "lat": "52.389330", 
-                "lon": "4.839000"
+                "lat": "52.39219", 
+                "lon": "4.84322"
             }, 
-            "stop_id": "GVB|02294", 
+            "feed_id": "CXX", 
+            "stop_id": "CXX|57120010", 
             "point": {
                 "lat": 52.38580555555556, 
                 "lon": 4.840777777777777
@@ -209,11 +225,12 @@
     }, 
     {
         "start": {
-            "stop_name": "C.K. Eloutstraat, Amsterdam", 
+            "stop_name": "Amsterdam, C.K. Eloutstraat", 
             "stop_point": {
-                "lat": "52.354340", 
-                "lon": "4.811380"
+                "lat": "52.35434", 
+                "lon": "4.81138"
             }, 
+            "feed_id": "GVB", 
             "stop_id": "GVB|04051", 
             "point": {
                 "lat": 52.34547222222223, 
@@ -221,12 +238,13 @@
             }
         }, 
         "stop": {
-            "stop_name": "Schiphol Plaza, Schiphol", 
+            "stop_name": "Schiphol Centrum, E. v. d. Beekstraat", 
             "stop_point": {
-                "lat": "52.308870", 
-                "lon": "4.761390"
+                "lat": "52.30470", 
+                "lon": "4.75037"
             }, 
-            "stop_id": "GVB|04267", 
+            "feed_id": "CXX", 
+            "stop_id": "CXX|57332039", 
             "point": {
                 "lat": 52.30894444444444, 
                 "lon": 4.761333333333333
@@ -235,24 +253,26 @@
     }, 
     {
         "start": {
-            "stop_name": "Hamerstraat, Amsterdam", 
+            "stop_name": "Amsterdam, Centraal Station", 
             "stop_point": {
-                "lat": "52.386260", 
-                "lon": "4.922670"
+                "lat": "52.37784", 
+                "lon": "4.89810"
             }, 
-            "stop_id": "GVB|01119", 
+            "feed_id": "CXX", 
+            "stop_id": "CXX|57002330", 
             "point": {
                 "lat": 52.38280555555556, 
                 "lon": 4.909888888888889
             }
         }, 
         "stop": {
-            "stop_name": "Centraal Station, Amsterdam", 
+            "stop_name": "Amsterdam, Centraal Station", 
             "stop_point": {
-                "lat": "52.377540", 
-                "lon": "4.901880"
+                "lat": "52.37764", 
+                "lon": "4.89772"
             }, 
-            "stop_id": "GVB|05003", 
+            "feed_id": "CXX", 
+            "stop_id": "CXX|57002341", 
             "point": {
                 "lat": 52.37708333333333, 
                 "lon": 4.897972222222222
@@ -261,24 +281,26 @@
     }, 
     {
         "start": {
-            "stop_name": "Polikliniek Enkhuizen, Enkhuizen", 
+            "stop_name": "Enkhuizen, Station", 
             "stop_point": {
-                "lat": "52.705250", 
-                "lon": "5.288980"
+                "lat": "52.70007", 
+                "lon": "5.28855"
             }, 
-            "stop_id": "CXX|38500840", 
+            "feed_id": "CXX", 
+            "stop_id": "CXX|38500010", 
             "point": {
                 "lat": 52.69972222222222, 
                 "lon": 5.28875
             }
         }, 
         "stop": {
-            "stop_name": "Station Sloterdijk, Amsterdam", 
+            "stop_name": "Amsterdam, Einsteinweg/Basisweg", 
             "stop_point": {
-                "lat": "52.389330", 
-                "lon": "4.839000"
+                "lat": "52.39219", 
+                "lon": "4.84322"
             }, 
-            "stop_id": "GVB|02294", 
+            "feed_id": "CXX", 
+            "stop_id": "CXX|57120010", 
             "point": {
                 "lat": 52.38580555555556, 
                 "lon": 4.840777777777777
@@ -287,11 +309,12 @@
     }, 
     {
         "start": {
-            "stop_name": "Busstation, Den Oever", 
+            "stop_name": "Den Oever, Busstation", 
             "stop_point": {
-                "lat": "52.929840", 
-                "lon": "5.032630"
+                "lat": "52.92984", 
+                "lon": "5.03263"
             }, 
+            "feed_id": "ARR", 
             "stop_id": "ARR|34770021", 
             "point": {
                 "lat": 52.93066666666667, 
@@ -299,12 +322,13 @@
             }
         }, 
         "stop": {
-            "stop_name": "Schiphol Plaza, Schiphol", 
+            "stop_name": "Schiphol Centrum, E. v. d. Beekstraat", 
             "stop_point": {
-                "lat": "52.308870", 
-                "lon": "4.761390"
+                "lat": "52.30470", 
+                "lon": "4.75037"
             }, 
-            "stop_id": "GVB|04267", 
+            "feed_id": "CXX", 
+            "stop_id": "CXX|57332039", 
             "point": {
                 "lat": 52.30894444444444, 
                 "lon": 4.761333333333333
@@ -313,24 +337,26 @@
     }, 
     {
         "start": {
-            "stop_name": "Weteringkade, Den Haag", 
+            "stop_name": "Den Haag, Haagse Poort", 
             "stop_point": {
-                "lat": "52.074910", 
-                "lon": "4.329830"
+                "lat": "52.07759", 
+                "lon": "4.33777"
             }, 
-            "stop_id": "HTM|2713", 
+            "feed_id": "ARR", 
+            "stop_id": "ARR|54003040", 
             "point": {
                 "lat": 52.07344444444445, 
                 "lon": 4.332527777777778
             }
         }, 
         "stop": {
-            "stop_name": "Centraal Station, Amsterdam", 
+            "stop_name": "Amsterdam, Centraal Station", 
             "stop_point": {
-                "lat": "52.377540", 
-                "lon": "4.901880"
+                "lat": "52.37764", 
+                "lon": "4.89772"
             }, 
-            "stop_id": "GVB|05003", 
+            "feed_id": "CXX", 
+            "stop_id": "CXX|57002341", 
             "point": {
                 "lat": 52.37708333333333, 
                 "lon": 4.897972222222222
@@ -339,11 +365,12 @@
     }, 
     {
         "start": {
-            "stop_name": "Molengraaffsingel, Delft", 
+            "stop_name": "Delft, Molengraaffsingel", 
             "stop_point": {
-                "lat": "51.992740", 
-                "lon": "4.383590"
+                "lat": "51.99274", 
+                "lon": "4.38359"
             }, 
+            "feed_id": "VTN", 
             "stop_id": "VTN|42007201", 
             "point": {
                 "lat": 51.993722222222225, 
@@ -351,12 +378,13 @@
             }
         }, 
         "stop": {
-            "stop_name": "Station Sloterdijk, Amsterdam", 
+            "stop_name": "Amsterdam, Einsteinweg/Basisweg", 
             "stop_point": {
-                "lat": "52.389330", 
-                "lon": "4.839000"
+                "lat": "52.39219", 
+                "lon": "4.84322"
             }, 
-            "stop_id": "GVB|02294", 
+            "feed_id": "CXX", 
+            "stop_id": "CXX|57120010", 
             "point": {
                 "lat": 52.38580555555556, 
                 "lon": 4.840777777777777
@@ -365,24 +393,26 @@
     }, 
     {
         "start": {
-            "stop_name": "Poortwachter, Amstelveen", 
+            "stop_name": "Amstelveen, Poortwachter", 
             "stop_point": {
-                "lat": "52.283330", 
-                "lon": "4.845090"
+                "lat": "52.28321", 
+                "lon": "4.84499"
             }, 
-            "stop_id": "GVB|07478", 
+            "feed_id": "CXX", 
+            "stop_id": "CXX|57243160", 
             "point": {
                 "lat": 52.28744444444444, 
                 "lon": 4.845444444444444
             }
         }, 
         "stop": {
-            "stop_name": "Schiphol Plaza, Schiphol", 
+            "stop_name": "Schiphol Centrum, E. v. d. Beekstraat", 
             "stop_point": {
-                "lat": "52.308870", 
-                "lon": "4.761390"
+                "lat": "52.30470", 
+                "lon": "4.75037"
             }, 
-            "stop_id": "GVB|04267", 
+            "feed_id": "CXX", 
+            "stop_id": "CXX|57332039", 
             "point": {
                 "lat": 52.30894444444444, 
                 "lon": 4.761333333333333
@@ -391,24 +421,26 @@
     }, 
     {
         "start": {
-            "stop_name": "Boreelkazerne, Deventer", 
+            "stop_name": "Deventer, Saxion Hogeschool", 
             "stop_point": {
-                "lat": "52.252590", 
-                "lon": "6.164400"
+                "lat": "52.25416", 
+                "lon": "6.16687"
             }, 
-            "stop_id": "SYNTUS|47899008", 
+            "feed_id": "ARR", 
+            "stop_id": "ARR|47640040", 
             "point": {
                 "lat": 52.25333333333333, 
                 "lon": 6.1697500000000005
             }
         }, 
         "stop": {
-            "stop_name": "Weteringkade, Den Haag", 
+            "stop_name": "Den Haag, Haagse Poort", 
             "stop_point": {
-                "lat": "52.074910", 
-                "lon": "4.329830"
+                "lat": "52.07759", 
+                "lon": "4.33777"
             }, 
-            "stop_id": "HTM|2713", 
+            "feed_id": "ARR", 
+            "stop_id": "ARR|54003040", 
             "point": {
                 "lat": 52.07344444444445, 
                 "lon": 4.332527777777778
@@ -417,11 +449,12 @@
     }, 
     {
         "start": {
-            "stop_name": "Raadhuislaan, Maarn", 
+            "stop_name": "Maarn, Raadhuislaan", 
             "stop_point": {
-                "lat": "52.064980", 
-                "lon": "5.369790"
+                "lat": "52.06498", 
+                "lon": "5.36979"
             }, 
+            "feed_id": "CXX", 
             "stop_id": "CXX|50550080", 
             "point": {
                 "lat": 52.07077777777778, 
@@ -429,11 +462,12 @@
             }
         }, 
         "stop": {
-            "stop_name": "Molengraaffsingel, Delft", 
+            "stop_name": "Delft, Molengraaffsingel", 
             "stop_point": {
-                "lat": "51.992740", 
-                "lon": "4.383590"
+                "lat": "51.99274", 
+                "lon": "4.38359"
             }, 
+            "feed_id": "VTN", 
             "stop_id": "VTN|42007201", 
             "point": {
                 "lat": 51.993722222222225, 
@@ -443,24 +477,26 @@
     }, 
     {
         "start": {
-            "stop_name": "Winkelhof, Leiderdorp", 
+            "stop_name": "Leiderdorp, Winkelhof", 
             "stop_point": {
-                "lat": "52.163410", 
-                "lon": "4.533950"
+                "lat": "52.16297", 
+                "lon": "4.53476"
             }, 
-            "stop_id": "ARR|54531530", 
+            "feed_id": "ARR", 
+            "stop_id": "ARR|54531560", 
             "point": {
                 "lat": 52.15686111111111, 
                 "lon": 4.541833333333333
             }
         }, 
         "stop": {
-            "stop_name": "Poortwachter, Amstelveen", 
+            "stop_name": "Amstelveen, Poortwachter", 
             "stop_point": {
-                "lat": "52.283330", 
-                "lon": "4.845090"
+                "lat": "52.28321", 
+                "lon": "4.84499"
             }, 
-            "stop_id": "GVB|07478", 
+            "feed_id": "CXX", 
+            "stop_id": "CXX|57243160", 
             "point": {
                 "lat": 52.28744444444444, 
                 "lon": 4.845444444444444
@@ -469,23 +505,25 @@
     }, 
     {
         "start": {
-            "stop_name": "Centrum/Verwulft, Haarlem", 
+            "stop_name": "Haarlem, Centrum/Verwulft", 
             "stop_point": {
-                "lat": "52.380010", 
-                "lon": "4.632620"
+                "lat": "52.38013", 
+                "lon": "4.63277"
             }, 
-            "stop_id": "CXX|55002090", 
+            "feed_id": "CXX", 
+            "stop_id": "CXX|55002260", 
             "point": {
                 "lat": 52.38138888888889, 
                 "lon": 4.635
             }
         }, 
         "stop": {
-            "stop_name": "Hortensiastraat, Zwolle", 
+            "stop_name": "Zwolle, Hortensiastraat", 
             "stop_point": {
-                "lat": "52.499940", 
-                "lon": "6.108560"
+                "lat": "52.49994", 
+                "lon": "6.10856"
             }, 
+            "feed_id": "SYNTUS", 
             "stop_id": "SYNTUS|46006110", 
             "point": {
                 "lat": 52.501083333333334, 
@@ -495,11 +533,12 @@
     }, 
     {
         "start": {
-            "stop_name": "Malieveld, Den Haag", 
+            "stop_name": "Den Haag, Malieveld", 
             "stop_point": {
-                "lat": "52.084900", 
-                "lon": "4.316530"
+                "lat": "52.08490", 
+                "lon": "4.31653"
             }, 
+            "feed_id": "HTM", 
             "stop_id": "HTM|2401", 
             "point": {
                 "lat": 52.078722222222225, 
@@ -507,11 +546,12 @@
             }
         }, 
         "stop": {
-            "stop_name": "Graadt van Roggenweg, Utrecht", 
+            "stop_name": "Utrecht, Graadt van Roggenweg", 
             "stop_point": {
-                "lat": "52.087770", 
-                "lon": "5.100570"
+                "lat": "52.08773", 
+                "lon": "5.10054"
             }, 
+            "feed_id": "CXX", 
             "stop_id": "CXX|50002070", 
             "point": {
                 "lat": 52.08836111111111, 
@@ -521,23 +561,25 @@
     }, 
     {
         "start": {
-            "stop_name": "Centraal Station, 's-Hertogenbosch", 
+            "stop_name": "'s-Hertogenbosch, Centraal Station (H)", 
             "stop_point": {
-                "lat": "51.689920", 
-                "lon": "5.295110"
+                "lat": "51.68999", 
+                "lon": "5.29473"
             }, 
-            "stop_id": "ARR|63000100", 
+            "feed_id": "ARR", 
+            "stop_id": "ARR|63000245", 
             "point": {
                 "lat": 51.687416666666664, 
                 "lon": 5.3085555555555555
             }
         }, 
         "stop": {
-            "stop_name": "Brinkstraat, Assen", 
+            "stop_name": "Assen, Brinkstraat", 
             "stop_point": {
-                "lat": "52.993040", 
-                "lon": "6.563200"
+                "lat": "52.99304", 
+                "lon": "6.56320"
             }, 
+            "feed_id": "QBUZZ", 
             "stop_id": "QBUZZ|15008110", 
             "point": {
                 "lat": 52.99263888888889, 
@@ -547,11 +589,12 @@
     }, 
     {
         "start": {
-            "stop_name": "Statenlaan, Middelburg", 
+            "stop_name": "Middelburg, Statenlaan", 
             "stop_point": {
-                "lat": "51.489270", 
-                "lon": "3.617220"
+                "lat": "51.48927", 
+                "lon": "3.61722"
             }, 
+            "feed_id": "CXX", 
             "stop_id": "CXX|76500310", 
             "point": {
                 "lat": 51.49527777777778, 
@@ -559,12 +602,13 @@
             }
         }, 
         "stop": {
-            "stop_name": "Centrum/Verwulft, Haarlem", 
+            "stop_name": "Haarlem, Centrum/Verwulft", 
             "stop_point": {
-                "lat": "52.380010", 
-                "lon": "4.632620"
+                "lat": "52.38013", 
+                "lon": "4.63277"
             }, 
-            "stop_id": "CXX|55002090", 
+            "feed_id": "CXX", 
+            "stop_id": "CXX|55002260", 
             "point": {
                 "lat": 52.38138888888889, 
                 "lon": 4.635
@@ -573,11 +617,12 @@
     }, 
     {
         "start": {
-            "stop_name": "Boschstraat/Maagdendries, Maastricht", 
+            "stop_name": "Maastricht, Boschstraat/Maagdendries", 
             "stop_point": {
-                "lat": "50.854500", 
-                "lon": "5.689940"
+                "lat": "50.85450", 
+                "lon": "5.68994"
             }, 
+            "feed_id": "VTN", 
             "stop_id": "VTN|15111901", 
             "point": {
                 "lat": 50.84966666666667, 
@@ -585,11 +630,12 @@
             }
         }, 
         "stop": {
-            "stop_name": "Malieveld, Den Haag", 
+            "stop_name": "Den Haag, Malieveld", 
             "stop_point": {
-                "lat": "52.084900", 
-                "lon": "4.316530"
+                "lat": "52.08490", 
+                "lon": "4.31653"
             }, 
+            "feed_id": "HTM", 
             "stop_id": "HTM|2401", 
             "point": {
                 "lat": 52.078722222222225, 
@@ -599,24 +645,26 @@
     }, 
     {
         "start": {
-            "stop_name": "Centraal Station, Arnhem", 
+            "stop_name": "Arnhem, Centraal Station", 
             "stop_point": {
-                "lat": "51.983840", 
-                "lon": "5.900510"
+                "lat": "51.98385", 
+                "lon": "5.90036"
             }, 
-            "stop_id": "CXX|40000010", 
+            "feed_id": "CXX", 
+            "stop_id": "CXX|40004003", 
             "point": {
                 "lat": 51.98447222222222, 
                 "lon": 5.9013888888888895
             }
         }, 
         "stop": {
-            "stop_name": "Centraal Station, 's-Hertogenbosch", 
+            "stop_name": "'s-Hertogenbosch, Centraal Station (H)", 
             "stop_point": {
-                "lat": "51.689920", 
-                "lon": "5.295110"
+                "lat": "51.68999", 
+                "lon": "5.29473"
             }, 
-            "stop_id": "ARR|63000100", 
+            "feed_id": "ARR", 
+            "stop_id": "ARR|63000245", 
             "point": {
                 "lat": 51.687416666666664, 
                 "lon": 5.3085555555555555
@@ -625,11 +673,12 @@
     }, 
     {
         "start": {
-            "stop_name": "Hortensiastraat, Zwolle", 
+            "stop_name": "Zwolle, Hortensiastraat", 
             "stop_point": {
-                "lat": "52.499940", 
-                "lon": "6.108560"
+                "lat": "52.49994", 
+                "lon": "6.10856"
             }, 
+            "feed_id": "SYNTUS", 
             "stop_id": "SYNTUS|46006110", 
             "point": {
                 "lat": 52.501083333333334, 
@@ -637,11 +686,12 @@
             }
         }, 
         "stop": {
-            "stop_name": "Statenlaan, Middelburg", 
+            "stop_name": "Middelburg, Statenlaan", 
             "stop_point": {
-                "lat": "51.489270", 
-                "lon": "3.617220"
+                "lat": "51.48927", 
+                "lon": "3.61722"
             }, 
+            "feed_id": "CXX", 
             "stop_id": "CXX|76500310", 
             "point": {
                 "lat": 51.49527777777778, 
@@ -651,11 +701,12 @@
     }, 
     {
         "start": {
-            "stop_name": "Graadt van Roggenweg, Utrecht", 
+            "stop_name": "Utrecht, Graadt van Roggenweg", 
             "stop_point": {
-                "lat": "52.087770", 
-                "lon": "5.100570"
+                "lat": "52.08773", 
+                "lon": "5.10054"
             }, 
+            "feed_id": "CXX", 
             "stop_id": "CXX|50002070", 
             "point": {
                 "lat": 52.08836111111111, 
@@ -663,11 +714,12 @@
             }
         }, 
         "stop": {
-            "stop_name": "Boschstraat/Maagdendries, Maastricht", 
+            "stop_name": "Maastricht, Boschstraat/Maagdendries", 
             "stop_point": {
-                "lat": "50.854500", 
-                "lon": "5.689940"
+                "lat": "50.85450", 
+                "lon": "5.68994"
             }, 
+            "feed_id": "VTN", 
             "stop_id": "VTN|15111901", 
             "point": {
                 "lat": 50.84966666666667, 
@@ -677,11 +729,12 @@
     }, 
     {
         "start": {
-            "stop_name": "Brinkstraat, Assen", 
+            "stop_name": "Assen, Brinkstraat", 
             "stop_point": {
-                "lat": "52.993040", 
-                "lon": "6.563200"
+                "lat": "52.99304", 
+                "lon": "6.56320"
             }, 
+            "feed_id": "QBUZZ", 
             "stop_id": "QBUZZ|15008110", 
             "point": {
                 "lat": 52.99263888888889, 
@@ -689,12 +742,13 @@
             }
         }, 
         "stop": {
-            "stop_name": "Centraal Station, Arnhem", 
+            "stop_name": "Arnhem, Centraal Station", 
             "stop_point": {
-                "lat": "51.983840", 
-                "lon": "5.900510"
+                "lat": "51.98385", 
+                "lon": "5.90036"
             }, 
-            "stop_id": "CXX|40000010", 
+            "feed_id": "CXX", 
+            "stop_id": "CXX|40004003", 
             "point": {
                 "lat": 51.98447222222222, 
                 "lon": 5.9013888888888895
@@ -703,23 +757,25 @@
     }, 
     {
         "start": {
-            "stop_name": "Trompstraat, Groningen", 
+            "stop_name": "Groningen, Trompstraat", 
             "stop_point": {
-                "lat": "53.214800", 
-                "lon": "6.576810"
+                "lat": "53.21451", 
+                "lon": "6.57585"
             }, 
-            "stop_id": "QBUZZ|10009430", 
+            "feed_id": "QBUZZ", 
+            "stop_id": "QBUZZ|10009440", 
             "point": {
                 "lat": 53.218583333333335, 
                 "lon": 6.567194444444445
             }
         }, 
         "stop": {
-            "stop_name": "Statenlaan, Middelburg", 
+            "stop_name": "Middelburg, Statenlaan", 
             "stop_point": {
-                "lat": "51.489270", 
-                "lon": "3.617220"
+                "lat": "51.48927", 
+                "lon": "3.61722"
             }, 
+            "feed_id": "CXX", 
             "stop_id": "CXX|76500310", 
             "point": {
                 "lat": 51.49527777777778, 
@@ -729,23 +785,25 @@
     }, 
     {
         "start": {
-            "stop_name": "Busstation, Leeuwarden", 
+            "stop_name": "Leeuwarden, De Brol", 
             "stop_point": {
-                "lat": "53.196380", 
-                "lon": "5.791360"
+                "lat": "53.20135", 
+                "lon": "5.79836"
             }, 
-            "stop_id": "QBUZZ|20000010", 
+            "feed_id": "ARR", 
+            "stop_id": "ARR|20002440", 
             "point": {
                 "lat": 53.196638888888884, 
                 "lon": 5.791972222222222
             }
         }, 
         "stop": {
-            "stop_name": "Boschstraat/Maagdendries, Maastricht", 
+            "stop_name": "Maastricht, Boschstraat/Maagdendries", 
             "stop_point": {
-                "lat": "50.854500", 
-                "lon": "5.689940"
+                "lat": "50.85450", 
+                "lon": "5.68994"
             }, 
+            "feed_id": "VTN", 
             "stop_id": "VTN|15111901", 
             "point": {
                 "lat": 50.84966666666667, 
@@ -755,24 +813,26 @@
     }, 
     {
         "start": {
-            "stop_name": "Begraafplaats, Emmeloord", 
+            "stop_name": "Emmeloord, Busstation", 
             "stop_point": {
-                "lat": "52.717610", 
-                "lon": "5.746490"
+                "lat": "52.71000", 
+                "lon": "5.75136"
             }, 
-            "stop_id": "CXX|25000410", 
+            "feed_id": "CXX", 
+            "stop_id": "CXX|25005022", 
             "point": {
                 "lat": 52.71291666666667, 
                 "lon": 5.756611111111111
             }
         }, 
         "stop": {
-            "stop_name": "Centraal Station, Arnhem", 
+            "stop_name": "Arnhem, Centraal Station", 
             "stop_point": {
-                "lat": "51.983840", 
-                "lon": "5.900510"
+                "lat": "51.98385", 
+                "lon": "5.90036"
             }, 
-            "stop_id": "CXX|40000010", 
+            "feed_id": "CXX", 
+            "stop_id": "CXX|40004003", 
             "point": {
                 "lat": 51.98447222222222, 
                 "lon": 5.9013888888888895
@@ -781,24 +841,26 @@
     }, 
     {
         "start": {
-            "stop_name": "Polikliniek Enkhuizen, Enkhuizen", 
+            "stop_name": "Enkhuizen, Station", 
             "stop_point": {
-                "lat": "52.705250", 
-                "lon": "5.288980"
+                "lat": "52.70007", 
+                "lon": "5.28855"
             }, 
-            "stop_id": "CXX|38500840", 
+            "feed_id": "CXX", 
+            "stop_id": "CXX|38500010", 
             "point": {
                 "lat": 52.69972222222222, 
                 "lon": 5.28875
             }
         }, 
         "stop": {
-            "stop_name": "Busstation, Leeuwarden", 
+            "stop_name": "Leeuwarden, De Brol", 
             "stop_point": {
-                "lat": "53.196380", 
-                "lon": "5.791360"
+                "lat": "53.20135", 
+                "lon": "5.79836"
             }, 
-            "stop_id": "QBUZZ|20000010", 
+            "feed_id": "ARR", 
+            "stop_id": "ARR|20002440", 
             "point": {
                 "lat": 53.196638888888884, 
                 "lon": 5.791972222222222
@@ -807,11 +869,12 @@
     }, 
     {
         "start": {
-            "stop_name": "Busstation, Den Oever", 
+            "stop_name": "Den Oever, Busstation", 
             "stop_point": {
-                "lat": "52.929840", 
-                "lon": "5.032630"
+                "lat": "52.92984", 
+                "lon": "5.03263"
             }, 
+            "feed_id": "ARR", 
             "stop_id": "ARR|34770021", 
             "point": {
                 "lat": 52.93066666666667, 
@@ -819,12 +882,13 @@
             }
         }, 
         "stop": {
-            "stop_name": "Begraafplaats, Emmeloord", 
+            "stop_name": "Emmeloord, Busstation", 
             "stop_point": {
-                "lat": "52.717610", 
-                "lon": "5.746490"
+                "lat": "52.71000", 
+                "lon": "5.75136"
             }, 
-            "stop_id": "CXX|25000410", 
+            "feed_id": "CXX", 
+            "stop_id": "CXX|25005022", 
             "point": {
                 "lat": 52.71291666666667, 
                 "lon": 5.756611111111111
@@ -833,24 +897,26 @@
     }, 
     {
         "start": {
-            "stop_name": "Weteringkade, Den Haag", 
+            "stop_name": "Den Haag, Haagse Poort", 
             "stop_point": {
-                "lat": "52.074910", 
-                "lon": "4.329830"
+                "lat": "52.07759", 
+                "lon": "4.33777"
             }, 
-            "stop_id": "HTM|2713", 
+            "feed_id": "ARR", 
+            "stop_id": "ARR|54003040", 
             "point": {
                 "lat": 52.07344444444445, 
                 "lon": 4.332527777777778
             }
         }, 
         "stop": {
-            "stop_name": "Winkelhof, Leiderdorp", 
+            "stop_name": "Leiderdorp, Winkelhof", 
             "stop_point": {
-                "lat": "52.163410", 
-                "lon": "4.533950"
+                "lat": "52.16297", 
+                "lon": "4.53476"
             }, 
-            "stop_id": "ARR|54531530", 
+            "feed_id": "ARR", 
+            "stop_id": "ARR|54531560", 
             "point": {
                 "lat": 52.15686111111111, 
                 "lon": 4.541833333333333
@@ -859,11 +925,12 @@
     }, 
     {
         "start": {
-            "stop_name": "Molengraaffsingel, Delft", 
+            "stop_name": "Delft, Molengraaffsingel", 
             "stop_point": {
-                "lat": "51.992740", 
-                "lon": "4.383590"
+                "lat": "51.99274", 
+                "lon": "4.38359"
             }, 
+            "feed_id": "VTN", 
             "stop_id": "VTN|42007201", 
             "point": {
                 "lat": 51.993722222222225, 
@@ -871,12 +938,13 @@
             }
         }, 
         "stop": {
-            "stop_name": "Weteringkade, Den Haag", 
+            "stop_name": "Den Haag, Haagse Poort", 
             "stop_point": {
-                "lat": "52.074910", 
-                "lon": "4.329830"
+                "lat": "52.07759", 
+                "lon": "4.33777"
             }, 
-            "stop_id": "HTM|2713", 
+            "feed_id": "ARR", 
+            "stop_id": "ARR|54003040", 
             "point": {
                 "lat": 52.07344444444445, 
                 "lon": 4.332527777777778
@@ -885,23 +953,25 @@
     }, 
     {
         "start": {
-            "stop_name": "Poortwachter, Amstelveen", 
+            "stop_name": "Amstelveen, Poortwachter", 
             "stop_point": {
-                "lat": "52.283330", 
-                "lon": "4.845090"
+                "lat": "52.28321", 
+                "lon": "4.84499"
             }, 
-            "stop_id": "GVB|07478", 
+            "feed_id": "CXX", 
+            "stop_id": "CXX|57243160", 
             "point": {
                 "lat": 52.28744444444444, 
                 "lon": 4.845444444444444
             }
         }, 
         "stop": {
-            "stop_name": "Molengraaffsingel, Delft", 
+            "stop_name": "Delft, Molengraaffsingel", 
             "stop_point": {
-                "lat": "51.992740", 
-                "lon": "4.383590"
+                "lat": "51.99274", 
+                "lon": "4.38359"
             }, 
+            "feed_id": "VTN", 
             "stop_id": "VTN|42007201", 
             "point": {
                 "lat": 51.993722222222225, 
@@ -911,24 +981,26 @@
     }, 
     {
         "start": {
-            "stop_name": "Boreelkazerne, Deventer", 
+            "stop_name": "Deventer, Saxion Hogeschool", 
             "stop_point": {
-                "lat": "52.252590", 
-                "lon": "6.164400"
+                "lat": "52.25416", 
+                "lon": "6.16687"
             }, 
-            "stop_id": "SYNTUS|47899008", 
+            "feed_id": "ARR", 
+            "stop_id": "ARR|47640040", 
             "point": {
                 "lat": 52.25333333333333, 
                 "lon": 6.1697500000000005
             }
         }, 
         "stop": {
-            "stop_name": "Poortwachter, Amstelveen", 
+            "stop_name": "Amstelveen, Poortwachter", 
             "stop_point": {
-                "lat": "52.283330", 
-                "lon": "4.845090"
+                "lat": "52.28321", 
+                "lon": "4.84499"
             }, 
-            "stop_id": "GVB|07478", 
+            "feed_id": "CXX", 
+            "stop_id": "CXX|57243160", 
             "point": {
                 "lat": 52.28744444444444, 
                 "lon": 4.845444444444444
@@ -937,11 +1009,12 @@
     }, 
     {
         "start": {
-            "stop_name": "Raadhuislaan, Maarn", 
+            "stop_name": "Maarn, Raadhuislaan", 
             "stop_point": {
-                "lat": "52.064980", 
-                "lon": "5.369790"
+                "lat": "52.06498", 
+                "lon": "5.36979"
             }, 
+            "feed_id": "CXX", 
             "stop_id": "CXX|50550080", 
             "point": {
                 "lat": 52.07077777777778, 
@@ -949,12 +1022,13 @@
             }
         }, 
         "stop": {
-            "stop_name": "Boreelkazerne, Deventer", 
+            "stop_name": "Deventer, Saxion Hogeschool", 
             "stop_point": {
-                "lat": "52.252590", 
-                "lon": "6.164400"
+                "lat": "52.25416", 
+                "lon": "6.16687"
             }, 
-            "stop_id": "SYNTUS|47899008", 
+            "feed_id": "ARR", 
+            "stop_id": "ARR|47640040", 
             "point": {
                 "lat": 52.25333333333333, 
                 "lon": 6.1697500000000005
@@ -963,23 +1037,25 @@
     }, 
     {
         "start": {
-            "stop_name": "Winkelhof, Leiderdorp", 
+            "stop_name": "Leiderdorp, Winkelhof", 
             "stop_point": {
-                "lat": "52.163410", 
-                "lon": "4.533950"
+                "lat": "52.16297", 
+                "lon": "4.53476"
             }, 
-            "stop_id": "ARR|54531530", 
+            "feed_id": "ARR", 
+            "stop_id": "ARR|54531560", 
             "point": {
                 "lat": 52.15686111111111, 
                 "lon": 4.541833333333333
             }
         }, 
         "stop": {
-            "stop_name": "Raadhuislaan, Maarn", 
+            "stop_name": "Maarn, Raadhuislaan", 
             "stop_point": {
-                "lat": "52.064980", 
-                "lon": "5.369790"
+                "lat": "52.06498", 
+                "lon": "5.36979"
             }, 
+            "feed_id": "CXX", 
             "stop_id": "CXX|50550080", 
             "point": {
                 "lat": 52.07077777777778, 
@@ -989,24 +1065,26 @@
     }, 
     {
         "start": {
-            "stop_name": "Centrum/Verwulft, Haarlem", 
+            "stop_name": "Haarlem, Centrum/Verwulft", 
             "stop_point": {
-                "lat": "52.380010", 
-                "lon": "4.632620"
+                "lat": "52.38013", 
+                "lon": "4.63277"
             }, 
-            "stop_id": "CXX|55002090", 
+            "feed_id": "CXX", 
+            "stop_id": "CXX|55002260", 
             "point": {
                 "lat": 52.38138888888889, 
                 "lon": 4.635
             }
         }, 
         "stop": {
-            "stop_name": "Schiphol Plaza, Schiphol", 
+            "stop_name": "Schiphol Centrum, E. v. d. Beekstraat", 
             "stop_point": {
-                "lat": "52.308870", 
-                "lon": "4.761390"
+                "lat": "52.30470", 
+                "lon": "4.75037"
             }, 
-            "stop_id": "GVB|04267", 
+            "feed_id": "CXX", 
+            "stop_id": "CXX|57332039", 
             "point": {
                 "lat": 52.30894444444444, 
                 "lon": 4.761333333333333
@@ -1015,11 +1093,12 @@
     }, 
     {
         "start": {
-            "stop_name": "Malieveld, Den Haag", 
+            "stop_name": "Den Haag, Malieveld", 
             "stop_point": {
-                "lat": "52.084900", 
-                "lon": "4.316530"
+                "lat": "52.08490", 
+                "lon": "4.31653"
             }, 
+            "feed_id": "HTM", 
             "stop_id": "HTM|2401", 
             "point": {
                 "lat": 52.078722222222225, 
@@ -1027,12 +1106,13 @@
             }
         }, 
         "stop": {
-            "stop_name": "Schiphol Plaza, Schiphol", 
+            "stop_name": "Schiphol Centrum, E. v. d. Beekstraat", 
             "stop_point": {
-                "lat": "52.308870", 
-                "lon": "4.761390"
+                "lat": "52.30470", 
+                "lon": "4.75037"
             }, 
-            "stop_id": "GVB|04267", 
+            "feed_id": "CXX", 
+            "stop_id": "CXX|57332039", 
             "point": {
                 "lat": 52.30894444444444, 
                 "lon": 4.761333333333333
@@ -1041,24 +1121,26 @@
     }, 
     {
         "start": {
-            "stop_name": "Centraal Station, 's-Hertogenbosch", 
+            "stop_name": "'s-Hertogenbosch, Centraal Station (H)", 
             "stop_point": {
-                "lat": "51.689920", 
-                "lon": "5.295110"
+                "lat": "51.68999", 
+                "lon": "5.29473"
             }, 
-            "stop_id": "ARR|63000100", 
+            "feed_id": "ARR", 
+            "stop_id": "ARR|63000245", 
             "point": {
                 "lat": 51.687416666666664, 
                 "lon": 5.3085555555555555
             }
         }, 
         "stop": {
-            "stop_name": "Schiphol Plaza, Schiphol", 
+            "stop_name": "Schiphol Centrum, E. v. d. Beekstraat", 
             "stop_point": {
-                "lat": "52.308870", 
-                "lon": "4.761390"
+                "lat": "52.30470", 
+                "lon": "4.75037"
             }, 
-            "stop_id": "GVB|04267", 
+            "feed_id": "CXX", 
+            "stop_id": "CXX|57332039", 
             "point": {
                 "lat": 52.30894444444444, 
                 "lon": 4.761333333333333
@@ -1067,11 +1149,12 @@
     }, 
     {
         "start": {
-            "stop_name": "Statenlaan, Middelburg", 
+            "stop_name": "Middelburg, Statenlaan", 
             "stop_point": {
-                "lat": "51.489270", 
-                "lon": "3.617220"
+                "lat": "51.48927", 
+                "lon": "3.61722"
             }, 
+            "feed_id": "CXX", 
             "stop_id": "CXX|76500310", 
             "point": {
                 "lat": 51.49527777777778, 
@@ -1079,12 +1162,13 @@
             }
         }, 
         "stop": {
-            "stop_name": "Schiphol Plaza, Schiphol", 
+            "stop_name": "Schiphol Centrum, E. v. d. Beekstraat", 
             "stop_point": {
-                "lat": "52.308870", 
-                "lon": "4.761390"
+                "lat": "52.30470", 
+                "lon": "4.75037"
             }, 
-            "stop_id": "GVB|04267", 
+            "feed_id": "CXX", 
+            "stop_id": "CXX|57332039", 
             "point": {
                 "lat": 52.30894444444444, 
                 "lon": 4.761333333333333
@@ -1093,11 +1177,12 @@
     }, 
     {
         "start": {
-            "stop_name": "Boschstraat/Maagdendries, Maastricht", 
+            "stop_name": "Maastricht, Boschstraat/Maagdendries", 
             "stop_point": {
-                "lat": "50.854500", 
-                "lon": "5.689940"
+                "lat": "50.85450", 
+                "lon": "5.68994"
             }, 
+            "feed_id": "VTN", 
             "stop_id": "VTN|15111901", 
             "point": {
                 "lat": 50.84966666666667, 
@@ -1105,12 +1190,13 @@
             }
         }, 
         "stop": {
-            "stop_name": "Schiphol Plaza, Schiphol", 
+            "stop_name": "Schiphol Centrum, E. v. d. Beekstraat", 
             "stop_point": {
-                "lat": "52.308870", 
-                "lon": "4.761390"
+                "lat": "52.30470", 
+                "lon": "4.75037"
             }, 
-            "stop_id": "GVB|04267", 
+            "feed_id": "CXX", 
+            "stop_id": "CXX|57332039", 
             "point": {
                 "lat": 52.30894444444444, 
                 "lon": 4.761333333333333
@@ -1119,24 +1205,26 @@
     }, 
     {
         "start": {
-            "stop_name": "Centraal Station, Arnhem", 
+            "stop_name": "Arnhem, Centraal Station", 
             "stop_point": {
-                "lat": "51.983840", 
-                "lon": "5.900510"
+                "lat": "51.98385", 
+                "lon": "5.90036"
             }, 
-            "stop_id": "CXX|40000010", 
+            "feed_id": "CXX", 
+            "stop_id": "CXX|40004003", 
             "point": {
                 "lat": 51.98447222222222, 
                 "lon": 5.9013888888888895
             }
         }, 
         "stop": {
-            "stop_name": "Schiphol Plaza, Schiphol", 
+            "stop_name": "Schiphol Centrum, E. v. d. Beekstraat", 
             "stop_point": {
-                "lat": "52.308870", 
-                "lon": "4.761390"
+                "lat": "52.30470", 
+                "lon": "4.75037"
             }, 
-            "stop_id": "GVB|04267", 
+            "feed_id": "CXX", 
+            "stop_id": "CXX|57332039", 
             "point": {
                 "lat": 52.30894444444444, 
                 "lon": 4.761333333333333
@@ -1145,11 +1233,12 @@
     }, 
     {
         "start": {
-            "stop_name": "Hortensiastraat, Zwolle", 
+            "stop_name": "Zwolle, Hortensiastraat", 
             "stop_point": {
-                "lat": "52.499940", 
-                "lon": "6.108560"
+                "lat": "52.49994", 
+                "lon": "6.10856"
             }, 
+            "feed_id": "SYNTUS", 
             "stop_id": "SYNTUS|46006110", 
             "point": {
                 "lat": 52.501083333333334, 
@@ -1157,12 +1246,13 @@
             }
         }, 
         "stop": {
-            "stop_name": "Schiphol Plaza, Schiphol", 
+            "stop_name": "Schiphol Centrum, E. v. d. Beekstraat", 
             "stop_point": {
-                "lat": "52.308870", 
-                "lon": "4.761390"
+                "lat": "52.30470", 
+                "lon": "4.75037"
             }, 
-            "stop_id": "GVB|04267", 
+            "feed_id": "CXX", 
+            "stop_id": "CXX|57332039", 
             "point": {
                 "lat": 52.30894444444444, 
                 "lon": 4.761333333333333
@@ -1171,11 +1261,12 @@
     }, 
     {
         "start": {
-            "stop_name": "Graadt van Roggenweg, Utrecht", 
+            "stop_name": "Utrecht, Graadt van Roggenweg", 
             "stop_point": {
-                "lat": "52.087770", 
-                "lon": "5.100570"
+                "lat": "52.08773", 
+                "lon": "5.10054"
             }, 
+            "feed_id": "CXX", 
             "stop_id": "CXX|50002070", 
             "point": {
                 "lat": 52.08836111111111, 
@@ -1183,12 +1274,13 @@
             }
         }, 
         "stop": {
-            "stop_name": "Schiphol Plaza, Schiphol", 
+            "stop_name": "Schiphol Centrum, E. v. d. Beekstraat", 
             "stop_point": {
-                "lat": "52.308870", 
-                "lon": "4.761390"
+                "lat": "52.30470", 
+                "lon": "4.75037"
             }, 
-            "stop_id": "GVB|04267", 
+            "feed_id": "CXX", 
+            "stop_id": "CXX|57332039", 
             "point": {
                 "lat": 52.30894444444444, 
                 "lon": 4.761333333333333
@@ -1197,11 +1289,12 @@
     }, 
     {
         "start": {
-            "stop_name": "Brinkstraat, Assen", 
+            "stop_name": "Assen, Brinkstraat", 
             "stop_point": {
-                "lat": "52.993040", 
-                "lon": "6.563200"
+                "lat": "52.99304", 
+                "lon": "6.56320"
             }, 
+            "feed_id": "QBUZZ", 
             "stop_id": "QBUZZ|15008110", 
             "point": {
                 "lat": 52.99263888888889, 
@@ -1209,12 +1302,13 @@
             }
         }, 
         "stop": {
-            "stop_name": "Schiphol Plaza, Schiphol", 
+            "stop_name": "Schiphol Centrum, E. v. d. Beekstraat", 
             "stop_point": {
-                "lat": "52.308870", 
-                "lon": "4.761390"
+                "lat": "52.30470", 
+                "lon": "4.75037"
             }, 
-            "stop_id": "GVB|04267", 
+            "feed_id": "CXX", 
+            "stop_id": "CXX|57332039", 
             "point": {
                 "lat": 52.30894444444444, 
                 "lon": 4.761333333333333
@@ -1223,24 +1317,26 @@
     }, 
     {
         "start": {
-            "stop_name": "Trompstraat, Groningen", 
+            "stop_name": "Groningen, Trompstraat", 
             "stop_point": {
-                "lat": "53.214800", 
-                "lon": "6.576810"
+                "lat": "53.21451", 
+                "lon": "6.57585"
             }, 
-            "stop_id": "QBUZZ|10009430", 
+            "feed_id": "QBUZZ", 
+            "stop_id": "QBUZZ|10009440", 
             "point": {
                 "lat": 53.218583333333335, 
                 "lon": 6.567194444444445
             }
         }, 
         "stop": {
-            "stop_name": "Schiphol Plaza, Schiphol", 
+            "stop_name": "Schiphol Centrum, E. v. d. Beekstraat", 
             "stop_point": {
-                "lat": "52.308870", 
-                "lon": "4.761390"
+                "lat": "52.30470", 
+                "lon": "4.75037"
             }, 
-            "stop_id": "GVB|04267", 
+            "feed_id": "CXX", 
+            "stop_id": "CXX|57332039", 
             "point": {
                 "lat": 52.30894444444444, 
                 "lon": 4.761333333333333
@@ -1249,24 +1345,26 @@
     }, 
     {
         "start": {
-            "stop_name": "Busstation, Leeuwarden", 
+            "stop_name": "Leeuwarden, De Brol", 
             "stop_point": {
-                "lat": "53.196380", 
-                "lon": "5.791360"
+                "lat": "53.20135", 
+                "lon": "5.79836"
             }, 
-            "stop_id": "QBUZZ|20000010", 
+            "feed_id": "ARR", 
+            "stop_id": "ARR|20002440", 
             "point": {
                 "lat": 53.196638888888884, 
                 "lon": 5.791972222222222
             }
         }, 
         "stop": {
-            "stop_name": "Schiphol Plaza, Schiphol", 
+            "stop_name": "Schiphol Centrum, E. v. d. Beekstraat", 
             "stop_point": {
-                "lat": "52.308870", 
-                "lon": "4.761390"
+                "lat": "52.30470", 
+                "lon": "4.75037"
             }, 
-            "stop_id": "GVB|04267", 
+            "feed_id": "CXX", 
+            "stop_id": "CXX|57332039", 
             "point": {
                 "lat": 52.30894444444444, 
                 "lon": 4.761333333333333
@@ -1275,24 +1373,26 @@
     }, 
     {
         "start": {
-            "stop_name": "Begraafplaats, Emmeloord", 
+            "stop_name": "Emmeloord, Busstation", 
             "stop_point": {
-                "lat": "52.717610", 
-                "lon": "5.746490"
+                "lat": "52.71000", 
+                "lon": "5.75136"
             }, 
-            "stop_id": "CXX|25000410", 
+            "feed_id": "CXX", 
+            "stop_id": "CXX|25005022", 
             "point": {
                 "lat": 52.71291666666667, 
                 "lon": 5.756611111111111
             }
         }, 
         "stop": {
-            "stop_name": "Schiphol Plaza, Schiphol", 
+            "stop_name": "Schiphol Centrum, E. v. d. Beekstraat", 
             "stop_point": {
-                "lat": "52.308870", 
-                "lon": "4.761390"
+                "lat": "52.30470", 
+                "lon": "4.75037"
             }, 
-            "stop_id": "GVB|04267", 
+            "feed_id": "CXX", 
+            "stop_id": "CXX|57332039", 
             "point": {
                 "lat": 52.30894444444444, 
                 "lon": 4.761333333333333
