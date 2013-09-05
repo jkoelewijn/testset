@@ -1,402 +1,402 @@
 [
     {
         "comment": "from Heemskerk, De Baandert to Amsterdam, Einsteinweg/Basisweg",
-        "from": "CXX|56300070",
+        "from": "HERMES_CXX|56300070",
         "id": "benckmarktest_0",
         "time": "2013-05-15T12:00:00",
         "timeType": "D",
-        "to": "CXX|57120010"
+        "to": "HERMES_CXX|57120010"
     },
     {
         "comment": "from Amsterdam, Einsteinweg/Basisweg to Amsterdam, Haarlemmermeerstation",
-        "from": "CXX|57120010",
+        "from": "HERMES_CXX|57120010",
         "id": "benckmarktest_1",
         "time": "2013-05-15T12:00:00",
         "timeType": "D",
-        "to": "CXX|57002171"
+        "to": "HERMES_CXX|57002171"
     },
     {
         "comment": "from Amsterdam, Houtmankade to Amsterdam, Molenaarsweg",
-        "from": "GVB|02104",
+        "from": "GVB_GVB|02104",
         "id": "benckmarktest_2",
         "time": "2013-05-15T12:00:00",
         "timeType": "D",
-        "to": "CXX|57112990"
+        "to": "HERMES_CXX|57112990"
     },
     {
         "comment": "from Purmerend, Sjeesstraat to Schiphol Centrum, E. v. d. Beekstraat",
-        "from": "EBS|37401010",
+        "from": "EBS_EBS|37401010",
         "id": "benckmarktest_3",
         "time": "2013-05-15T12:00:00",
         "timeType": "D",
-        "to": "CXX|57332039"
+        "to": "HERMES_CXX|57332039"
     },
     {
         "comment": "from Amsterdam, Nachtwachtlaan to Amsterdam, Beukenweg",
-        "from": "GVB|03165",
+        "from": "GVB_GVB|03165",
         "id": "benckmarktest_4",
         "time": "2013-05-15T12:00:00",
         "timeType": "D",
-        "to": "GVB|00021"
+        "to": "GVB_GVB|00021"
     },
     {
         "comment": "from Amsterdam, Beukenweg to Amsterdam, Nachtwachtlaan",
-        "from": "GVB|00021",
+        "from": "GVB_GVB|00021",
         "id": "benckmarktest_5",
         "time": "2013-05-15T12:00:00",
         "timeType": "D",
-        "to": "GVB|03165"
+        "to": "GVB_GVB|03165"
     },
     {
         "comment": "from Amsterdam, Plein '40-45 to Amsterdam, Ruimzicht",
-        "from": "CXX|57130160",
+        "from": "HERMES_CXX|57130160",
         "id": "benckmarktest_6",
         "time": "2013-05-15T12:00:00",
         "timeType": "D",
-        "to": "CXX|57134280"
+        "to": "HERMES_CXX|57134280"
     },
     {
         "comment": "from Amsterdam, 1e v.Swindenstraat to Amsterdam, Einsteinweg/Basisweg",
-        "from": "GVB|08098",
+        "from": "GVB_GVB|08098",
         "id": "benckmarktest_7",
         "time": "2013-05-15T12:00:00",
         "timeType": "D",
-        "to": "CXX|57120010"
+        "to": "HERMES_CXX|57120010"
     },
     {
         "comment": "from Amsterdam, C.K. Eloutstraat to Schiphol Centrum, E. v. d. Beekstraat",
-        "from": "GVB|04051",
+        "from": "GVB_GVB|04051",
         "id": "benckmarktest_8",
         "time": "2013-05-15T12:00:00",
         "timeType": "D",
-        "to": "CXX|57332039"
+        "to": "HERMES_CXX|57332039"
     },
     {
         "comment": "from Amsterdam, Centraal Station to Amsterdam, Centraal Station",
-        "from": "CXX|57002330",
+        "from": "HERMES_CXX|57002330",
         "id": "benckmarktest_9",
         "time": "2013-05-15T12:00:00",
         "timeType": "D",
-        "to": "CXX|57002341"
+        "to": "HERMES_CXX|57002341"
     },
     {
         "comment": "from Enkhuizen, Station to Amsterdam, Einsteinweg/Basisweg",
-        "from": "CXX|38500010",
+        "from": "HERMES_CXX|38500010",
         "id": "benckmarktest_10",
         "time": "2013-05-15T12:00:00",
         "timeType": "D",
-        "to": "CXX|57120010"
+        "to": "HERMES_CXX|57120010"
     },
     {
         "comment": "from Den Oever, Busstation to Schiphol Centrum, E. v. d. Beekstraat",
-        "from": "ARR|34770021",
+        "from": "ARR_ARR|34770021",
         "id": "benckmarktest_11",
         "time": "2013-05-15T12:00:00",
         "timeType": "D",
-        "to": "CXX|57332039"
+        "to": "HERMES_CXX|57332039"
     },
     {
         "comment": "from Den Haag, Haagse Poort to Amsterdam, Centraal Station",
-        "from": "ARR|54003040",
+        "from": "ARR_ARR|54003040",
         "id": "benckmarktest_12",
         "time": "2013-05-15T12:00:00",
         "timeType": "D",
-        "to": "CXX|57002341"
+        "to": "HERMES_CXX|57002341"
     },
     {
         "comment": "from Delft, Molengraaffsingel to Amsterdam, Einsteinweg/Basisweg",
-        "from": "VTN|42007201",
+        "from": "VTN_VTN|42007201",
         "id": "benckmarktest_13",
         "time": "2013-05-15T12:00:00",
         "timeType": "D",
-        "to": "CXX|57120010"
+        "to": "HERMES_CXX|57120010"
     },
     {
         "comment": "from Amstelveen, Poortwachter to Schiphol Centrum, E. v. d. Beekstraat",
-        "from": "CXX|57243160",
+        "from": "HERMES_CXX|57243160",
         "id": "benckmarktest_14",
         "time": "2013-05-15T12:00:00",
         "timeType": "D",
-        "to": "CXX|57332039"
+        "to": "HERMES_CXX|57332039"
     },
     {
         "comment": "from Deventer, Saxion Hogeschool to Den Haag, Haagse Poort",
-        "from": "ARR|47640040",
+        "from": "ARR_ARR|47640040",
         "id": "benckmarktest_15",
         "time": "2013-05-15T12:00:00",
         "timeType": "D",
-        "to": "ARR|54003040"
+        "to": "ARR_ARR|54003040"
     },
     {
         "comment": "from Maarn, Raadhuislaan to Delft, Molengraaffsingel",
-        "from": "CXX|50550080",
+        "from": "HERMES_CXX|50550080",
         "id": "benckmarktest_16",
         "time": "2013-05-15T12:00:00",
         "timeType": "D",
-        "to": "VTN|42007201"
+        "to": "VTN_VTN|42007201"
     },
     {
         "comment": "from Leiderdorp, Winkelhof to Amstelveen, Poortwachter",
-        "from": "ARR|54531560",
+        "from": "ARR_ARR|54531560",
         "id": "benckmarktest_17",
         "time": "2013-05-15T12:00:00",
         "timeType": "D",
-        "to": "CXX|57243160"
+        "to": "HERMES_CXX|57243160"
     },
     {
         "comment": "from Haarlem, Centrum/Verwulft to Zwolle, Hortensiastraat",
-        "from": "CXX|55002260",
+        "from": "HERMES_CXX|55002260",
         "id": "benckmarktest_18",
         "time": "2013-05-15T12:00:00",
         "timeType": "D",
-        "to": "SYNTUS|46006110"
+        "to": "SYNTUS_SYNTUS|46006110"
     },
     {
         "comment": "from Den Haag, Malieveld to Utrecht, Graadt van Roggenweg",
-        "from": "HTM|2401",
+        "from": "HTM_HTM|2401",
         "id": "benckmarktest_19",
         "time": "2013-05-15T12:00:00",
         "timeType": "D",
-        "to": "CXX|50002070"
+        "to": "HERMES_CXX|50002070"
     },
     {
         "comment": "from 's-Hertogenbosch, Centraal Station (H) to Assen, Brinkstraat",
-        "from": "ARR|63000245",
+        "from": "ARR_ARR|63000245",
         "id": "benckmarktest_20",
         "time": "2013-05-15T12:00:00",
         "timeType": "D",
-        "to": "QBUZZ|15008110"
+        "to": "QBUZZ_QBUZZ|15008110"
     },
     {
         "comment": "from Middelburg, Statenlaan to Haarlem, Centrum/Verwulft",
-        "from": "CXX|76500310",
+        "from": "HERMES_CXX|76500310",
         "id": "benckmarktest_21",
         "time": "2013-05-15T12:00:00",
         "timeType": "D",
-        "to": "CXX|55002260"
+        "to": "HERMES_CXX|55002260"
     },
     {
         "comment": "from Maastricht, Boschstraat/Maagdendries to Den Haag, Malieveld",
-        "from": "VTN|15111901",
+        "from": "VTN_VTN|15111901",
         "id": "benckmarktest_22",
         "time": "2013-05-15T12:00:00",
         "timeType": "D",
-        "to": "HTM|2401"
+        "to": "HTM_HTM|2401"
     },
     {
         "comment": "from Arnhem, Centraal Station to 's-Hertogenbosch, Centraal Station (H)",
-        "from": "CXX|40004003",
+        "from": "HERMES_CXX|40004003",
         "id": "benckmarktest_23",
         "time": "2013-05-15T12:00:00",
         "timeType": "D",
-        "to": "ARR|63000245"
+        "to": "ARR_ARR|63000245"
     },
     {
         "comment": "from Zwolle, Hortensiastraat to Middelburg, Statenlaan",
-        "from": "SYNTUS|46006110",
+        "from": "SYNTUS_SYNTUS|46006110",
         "id": "benckmarktest_24",
         "time": "2013-05-15T12:00:00",
         "timeType": "D",
-        "to": "CXX|76500310"
+        "to": "HERMES_CXX|76500310"
     },
     {
         "comment": "from Utrecht, Graadt van Roggenweg to Maastricht, Boschstraat/Maagdendries",
-        "from": "CXX|50002070",
+        "from": "HERMES_CXX|50002070",
         "id": "benckmarktest_25",
         "time": "2013-05-15T12:00:00",
         "timeType": "D",
-        "to": "VTN|15111901"
+        "to": "VTN_VTN|15111901"
     },
     {
         "comment": "from Assen, Brinkstraat to Arnhem, Centraal Station",
-        "from": "QBUZZ|15008110",
+        "from": "QBUZZ_QBUZZ|15008110",
         "id": "benckmarktest_26",
         "time": "2013-05-15T12:00:00",
         "timeType": "D",
-        "to": "CXX|40004003"
+        "to": "HERMES_CXX|40004003"
     },
     {
         "comment": "from Groningen, Trompstraat to Middelburg, Statenlaan",
-        "from": "QBUZZ|10009440",
+        "from": "QBUZZ_QBUZZ|10009440",
         "id": "benckmarktest_27",
         "time": "2013-05-15T12:00:00",
         "timeType": "D",
-        "to": "CXX|76500310"
+        "to": "HERMES_CXX|76500310"
     },
     {
         "comment": "from Leeuwarden, De Brol to Maastricht, Boschstraat/Maagdendries",
-        "from": "ARR|20002440",
+        "from": "ARR_ARR|20002440",
         "id": "benckmarktest_28",
         "time": "2013-05-15T12:00:00",
         "timeType": "D",
-        "to": "VTN|15111901"
+        "to": "VTN_VTN|15111901"
     },
     {
         "comment": "from Emmeloord, Busstation to Arnhem, Centraal Station",
-        "from": "CXX|25005022",
+        "from": "HERMES_CXX|25005022",
         "id": "benckmarktest_29",
         "time": "2013-05-15T12:00:00",
         "timeType": "D",
-        "to": "CXX|40004003"
+        "to": "HERMES_CXX|40004003"
     },
     {
         "comment": "from Enkhuizen, Station to Leeuwarden, De Brol",
-        "from": "CXX|38500010",
+        "from": "HERMES_CXX|38500010",
         "id": "benckmarktest_30",
         "time": "2013-05-15T12:00:00",
         "timeType": "D",
-        "to": "ARR|20002440"
+        "to": "ARR_ARR|20002440"
     },
     {
         "comment": "from Den Oever, Busstation to Emmeloord, Busstation",
-        "from": "ARR|34770021",
+        "from": "ARR_ARR|34770021",
         "id": "benckmarktest_31",
         "time": "2013-05-15T12:00:00",
         "timeType": "D",
-        "to": "CXX|25005022"
+        "to": "HERMES_CXX|25005022"
     },
     {
         "comment": "from Den Haag, Haagse Poort to Leiderdorp, Winkelhof",
-        "from": "ARR|54003040",
+        "from": "ARR_ARR|54003040",
         "id": "benckmarktest_32",
         "time": "2013-05-15T12:00:00",
         "timeType": "D",
-        "to": "ARR|54531560"
+        "to": "ARR_ARR|54531560"
     },
     {
         "comment": "from Delft, Molengraaffsingel to Den Haag, Haagse Poort",
-        "from": "VTN|42007201",
+        "from": "VTN_VTN|42007201",
         "id": "benckmarktest_33",
         "time": "2013-05-15T12:00:00",
         "timeType": "D",
-        "to": "ARR|54003040"
+        "to": "ARR_ARR|54003040"
     },
     {
         "comment": "from Amstelveen, Poortwachter to Delft, Molengraaffsingel",
-        "from": "CXX|57243160",
+        "from": "HERMES_CXX|57243160",
         "id": "benckmarktest_34",
         "time": "2013-05-15T12:00:00",
         "timeType": "D",
-        "to": "VTN|42007201"
+        "to": "VTN_VTN|42007201"
     },
     {
         "comment": "from Deventer, Saxion Hogeschool to Amstelveen, Poortwachter",
-        "from": "ARR|47640040",
+        "from": "ARR_ARR|47640040",
         "id": "benckmarktest_35",
         "time": "2013-05-15T12:00:00",
         "timeType": "D",
-        "to": "CXX|57243160"
+        "to": "HERMES_CXX|57243160"
     },
     {
         "comment": "from Maarn, Raadhuislaan to Deventer, Saxion Hogeschool",
-        "from": "CXX|50550080",
+        "from": "HERMES_CXX|50550080",
         "id": "benckmarktest_36",
         "time": "2013-05-15T12:00:00",
         "timeType": "D",
-        "to": "ARR|47640040"
+        "to": "ARR_ARR|47640040"
     },
     {
         "comment": "from Leiderdorp, Winkelhof to Maarn, Raadhuislaan",
-        "from": "ARR|54531560",
+        "from": "ARR_ARR|54531560",
         "id": "benckmarktest_37",
         "time": "2013-05-15T12:00:00",
         "timeType": "D",
-        "to": "CXX|50550080"
+        "to": "HERMES_CXX|50550080"
     },
     {
         "comment": "from Haarlem, Centrum/Verwulft to Schiphol Centrum, E. v. d. Beekstraat",
-        "from": "CXX|55002260",
+        "from": "HERMES_CXX|55002260",
         "id": "benckmarktest_38",
         "time": "2013-05-15T12:00:00",
         "timeType": "D",
-        "to": "CXX|57332039"
+        "to": "HERMES_CXX|57332039"
     },
     {
         "comment": "from Den Haag, Malieveld to Schiphol Centrum, E. v. d. Beekstraat",
-        "from": "HTM|2401",
+        "from": "HTM_HTM|2401",
         "id": "benckmarktest_39",
         "time": "2013-05-15T12:00:00",
         "timeType": "D",
-        "to": "CXX|57332039"
+        "to": "HERMES_CXX|57332039"
     },
     {
         "comment": "from 's-Hertogenbosch, Centraal Station (H) to Schiphol Centrum, E. v. d. Beekstraat",
-        "from": "ARR|63000245",
+        "from": "ARR_ARR|63000245",
         "id": "benckmarktest_40",
         "time": "2013-05-15T12:00:00",
         "timeType": "D",
-        "to": "CXX|57332039"
+        "to": "HERMES_CXX|57332039"
     },
     {
         "comment": "from Middelburg, Statenlaan to Schiphol Centrum, E. v. d. Beekstraat",
-        "from": "CXX|76500310",
+        "from": "HERMES_CXX|76500310",
         "id": "benckmarktest_41",
         "time": "2013-05-15T12:00:00",
         "timeType": "D",
-        "to": "CXX|57332039"
+        "to": "HERMES_CXX|57332039"
     },
     {
         "comment": "from Maastricht, Boschstraat/Maagdendries to Schiphol Centrum, E. v. d. Beekstraat",
-        "from": "VTN|15111901",
+        "from": "VTN_VTN|15111901",
         "id": "benckmarktest_42",
         "time": "2013-05-15T12:00:00",
         "timeType": "D",
-        "to": "CXX|57332039"
+        "to": "HERMES_CXX|57332039"
     },
     {
         "comment": "from Arnhem, Centraal Station to Schiphol Centrum, E. v. d. Beekstraat",
-        "from": "CXX|40004003",
+        "from": "HERMES_CXX|40004003",
         "id": "benckmarktest_43",
         "time": "2013-05-15T12:00:00",
         "timeType": "D",
-        "to": "CXX|57332039"
+        "to": "HERMES_CXX|57332039"
     },
     {
         "comment": "from Zwolle, Hortensiastraat to Schiphol Centrum, E. v. d. Beekstraat",
-        "from": "SYNTUS|46006110",
+        "from": "SYNTUS_SYNTUS|46006110",
         "id": "benckmarktest_44",
         "time": "2013-05-15T12:00:00",
         "timeType": "D",
-        "to": "CXX|57332039"
+        "to": "HERMES_CXX|57332039"
     },
     {
         "comment": "from Utrecht, Graadt van Roggenweg to Schiphol Centrum, E. v. d. Beekstraat",
-        "from": "CXX|50002070",
+        "from": "HERMES_CXX|50002070",
         "id": "benckmarktest_45",
         "time": "2013-05-15T12:00:00",
         "timeType": "D",
-        "to": "CXX|57332039"
+        "to": "HERMES_CXX|57332039"
     },
     {
         "comment": "from Assen, Brinkstraat to Schiphol Centrum, E. v. d. Beekstraat",
-        "from": "QBUZZ|15008110",
+        "from": "QBUZZ_QBUZZ|15008110",
         "id": "benckmarktest_46",
         "time": "2013-05-15T12:00:00",
         "timeType": "D",
-        "to": "CXX|57332039"
+        "to": "HERMES_CXX|57332039"
     },
     {
         "comment": "from Groningen, Trompstraat to Schiphol Centrum, E. v. d. Beekstraat",
-        "from": "QBUZZ|10009440",
+        "from": "QBUZZ_QBUZZ|10009440",
         "id": "benckmarktest_47",
         "time": "2013-05-15T12:00:00",
         "timeType": "D",
-        "to": "CXX|57332039"
+        "to": "HERMES_CXX|57332039"
     },
     {
         "comment": "from Leeuwarden, De Brol to Schiphol Centrum, E. v. d. Beekstraat",
-        "from": "ARR|20002440",
+        "from": "ARR_ARR|20002440",
         "id": "benckmarktest_48",
         "time": "2013-05-15T12:00:00",
         "timeType": "D",
-        "to": "CXX|57332039"
+        "to": "HERMES_CXX|57332039"
     },
     {
         "comment": "from Emmeloord, Busstation to Schiphol Centrum, E. v. d. Beekstraat",
-        "from": "CXX|25005022",
+        "from": "HERMES_CXX|25005022",
         "id": "benckmarktest_49",
         "time": "2013-05-15T12:00:00",
         "timeType": "D",
-        "to": "CXX|57332039"
+        "to": "HERMES_CXX|57332039"
     }
 ]
